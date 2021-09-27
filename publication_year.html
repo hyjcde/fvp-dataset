@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <meta name="keywords" content="Chen Change Loy, Ziwei Liu, Bo Dai, Yixin Cao, Super-resolution, Deep Learning, Computer Vision, Convolutional Neural Network, Enhancement, Inpainting, Knowledge Distillation, Restoration, GAN, Generative Adversarial Networks, Generation, Manipulation, Editing, Object Detection, Segmentation, Recognition, Continual Learning, Domain Generalization, Self-Supervised Learning, Singapore, NTU, Nanyang Technological University, SCSE" />
+        
+        <!-- Page Title -->
+        <title>Publications | MMLab@NTU</title>
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicons/favicon-16x16.png">
+        <link rel="manifest" href="./assets/img/favicons/site.webmanifest">
+        <link rel="mask-icon" href="./assets/img/favicons/safari-pinned-tab.svg" color="#f23838">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- Vendor Stylesheets -->
+        <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700%7CRoboto:300,400,700" rel="stylesheet">
+        <link href="./assets/vendor/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="./assets/vendor/jquery.mb.vimeo_player/dist/css/jquery.mb.vimeo_player.min.css" rel="stylesheet">
+        <link href="./assets/vendor/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
+
+        <!-- Theme Stylesheets -->
+        <link href="./assets/css/theme.css" rel="stylesheet">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22940424-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-22940424-1');
+        </script>
+    </head>
+
+    <body>
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="spinner">
+                <div class="circles"></div>
+            </div>
+        </div>
+        <!-- End of Preloader -->
+
+        <!-- Header -->
+        <header class="spyre-navbar navbar navbar-expand-lg bg-secondary navbar-dark fixed-top align-items-center" data-transparent data-text-color="#ffffff">
+            <div class="container">
+                <a class="navbar-brand mr-lg-5 mr-xl-7" href="./index.html">
+                    <img src="./assets/img/logo.png" class="d-none d-lg-block" alt="MMLab" width="183" />
+                    <img src="./assets/img/logo.png" class="d-block d-lg-none" alt="MMLab" width="150" />
+                </a>
+
+                <!-— Desktop Menu -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="pl-2 nav-item navbar-text"><a href="./index.html" class="nav-link text-400">Home</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="./team.html" class="nav-link text-400">Team</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="./research.html" class="nav-link text-400">Research</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="./publication_topic.html" class="nav-link">Publications</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="./downloads.html" class="nav-link text-400">Code | Datasets</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="./careers.html" class="nav-link text-400">Join Us</a></li>
+                    </ul>
+                </div>
+                <!-— End of Desktop Menu -->
+
+                <div class="menu-toggle d-block d-lg-none">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="cross">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spyrenav Overlay -->
+            <div class="spyre-navbar-overlay overlay-slide">
+                <div class="container">
+                    <div class="row">
+                        <div class="spyre-navbar-nav-container col-md-6 col-lg-5 col-xl-4 bg-white ext-l">
+                            <nav class="spyre-navbar-nav">
+                                <ul class="spyre-nav">
+                                    <li class="spyre-nav-item"><a href="./index.html" class="spyre-nav-link">Home</a></li>
+                                    <li class="spyre-nav-item"><a href="./research.html" class="spyre-nav-link">Our Research</a></li>
+                                    <li class="spyre-nav-item"><a href="./team.html" class="spyre-nav-link">Team</a></li>
+                                    <li class="spyre-nav-item dropdown">
+                                        <a href="#" class="spyre-nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Publications</a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li class="dropdown-menu-item"><a href="./publication_topic.html" class="dropdown-menu-link">By Topic</a></li>
+                                            <li class="dropdown-menu-item"><a href="./publication_year.html" class="dropdown-menu-link">By Year</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="spyre-nav-item"><a href="./downloads.html" class="spyre-nav-link">Code and Datasets</a></li>
+                                    <li class="spyre-nav-item"><a href="./careers.html" class="spyre-nav-link">Join Us</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+        
+                        <div class="col-lg-7 col-xl-8 d-none d-md-block">
+                            <div class="d-flex flex-column h-100">
+                                <div class="d-flex h-100">
+                                    <div class="align-self-center">
+                                        <div class="text-uppercase"
+                                            data-background-text="computer vision"
+                                            data-color="#7079a2"
+                                            data-opacity="0.02"
+                                            data-font-size="85px"
+                                            data-font-weight="500"
+                                            data-offset-x="-5%"
+                                            data-letter-spacing="5px"
+                                        ></div>
+                                        <div class="text-uppercase"
+                                            data-background-text="mmlab"
+                                            data-color="#7079a2"
+                                            data-opacity="0.04"
+                                            data-font-size="175px"
+                                            data-font-weight="500"
+                                            data-offset-x="29%"
+                                            data-padding="7vh 0 2vh 0"
+                                            data-letter-spacing="5px"
+                                        ></div>
+                                        <div class="text-uppercase"
+                                            data-background-text="deep learning"
+                                            data-color="#7079a2"
+                                            data-opacity="0.03"
+                                            data-font-size="140px"
+                                            data-font-weight="500"
+                                            data-offset-x="15%"
+                                            data-letter-spacing="5px"
+                                        ></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-auto">
+                                    <ul class="nav flex-nowrap float-right">
+                                        <li class="nav-item">
+                                            <a class="nav-link px-2" href="https://twitter.com/MMLabNTU" target="_blank">
+                                                <i class="zmdi zmdi-twitter text-white"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Spyrenav Overlay -->
+        </header>
+        <!-- End of Header -->
+
+        <!-- Main Content -->
+        <main class="main minh-100vh">
+            <!-- Section -->
+            <section class="py-0 overflow-hidden text-center">
+                <div class="bg-container overlay parallax" data-rellax-percentage="0.5" style="background-image: url(./assets/img/backgrounds/bg-02.jpg)">
+                </div>
+                <span id="2021"></span>
+            </section>
+            <!-- End of Section -->
+
+            <!-- Section -->
+            <section id="section-1" class="pb-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 order-lg-1">
+                            <div class="pb-6 pt-6 py-lg-3" data-toggle="sticky" data-sticky-offset-top="100">
+                                <h5 class="mb-4 text-uppercase text-600">Years</h5>
+                                <ul class="mb-5 mb-lg-6 pl-4 text-600">
+                                    <li class="mb-1"><a href="#2021" class="text-600">2021</a></li>
+                                    <li class="mb-1"><a href="#2020" class="text-600">2020</a></li>
+                                    <li class="mb-1"><a href="#2019" class="text-600">2019</a></li>
+                                    <li class="mb-1"><a href="#2018" class="text-600">2018</a></li>
+                                </ul>
+
+                                <h5 class="mb-4 text-uppercase text-600">Sort by</h5>
+                                <ul class="mb-5 mb-lg-6 pl-4 text-600">
+                                    <li class="mb-1"><a href="./publication_topic.html#section-1" class="text-600">Topics</a></li>
+                                </ul>
+                                
+                                <h5 class="mb-4 text-uppercase text-600">Highlights</h5>
+                                <ul class="mb-5 mb-lg-6 pl-4 text-600">
+                                    <li class="mb-1"><a href="./conference/iccv2021/index.html" class="text-600">ICCV 2021</a></li>
+                                    <li class="mb-1"><a href="./conference/cvpr2021/index.html" class="text-600">CVPR 2021</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-8 order-lg-2 pb-6 pb-lg-0 pt-lg-3"> 
+                            <div class="mb-8">
+                                <h2 class="mb-4 text-uppercase">2021</h2>
+
+                                <h4 class="mb-4 text-uppercase">Journal</h4>
+                                <ol>
+                                    <li>
+                                       <span class="text-primary">Exploiting Deep Generative Prior for Versatile Image Restoration and Manipulation</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       X. Pan, X. Zhan, B. Dai, D. Lin, C. C. Loy, P. Luo  <br /> 
+                                       IEEE Transactions on Pattern Analysis and Machine Intelligence, 2021 <strong>(TPAMI)</strong><br />   
+                                       </span>
+                                       [<a href="https://github.com/XingangPan/deep-generative-prior" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Path-Restore: Learning Network Path Selection for Image Restoration</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       K. Yu, X. Wang, C. Dong, X. Tang, C. C. Loy  <br /> 
+                                       IEEE Transactions on Pattern Analysis and Machine Intelligence, 2021 <strong>(TPAMI)</strong><br />   
+                                       </span>
+                                       [<a href="https://doi.org/10.1109/tpami.2021.3096255" target="_blank"><span class="text-muted">DOI</span></a>]
+                                       [<a href="https://arxiv.org/abs/1904.10343" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="./project/pathrestore/index.html" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">CARAFE++: Unified Content-Aware ReAssembly of FEatures</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       J. Wang, K. Chen, R. Xu, Z. Liu, C. C. Loy, D. Lin  <br /> 
+                                       IEEE Transactions on Pattern Analysis and Machine Intelligence, 2021 <strong>(TPAMI)</strong> <br />  
+                                       </span>
+                                       [<a href="https://doi.org/10.1109/TPAMI.2021.3074370" target="_blank"><span class="text-muted">DOI</span></a>]
+                                       [<a href="https://arxiv.org/abs/2012.04733" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Learning to Enhance Low-Light Image via Zero-Reference Deep Curve Estimation </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       C. Li, C. Guo, C. C. Loy <br /> 
+                                       IEEE Transactions on Pattern Analysis and Machine Intelligence, 2021 <strong>(TPAMI)</strong><br />    
+                                       </span>
+                                       [<a href="https://doi.org/10.1109/TPAMI.2021.3063604" target="_blank"><span class="text-muted">DOI</span></a>]
+                                       [<a href="https://arxiv.org/abs/2103.00860" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://li-chongyi.github.io/Proj_Zero-DCE.html" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                </ol>
+
+                                <h4 class="mb-4 text-uppercase">Conference</h4>
+                                <ol>
+                                    <li>
+                                        <span class="text-primary">3D Human Texture Estimation from a Single Image with Transformers </span> 
+                                        <br />
+                                        <span class="text-500">
+                                        X. Xu, C. C. Loy <br /> 
+                                        in Proceedings of IEEE/CVF International Conference on Computer Vision, 2021 <strong>(ICCV, Oral)</strong><br />    
+                                        </span>
+                                        [<a href="http://personal.ie.cuhk.edu.hk/~ccloy/files/iccv_2021_texformer.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                        [<a href="https://arxiv.org/abs/2109.02563" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                        [<a href="./project/texformer/index.html" target="_blank"><span class="text-muted">Project Page</span></a>]  
+                                    </li>
+                                    <li>
+                                        <span class="text-primary">FASA: Feature Augmentation and Sampling Adaptation for Long-Tailed Instance Segmentation </span> 
+                                        <br />
+                                        <span class="text-500">
+                                        Y. Zang, C. Huang, C. C. Loy <br /> 
+                                        in Proceedings of IEEE/CVF International Conference on Computer Vision, 2021 <strong>(ICCV)</strong><br />    
+                                        </span>
+                                        [<a href="http://personal.ie.cuhk.edu.hk/~ccloy/files/iccv_2021_fasa.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                        [<a href="https://arxiv.org/abs/2102.12867" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                        [<a href="http://personal.ie.cuhk.edu.hk/~ccloy/files/iccv_2021_fasa_supp.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                        [<a href="./project/fasa/index.html" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                        <span class="text-primary">ReconfigISP: Reconfigurable Camera Image Processing Pipeline </span>
+                                        <br />
+                                        <span class="text-500">
+                                        K. Yu, Z. Li, Y. Peng, C. C. Loy, J. Gu <br /> 
+                                        in Proceedings of IEEE/CVF International Conference on Computer Vision, 2021 <strong>(ICCV)</strong><br />    
+                                        </span>
+                                        [<a href="http://personal.ie.cuhk.edu.hk/~ccloy/files/iccv_2021_reconfigisp.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                        [<a href="https://arxiv.org/abs/2109.04760" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                        [<a href="http://personal.ie.cuhk.edu.hk/~ccloy/files/iccv_2021_reconfigisp_supp.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                        [<a href="./project/reconfigisp/index.html" target="_blank"><span class="text-muted">Project Page</span></a>]  
+                                    </li>
+                                    <li>
+                                        <span class="text-primary">Focal Frequency Loss for Image Reconstruction and Synthesis </span> 
+                                        <br />
+                                        <span class="text-500">
+                                        L. Jiang, B. Dai, W. Wu, C. C. Loy <br /> 
+                                        in Proceedings of IEEE/CVF International Conference on Computer Vision, 2021 <strong>(ICCV)</strong><br />    
+                                        </span>
+                                        [<a href="http://personal.ie.cuhk.edu.hk/~ccloy/files/iccv_2021_ffl.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                        [<a href="https://arxiv.org/abs/2012.12821" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                        [<a href="./project/ffl/index.html" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                        <span class="text-primary">Talk-to-Edit: Fine-Grained Facial Editing via Dialog </span> 
+                                        <br />
+                                        <span class="text-500">
+                                        Y. Jiang,  Z. Huang, X. Pan, C. C. Loy, Z. Liu <br /> 
+                                        in Proceedings of IEEE/CVF International Conference on Computer Vision, 2021 <strong>(ICCV)</strong><br />    
+                                        </span>
+                                        [<a href="http://personal.ie.cuhk.edu.hk/~ccloy/files/iccv_2021_talkedit.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                        [<a href="https://arxiv.org/abs/2109.04425" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                        [<a href="./project/talkedit/index.html" target="_blank"><span class="text-muted">Project Page</span></a>] 
+                                    </li>
+                                    <li>
+                                        <span class="text-primary">Semantically Coherent Out-of-Distribution Detection </span> 
+                                        <br />
+                                        <span class="text-500">
+                                        J. Yang, H. Wang, L. Feng, X. Yan, H. Zheng,  W. Zhang, Z. Liu <br /> 
+                                        in Proceedings of IEEE/CVF International Conference on Computer Vision, 2021 <strong>(ICCV)</strong><br />    
+                                        </span>
+                                        [<a href="https://arxiv.org/abs/2108.11941" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                        [<a href="https://jingkang50.github.io/projects/scood" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                        <span class="text-primary">Unsupervised Domain Adaptive 3D Detection with Multi-Level Consistency </span> 
+                                        <br />
+                                        <span class="text-500">
+                                        Z. Luo, Z. Cai, C. Zhou, G. Zhang, H. Zhao, S. Yi, S. Lu, H. Li, S. Zhang, Z. Liu <br /> 
+                                        in Proceedings of IEEE/CVF International Conference on Computer Vision, 2021 <strong>(ICCV)</strong><br />    
+                                        </span>
+                                        [<a href="https://arxiv.org/abs/2107.11355" target="_blank"><span class="text-muted">arXiv</span></a>] 
+                                    </li>
+                                    <li>
+                                        <span class="text-primary">Incorporating Convolution Designs into Visual Transformers </span> 
+                                        <br />
+                                        <span class="text-500">
+                                        K. Yuan, S. Guo, Z. Liu, A. Zhou, F. Yu, W. Wu <br /> 
+                                        in Proceedings of IEEE/CVF International Conference on Computer Vision, 2021 <strong>(ICCV)</strong><br />    
+                                        </span>
+                                        [<a href="https://arxiv.org/abs/2103.11816" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                    </li>
+                                    <li>
+                                        <span class="text-primary">Differentiable Dynamic Wirings for Neural Networks </span> 
+                                        <br />
+                                        <span class="text-500">
+                                        K. Yuan, Q. Li,  S. Guo, D. Chen, A. Zhou, F. Yu, Z. Liu <br /> 
+                                        in Proceedings of IEEE/CVF International Conference on Computer Vision, 2021 <strong>(ICCV)</strong><br />    
+                                        </span>
+                                        [<span class="text-muted">Coming Soon</span>] 
+                                    </li>
+                                    <li>
+                                        <span class="text-primary">BlockPlanner: City Block Generation with Vectorized Graph Representation </span> 
+                                        <br />
+                                        <span class="text-500">
+                                        L. Xu, Y. Xiangli, A. Rao, N. Zhao, B. Dai, Z. Liu, D. Lin <br /> 
+                                        in Proceedings of IEEE/CVF International Conference on Computer Vision, 2021 <strong>(ICCV)</strong><br />    
+                                        </span>
+                                        [<span class="text-muted">Coming Soon</span>] 
+                                    </li>
+                                    <li>
+                                        <span class="text-primary">Energy-Based Open-World Uncertainty Modeling for Confidence Calibration </span> 
+                                        <br />
+                                        <span class="text-500">
+                                        Y. Wang, B. Li, T. Che, K. Zhou, D. Li, Z. Liu <br /> 
+                                        in Proceedings of IEEE/CVF International Conference on Computer Vision, 2021 <strong>(ICCV)</strong><br />    
+                                        </span>
+                                        [<a href="https://arxiv.org/abs/2107.12628" target="_blank"><span class="text-muted">arXiv</span></a>] 
+                                    </li>                                                 
+                                    <li>
+                                       <span class="text-primary">Retrospective Class Incremental Learning </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       Q. Tao, C. C. Loy, J. Cai, Z. Ge, S. See <br /> 
+                                       in Proceedings of IEEE International Conference on Multimedia and Expo, 2021 <strong>(ICME)</strong><br />    
+                                       </span>
+                                       [<a href="http://personal.ie.cuhk.edu.hk/~ccloy/files/icme_2021_restropective.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">GLEAN: Generative Latent Bank for Large-Factor Image Super-Resolution </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       K. C. K. Chan, X. Wang, X. Xu, J. Gu, C. C. Loy <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2021 <strong>(CVPR, Oral)</strong><br />    
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Chan_GLEAN_Generative_Latent_Bank_for_Large-Factor_Image_Super-Resolution_CVPR_2021_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2012.00739" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/supplemental/Chan_GLEAN_Generative_Latent_CVPR_2021_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="./project/glean/" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Adversarial Robustness under Long-Tailed Distribution </span>
+                                       <br />
+                                       <span class="text-500">
+                                       T. Wu, Z. Liu, Q. Huang, Y. Wang, D. Lin <br />
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2021 <strong>(CVPR, Oral)</strong><br />
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Wu_Adversarial_Robustness_Under_Long-Tailed_Distribution_CVPR_2021_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2104.02703" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/supplemental/Wu_Adversarial_Robustness_Under_CVPR_2021_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="https://github.com/wutong16/Adversarial_Long-Tail" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Variational Relational Point Completion Network </span>
+                                       <br />
+                                       <span class="text-500">
+                                       L. Pan, X. Chen, Z. Cai, J. Zhang, H. Zhao, S. Yi, Z. Liu <br />
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2021 <strong>(CVPR, Oral)</strong><br />
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Pan_Variational_Relational_Point_Completion_Network_CVPR_2021_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2104.10154" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/supplemental/Pan_Variational_Relational_Point_CVPR_2021_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="https://paul007pl.github.io/projects/VRCNet" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">ForgeryNet: A Versatile Benchmark for Comprehensive Forgery Analysis </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       Y. He, B. Gan, S. Chen, Y. Zhou, G. Yin, L. Song, L. Sheng, J. Shao, Z. Liu  <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2021 <strong>(CVPR, Oral)</strong> <br />    
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/papers/He_ForgeryNet_A_Versatile_Benchmark_for_Comprehensive_Forgery_Analysis_CVPR_2021_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2103.05630" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/supplemental/He_ForgeryNet_A_Versatile_CVPR_2021_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="https://yinanhe.github.io/projects/forgerynet.html" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>                                     
+                                    <li>
+                                       <span class="text-primary">BasicVSR: The Search for Essential Components in Video Super-Resolution and Beyond </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       K. C. K. Chan, X. Wang, K. Yu, C. Dong, C. C. Loy <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2021 <strong>(CVPR)</strong><br />    
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Chan_BasicVSR_The_Search_for_Essential_Components_in_Video_Super-Resolution_and_CVPR_2021_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2012.02181" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/supplemental/Chan_BasicVSR_The_Search_CVPR_2021_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="https://ckkelvinchan.github.io/projects/BasicVSR" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Robust Reference-based Super-Resolution via C<sup>2</sup>-Matching </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       Y. Jiang, K. C. K. Chan, X. Wang, C. C. Loy, Z. Liu <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2021 <strong>(CVPR)</strong><br />    
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Jiang_Robust_Reference-Based_Super-Resolution_via_C2-Matching_CVPR_2021_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2106.01863" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/supplemental/Jiang_Robust_Reference-Based_Super-Resolution_CVPR_2021_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="https://github.com/yumingj/C2-Matching" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Visually Informed Binaural Audio Generation without Binaural Audios </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       X. Xu, H. Zhou, Z. Liu, B. Dai, X. Wang, D. Lin <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2021 <strong>(CVPR)</strong><br />    
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Xu_Visually_Informed_Binaural_Audio_Generation_without_Binaural_Audios_CVPR_2021_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2104.06162" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/supplemental/Xu_Visually_Informed_Binaural_CVPR_2021_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="https://sheldontsui.github.io/projects/PseudoBinaural" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Scene-aware Generative Network for Human Motion Synthesis </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       J. Wang, S. Yan, B. Dai, D. Lin <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2021 <strong>(CVPR)</strong><br />    
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Wang_Scene-Aware_Generative_Network_for_Human_Motion_Synthesis_CVPR_2021_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/supplemental/Wang_Scene-Aware_Generative_Network_CVPR_2021_supplemental.zip" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="http://wangjingbo.top/papers/Posegeneration/Posegeneration.html" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">LiDAR-based Panoptic Segmentation via Dynamic Shifting Network</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       F. Hong, H. Zhou, X. Zhu, H. Li, Z. Liu  <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2021 <strong>(CVPR)</strong> <br />
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Hong_LiDAR-Based_Panoptic_Segmentation_via_Dynamic_Shifting_Network_CVPR_2021_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2011.11964" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/supplemental/Hong_LiDAR-Based_Panoptic_Segmentation_CVPR_2021_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="https://github.com/hongfz16/DS-Net" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Unsupervised Feature Learning by Cross-Level Instance-Group Discrimination </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       X. Wang, Z. Liu, S. X. Yu  <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2021 <strong>(CVPR)</strong> <br />    
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Wang_Unsupervised_Feature_Learning_by_Cross-Level_Instance-Group_Discrimination_CVPR_2021_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2008.03813" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/supplemental/Wang_Unsupervised_Feature_Learning_CVPR_2021_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="http://people.eecs.berkeley.edu/~xdwang/projects/CLD/" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Removing Diffraction Image Artifacts in Under-Display Camera via Dynamic Skip Connection Network </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       R. Feng, C. Li, H. Chen, S. Li, C. C. Loy, J. Gu  <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2021 <strong>(CVPR)</strong><br />    
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Feng_Removing_Diffraction_Image_Artifacts_in_Under-Display_Camera_via_Dynamic_Skip_CVPR_2021_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2104.09556" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/supplemental/Feng_Removing_Diffraction_Image_CVPR_2021_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="https://jnjaby.github.io/projects/UDC/" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>                                     
+                                    <li>
+                                       <span class="text-primary">Deep Animation Video Interpolation in the Wild </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       S-Y. Li, S. Zhao, W. Yu, W. Sun, D. Metaxas, C. C. Loy, Z. Liu <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2021 <strong>(CVPR)</strong><br />    
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Siyao_Deep_Animation_Video_Interpolation_in_the_Wild_CVPR_2021_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2104.02495" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/supplemental/Siyao_Deep_Animation_Video_CVPR_2021_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="https://github.com/lisiyao21/AnimeInterp/" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li> 
+                                    <li>
+                                       <span class="text-primary">Pose-Controllable Talking Face Generation by Implicitly Modularized Audio-Visual Representation </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       H. Zhou, Y. Sun, W. Wu, C. C. Loy, X. Wang, Z. Liu <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2021 <strong>(CVPR)</strong><br />    
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Zhou_Pose-Controllable_Talking_Face_Generation_by_Implicitly_Modularized_Audio-Visual_Representation_CVPR_2021_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2104.11116" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/supplemental/Zhou_Pose-Controllable_Talking_Face_CVPR_2021_supplemental.zip" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="https://github.com/Hangz-nju-cuhk/Talking-Face_PC-AVS" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>                               
+                                    <li>
+                                       <span class="text-primary">Pareidolia Face Reenactment </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       L. Song, W. Wu, C. Fu, C. Qian, C. C. Loy, R. He  <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2021 <strong>(CVPR)</strong><br />    
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Song_Pareidolia_Face_Reenactment_CVPR_2021_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2104.03061" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/supplemental/Song_Pareidolia_Face_Reenactment_CVPR_2021_supplemental.zip" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="https://wywu.github.io/projects/ETT/ETT.html" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                       [<a href="https://www.youtube.com/watch?v=lVYZ3IAVM_U" target="_blank"><span class="text-muted">YouTube</span></a>]
+                                    </li> 
+                                    <li>
+                                       <span class="text-primary">Audio-Driven Emotional Video Portraits </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       X. Ji, H. Zhou, K. Wang, W. Wu, X. Cao, C. C. Loy, F. Xu  <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2021 <strong>(CVPR)</strong><br />    
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Ji_Audio-Driven_Emotional_Video_Portraits_CVPR_2021_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2104.07452" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/supplemental/Ji_Audio-Driven_Emotional_Video_CVPR_2021_supplemental.zip" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="https://jixinya.github.io/projects/evp/" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li> 
+                                    <li>
+                                       <span class="text-primary">Positional Encoding as Spatial Inductive Bias in GANs </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       R. Xu, X. Wang, K. Chen, B. Zhou, C. C. Loy <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2021 <strong>(CVPR)</strong><br />   
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Xu_Positional_Encoding_As_Spatial_Inductive_Bias_in_GANs_CVPR_2021_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2012.05217" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/supplemental/Xu_Positional_Encoding_As_CVPR_2021_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="https://nbei.github.io/gan-pos-encoding.html" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                       [<a href="https://www.youtube.com/watch?v=n6B01YqC1ng&feature=emb_title" target="_blank"><span class="text-muted">YouTube</span></a>]
+                                    </li> 
+                                    <li>
+                                       <span class="text-primary">Seesaw Loss for Long-Tailed Instance Segmentation </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       J. Wang, W. Zhang, Y. Zang, Y. Cao, J. Pang, T. Gong, K. Chen, Z. Liu, C. C. Loy, D. Lin  <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2021 <strong>(CVPR)</strong><br />    
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Wang_Seesaw_Loss_for_Long-Tailed_Instance_Segmentation_CVPR_2021_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2008.10032" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/supplemental/Wang_Seesaw_Loss_for_CVPR_2021_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                    </li> 
+                                    <li>
+                                       <span class="text-primary">Unsupervised 3D Shape Completion through GAN Inversion </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       J. Zhang, X. Chen, Z. Cai, L. Pan, H. Zhao, S. Yi, C. K. Yeo, B. Dai, C. C. Loy <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2021 <strong>(CVPR)</strong><br />    
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Zhang_Unsupervised_3D_Shape_Completion_Through_GAN_Inversion_CVPR_2021_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2104.13366" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/supplemental/Zhang_Unsupervised_3D_Shape_CVPR_2021_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="https://junzhezhang.github.io/projects/ShapeInversion/" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>                                   
+                                    <li>
+                                       <span class="text-primary">Do 2D GANs Know 3D Shape? Unsupervised 3D Shape Reconstruction from 2D Image GANs </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       X. Pan, B. Dai, Z. Liu, C. C. Loy, P. Luo <br /> 
+                                       International Conference on Learning Representations, 2021 <strong>(ICLR, Oral)</strong><br />    
+                                       </span>
+                                       [<a href="https://openreview.net/pdf?id=FGqiDsBUKL0" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2011.00844" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://xingangpan.github.io/projects/GAN2Shape.html" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Long-Tailed Recognition by Routing Diverse Distribution-Aware Experts </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       X. Wang, L. Lian, Z. Miao, Z. Liu, S. X. Yu  <br /> 
+                                       International Conference on Learning Representations, 2021 <strong>(ICLR)</strong> <br />    
+                                       </span>
+                                       [<a href="https://openreview.net/pdf?id=D9I3drBz4UC" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2010.01809" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="http://people.eecs.berkeley.edu/~xdwang/projects/RIDE/" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Understanding Deformable Alignment in Video Super-Resolution </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       K. C. K. Chan, X. Wang, K. Yu, C. Dong, C. C. Loy <br /> 
+                                       in Proceedings of AAAI Conference on Artificial Intelligence, 2021 <strong>(AAAI)</strong><br />    
+                                       </span>
+                                       [<a href="https://arxiv.org/abs/2009.07265" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://ckkelvinchan.github.io/projects/DCN/" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li> 
+                                    <li>
+                                       <span class="text-primary">PTeacher: a Computer-Aided Personalized Pronunciation Training System with Exaggerated Audio-Visual Corrective Feedback </span>
+                                       <br />
+                                       <span class="text-500">
+                                       Y. Bu, T. Ma, W. Li, H. Zhou, J. Jia, S. Chen, K. Xu, D. Shi, H. Wu, Z. Yang, K. Li, Z. Wu, Y. Shi, X. Lu, Z. Liu <br />
+                                       in ACM Conference on Human Factors in Computing Systems, 2021 <strong>(CHI)</strong><br />
+                                       </span>
+                                       [<a href="https://hcsi.cs.tsinghua.edu.cn/Paper/Paper21/CHI21-BUYAOHUA.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                    </li>                                                                      
+                                </ol>
+
+                                <h4 class="mb-4 text-uppercase">Technical Report</h4>
+                                <ol>
+                                    <li>
+                                       <span class="text-primary">Learning to Prompt for Vision-Language Models </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       K. Zhou, J. Yang, C. C. Loy, Z. Liu <br /> 
+                                       Technical report, arXiv:2109.01134, 2021 <br />    
+                                       </span>
+                                       [<a href="https://arxiv.org/abs/2109.01134" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">K-Net: Towards Unified Image Segmentation </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       W. Zhang, J. Pang, K. Chen, C. C. Loy <br /> 
+                                       Technical report, arXiv:2106.14855, 2021 <br />    
+                                       </span>
+                                       [<a href="https://arxiv.org/abs/2106.14855" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Unsupervised Object-Level Representation Learning from Scene Images </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       J. Xie, X. Zhan, Z. Liu, Y. S. Ong, C. C. Loy <br /> 
+                                       Technical report, arXiv:2106.11952, 2021 <br />    
+                                       </span>
+                                       [<a href="https://arxiv.org/abs/2106.11952" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="./project/orl/index.html" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Delving Deep into the Generalization of Vision Transformers under Distribution Shifts </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       C. Zhang, M. Zhang, S. Zhang, D. Jin, Q. Zhou, Z. Cai, H. Zhao, S. Yi, X. Liu, Z. Liu <br /> 
+                                       Technical report, arXiv:2106.07617, 2021 <br />    
+                                       </span>
+                                       [<a href="https://arxiv.org/abs/2106.07617" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://github.com/Phoenix1153/ViT_OOD_generalization" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Optimization Variance: Exploring Generalization Properties of DNNs </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       X. Zhang, D. Wu, H. Xiong, B. Dai <br /> 
+                                       Technical report, arXiv:2106.01714, 2021 <br />    
+                                       </span>
+                                       [<a href="https://arxiv.org/abs/2106.01714" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Semi-Supervised Domain Generalization with Stochastic StyleMatch </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       K. Zhou, C. C. Loy, Z. Liu <br /> 
+                                       Technical report, arXiv:2106.00592, 2021 <br />    
+                                       </span>
+                                       [<a href="https://arxiv.org/abs/2106.00592" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://github.com/KaiyangZhou/ssdg-benchmark" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Revisiting Skeleton-based Action Recognition </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       H. Duan, Y. Zhao, K. Chen, D. Shao, D. Lin, B. Dai <br /> 
+                                       Technical report, arXiv:2104.13586, 2021 <br />    
+                                       </span>
+                                       [<a href="https://arxiv.org/abs/2104.13586" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">BasicVSR++: Improving Video Super-Resolution with Enhanced Propagation and Alignment </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       K. C. K. Chan, S. Zhou, X. Xu, C. C. Loy <br /> 
+                                       Technical report, arXiv:2104.13371, 2021 <br />    
+                                       </span>
+                                       [<a href="https://arxiv.org/abs/2104.13371" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://ckkelvinchan.github.io/projects/BasicVSR++/" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>  
+                                    <li>
+                                       <span class="text-primary">Low-Light Image and Video Enhancement Using Deep Learning: A Survey </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       C. Li, C. Guo, L. Han, J. Jiang, M. Cheng, J. Gu, C. C. Loy <br /> 
+                                       Technical report, arXiv:2104.10729, 2021 <br />    
+                                       </span>
+                                       [<a href="https://arxiv.org/abs/2104.10729" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://github.com/Li-Chongyi/Lighting-the-Darkness-in-the-Deep-Learning-Era-Open" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Domain Generalization in Vision: A Survey </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       K. Zhou, Z. Liu, Y. Qiao, T. Xiang, C. C. Loy <br /> 
+                                       Technical report, arXiv:2103.02503, 2021 <br />    
+                                       </span>
+                                       [<a href="https://arxiv.org/abs/2103.02503" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Network Pruning via Resource Reallocation </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       Y. Hou, Z. Ma, C. Liu, Z. Wang, C. C. Loy <br /> 
+                                       Technical report, arXiv:2103.01847, 2021 <br />    
+                                       </span>
+                                       [<a href="https://arxiv.org/abs/2103.01847" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                    </li>                                                
+                                </ol>
+
+                                <span id="2020"></span>
+                            </div>
+
+                            <div class="mb-8">
+                                <h2 class="mb-4 text-uppercase">2020</h2>
+
+                                <h4 class="mb-4 text-uppercase">Journal</h4>
+                                <ol>
+                                    <li>
+                                       <span class="text-primary">A Lightweight Optical Flow CNN - Revisiting Data Fidelity and Regularization</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       T.-W. Hui, X. Tang, C. C. Loy  <br /> 
+                                       IEEE Transactions on Pattern Analysis and Machine Intelligence, 2020 <strong>(TPAMI)</strong><br />    
+                                       </span>
+                                       [<a href="https://doi.org/10.1109/TPAMI.2020.2976928" target="_blank"><span class="text-muted">DOI</span></a>]
+                                       [<a href="https://arxiv.org/abs/1903.07414" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://github.com/twhui/LiteFlowNet2" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li> 
+                                    <li>
+                                       <span class="text-primary">High-Quality Video Generation from Static Structural Annotations</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       L. Sheng, J. Pan, J. Guo, J. Shao, C. C. Loy   <br /> 
+                                       International Journal of Computer Vision, 2020 <strong>(IJCV)</strong><br />    
+                                       </span>
+                                       [<a href="https://doi.org/10.1007/s11263-020-01334-x" target="_blank"><span class="text-muted">DOI</span></a>]
+                                    </li>                                     
+                                </ol>
+
+                                <h4 class="mb-4 text-uppercase">Conference</h4>
+                                <ol>
+                                   <li>
+                                       <span class="text-primary">Cross-Scale Internal Graph Neural Network for Image Super-Resolution </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       S. Zhou, J. Zhang, W. Zuo, C. C. Loy  <br /> 
+                                       in Proceedings of Neural Information Processing Systems, 2020 <strong>(NeurIPS)</strong> <br />    
+                                       </span>
+                                       [<a href="https://proceedings.neurips.cc/paper/2020/file/23ad3e314e2a2b43b4c720507cec0723-Paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2006.16673" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://papers.nips.cc/paper/2020/file/23ad3e314e2a2b43b4c720507cec0723-Supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="https://github.com/sczhou/IGNN" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Exploiting Deep Generative Prior for Versatile Image Restoration and Manipulation </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       X. Pan, X. Zhan, B. Dai, D. Lin, C. C. Loy, P. Luo  <br /> 
+                                       European Conference on Computer Vision, 2020 <strong>(ECCV, Oral)</strong><br />    
+                                       </span>
+                                       [<a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123470256.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2003.13659" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123470256-supp.zip.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="https://github.com/XingangPan/deep-generative-prior" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">LiteFlowNet3: Resolving Correspondence Ambiguity for More Accurate Optical Flow Estimation</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       T.-W. Hui, C. C. Loy  <br /> 
+                                       European Conference on Computer Vision, 2020 <strong>(ECCV)</strong><br />  
+                                       </span>
+                                       [<a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650171.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2007.09319" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650171-supp.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="https://github.com/twhui/LiteFlowNet3" target="_blank"><span class="text-muted">Project Page</span>]</a></a>
+                                    </li> 
+                                    <li>
+                                       <span class="text-primary">MEAD: A Large-scale Audio-visual Dataset for Emotional Talking Face Generation</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       K. Wang, Q. Wu, L. Song, Z. Yang, W. Wu, C. Qian, R. He, Y. Qiao, C. C. Loy  <br /> 
+                                       European Conference on Computer Vision, 2020 <strong>(ECCV)</strong><br />  
+                                       </span>
+                                       [<a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123660698.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123660698-supp.zip" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="https://wywu.github.io/projects/MEAD/MEAD.html" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">TSIT: A Simple and Versatile Framework for Image-to-Image Translation</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       L. Jiang, C. Zhang, M. Huang, C. Liu, J. Shi, C. C. Loy  <br /> 
+                                       European Conference on Computer Vision, 2020 <strong>(ECCV, Spotlight)</strong><br />  
+                                       </span>
+                                       [<a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123480205.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2007.12072" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123480205-supp.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="https://github.com/EndlessSora/TSIT" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li> 
+                                    <li>
+                                       <span class="text-primary">Side-Aware Boundary Localization for More Precise Object Detection</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       J. Wang, W. Zhang, Y. Cao, K. Chen, J. Pang, T. Gong, J. Shi, C. C. Loy, D. Lin  <br /> 
+                                       European Conference on Computer Vision, 2020 <strong>(ECCV)</strong><br />  
+                                       </span>
+                                       [<a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123490392.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/1912.04260" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123490392-supp.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">RGB-D Salient Object Detection with Cross-Modality Modulation and Selection</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       C. Li, R. Cong, Y. Piao, Q. Xu, C. C. Loy  <br /> 
+                                       European Conference on Computer Vision, 2020 <strong>(ECCV)</strong><br />  
+                                       </span>
+                                       [<a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123530222.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2007.07051" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123530222-supp.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="https://li-chongyi.github.io/Proj_ECCV20" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">MessyTable: Instance Association in Multiple Camera Views</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       Z. Cai, J. Zhang, D. Ren, C. Yu, H. Zhao, S. Yi, C. K. Yeo, C. C. Loy  <br /> 
+                                       European Conference on Computer Vision, 2020 <strong>(ECCV)</strong><br />  
+                                       </span>
+                                       [<a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123560001.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2007.14878" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123560001-supp.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="https://caizhongang.github.io/projects/MessyTable/" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Knowledge Distillation Meets Self-Supervision </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       G. Xu, Z. Liu, X. Li, C. C. Loy  <br /> 
+                                       European Conference on Computer Vision, 2020 <strong>(ECCV)</strong><br />    
+                                       </span>
+                                       [<a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123540562.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2006.07114" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123540562-supp.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="https://github.com/xuguodong03/SSKD" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>                                    
+                                    <li>
+                                       <span class="text-primary">Zero-Reference Deep Curve Estimation for Low-Light Image Enhancement </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       C. Guo, C. Li, J. Guo, C. C. Loy, J. Hou, S. Kwong, R. Cong  <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2020 <strong>(CVPR)</strong> <br />    
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Guo_Zero-Reference_Deep_Curve_Estimation_for_Low-Light_Image_Enhancement_CVPR_2020_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2001.06826" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://openaccess.thecvf.com/content_CVPR_2020/supplemental/Guo_Zero-Reference_Deep_Curve_CVPR_2020_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="https://li-chongyi.github.io/Proj_Zero-DCE.html" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li> 
+                                    <li>
+                                       <span class="text-primary">Self-Supervised Scene De-occlusion </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       X. Zhan, X. Pan, B. Dai, Z. Liu, D. Lin, C. C. Loy  <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2020 <strong>(CVPR, Oral)</strong> <br />    
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Zhan_Self-Supervised_Scene_De-Occlusion_CVPR_2020_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2004.02788" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://openaccess.thecvf.com/content_CVPR_2020/supplemental/Zhan_Self-Supervised_Scene_De-Occlusion_CVPR_2020_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="https://xiaohangzhan.github.io/projects/deocclusion/" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                       [<a href="https://www.youtube.com/watch?v=xIHCyyaB5gU&feature=emb_title" target="_blank"><span class="text-muted">YouTube</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">TransMoMo: Invariance-Driven Unsupervised Video Motion Retargeting </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       Z. Yang, W. Zhu, W. Wu, C. Qian, Q. Zhou, B. Zhou, C. C. Loy  <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2020 <strong>(CVPR)</strong> <br />    
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Yang_TransMoMo_Invariance-Driven_Unsupervised_Video_Motion_Retargeting_CVPR_2020_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2003.14401" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://openaccess.thecvf.com/content_CVPR_2020/supplemental/Yang_TransMoMo_Invariance-Driven_Unsupervised_CVPR_2020_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="https://yzhq97.github.io/transmomo/" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Prime Sample Attention in Object Detection</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       Y. Cao, K. Chen, C. C. Loy, D. Lin  <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2020 <strong>(CVPR)</strong> <br />    
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Cao_Prime_Sample_Attention_in_Object_Detection_CVPR_2020_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/1904.04821" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://openaccess.thecvf.com/content_CVPR_2020/supplemental/Cao_Prime_Sample_Attention_CVPR_2020_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="https://github.com/open-mmlab/mmdetection" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Online Deep Clustering for Unsupervised Representation Learning </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       X. Zhan, J. Xie, Z. Liu, Y. S. Ong, C. C. Loy  <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2020 <strong>(CVPR)</strong> <br />    
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Zhan_Online_Deep_Clustering_for_Unsupervised_Representation_Learning_CVPR_2020_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2006.10645" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://github.com/open-mmlab/OpenSelfSup" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Inter-Region Affinity Distillation for Road Marking Segmentation </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       Y. Hou, Z. Ma, C. Liu, T.-W. Hui, C. C. Loy  <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2020 <strong>(CVPR)</strong> <br />    
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Hou_Inter-Region_Affinity_Distillation_for_Road_Marking_Segmentation_CVPR_2020_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2004.05304" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://openaccess.thecvf.com/content_CVPR_2020/supplemental/Hou_Inter-Region_Affinity_Distillation_CVPR_2020_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="https://github.com/cardwing/Codes-for-IntRA-KD" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">EcoNAS: Finding Proxies for Economical Neural Architecture Search </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       D. Zhou, X. Zhou, W. Zhang, C. C. Loy, S. Yi, X. Zhang, W. Ouyang  <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2020 <strong>(CVPR)</strong> <br />    
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Zhou_EcoNAS_Finding_Proxies_for_Economical_Neural_Architecture_Search_CVPR_2020_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2001.01233" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://openaccess.thecvf.com/content_CVPR_2020/supplemental/Zhou_EcoNAS_Finding_Proxies_CVPR_2020_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                    </li> 
+                                    <li>
+                                       <span class="text-primary">DeeperForensics-1.0: A Large-Scale Dataset for Real-World Face Forgery Detection </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       L. Jiang, R. Li, W. Wu, C. Qian, C. C. Loy  <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2020 <strong>(CVPR)</strong> <br />    
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Jiang_DeeperForensics-1.0_A_Large-Scale_Dataset_for_Real-World_Face_Forgery_Detection_CVPR_2020_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2001.03024" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://openaccess.thecvf.com/content_CVPR_2020/supplemental/Jiang_DeeperForensics-1.0_A_Large-Scale_CVPR_2020_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="https://liming-jiang.com/projects/DrF1/DrF1.html" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>   
+                                    <li>
+                                       <span class="text-primary">Learning to Cluster Faces via Confidence and Connectivity Estimation</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       L. Yang, D. Chen, X. Zhan, R. Zhao, C. C. Loy, D. Lin  <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2020 <strong>(CVPR)</strong> <br />    
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Yang_Learning_to_Cluster_Faces_via_Confidence_and_Connectivity_Estimation_CVPR_2020_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2004.00445" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://openaccess.thecvf.com/content_CVPR_2020/supplemental/Yang_Learning_to_Cluster_CVPR_2020_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="https://github.com/yl-1993/learn-to-cluster" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>                                                                                   
+                                    <li>
+                                       <span class="text-primary">Real or Not Real, That is the Question </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       Y. Xiangli, Y. Deng, B. Dai, C. C. Loy, D. Lin  <br /> 
+                                       International Conference on Learning Representations, 2020 <strong>(ICLR, Spotlight)</strong><br />    
+                                       </span>
+                                       [<a href="https://openreview.net/pdf?id=B1lPaCNtPB" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://github.com/kam1107/RealnessGAN" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>                                                   
+                                </ol>
+
+                                <h4 class="mb-4 text-uppercase">Technical Report</h4>
+                                <ol>
+                                    <li>
+                                       <span class="text-primary">Chasing the Tail in Monocular 3D Human Reconstruction with Prototype Memory </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       Y. Rong, Z. Liu, C. C. Loy  <br /> 
+                                       Technical report, arXiv:2012.14739, 2020 <br />    
+                                       </span>
+                                       [<a href="https://arxiv.org/abs/2012.14739" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Exploring Data Augmentation for Multi-Modality 3D Object Detection </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       W. Zhang, Z. Wang, C. C. Loy  <br /> 
+                                       Technical report, arXiv:2012.12741, 2020 <br />    
+                                       </span>
+                                       [<a href="https://arxiv.org/abs/2012.12741" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://github.com/open-mmlab/mmdetection3d" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Computation-Efficient Knowledge Distillation via Uncertainty-Aware Mixup </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       G. Xu, Z. Liu, C. C. Loy  <br /> 
+                                       Technical report, arXiv:2012.05217, 2020 <br />    
+                                       </span>
+                                       [<a href="https://arxiv.org/abs/2012.09413" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://github.com/xuguodong03/UNIXKD" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Flexible Piecewise Curves Estimation for Photo Enhancement </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       C. Li, C. Guo, Q. Ai, S. Zhou, C. C. Loy <br /> 
+                                       Technical report, arXiv:2010.13412, 2020 <br />    
+                                       </span>
+                                       [<a href="https://arxiv.org/abs/2010.13412" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Texture Memory-Augmented Deep Patch-Based Image Inpainting </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       R. Xu, M. Guo, J. Wang, X. Li, B. Zhou, C. C. Loy <br /> 
+                                       Technical report, arXiv:2009.13240, 2020 <br />    
+                                       </span>
+                                       [<a href="https://arxiv.org/abs/2009.13240" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Delving into Inter-Image Invariance for Unsupervised Visual Representations </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       J. Xie, X. Zhan, Z. Liu, Y. S. Ong, C. C. Loy  <br /> 
+                                       Technical report, arXiv:2008.11702, 2020 <br />    
+                                       </span>
+                                       [<a href="https://arxiv.org/abs/2008.11702" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://github.com/open-mmlab/OpenSelfSup" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Feature Pyramid Grids </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       K. Chen, Y. Cao, C. C. Loy, D. Lin, C. Feichtenhofer  <br /> 
+                                       Technical report, arXiv:2004.03580, 2020 <br />    
+                                       </span>
+                                       [<a href="https://arxiv.org/abs/2004.03580" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Residual Knowledge Distillation </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       M. Gao, Y. Shen, Q. Li, C. C. Loy  <br /> 
+                                       Technical report, arXiv:2002.09168, 2020 <br />    
+                                       </span>
+                                       [<a href="https://arxiv.org/abs/2002.09168" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                    </li> 
+                                    <li>
+                                       <span class="text-primary">Everybody’s Talkin’: Let Me Talk as You Want </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       L. Song, W. Wu, C. Qian, R. He, C. C. Loy  <br /> 
+                                       Technical report, arXiv:2001.05201, 2020 <br />    
+                                       </span>
+                                       [<a href="https://arxiv.org/abs/2001.05201" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://wywu.github.io/projects/EBT/EBT.html" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                </ol>
+
+                                <span id="2019"></span>
+                            </div>
+
+                            <div class="mb-8">
+                                <h2 class="mb-4 text-uppercase">2019</h2>
+
+                                <h4 class="mb-4 text-uppercase">Journal</h4>                                
+                                <ol>
+                                    <li>
+                                       <span class="text-primary">Deep Imbalanced Learning for Face Recognition and Attribute Prediction</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       C. Huang, Y. Li, C. C. Loy, X. Tang  <br /> 
+                                       IEEE Transactions on Pattern Analysis and Machine Intelligence, 2019 <strong>(TPAMI)</strong> <br /> 
+                                       </span>
+                                       [<a href="https://doi.org/10.1109/TPAMI.2019.2914680" target="_blank"><span class="text-muted">DOI</span></a>]  
+                                       [<a href="https://arxiv.org/abs/1806.00194" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                    </li>
+                                </ol>
+
+                                <h4 class="mb-4 text-uppercase">Conference</h4>
+                                <ol>
+                                    <li>
+                                       <span class="text-primary">CARAFE: Content-Aware ReAssembly of FEatures</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       J. Wang, K. Chen, R. Xu, Z. Liu, C. C. Loy, D. Lin  <br /> 
+                                       in Proceedings of International Conference on Computer Vision, 2019 <strong>(ICCV, Oral)</strong> <br />  
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Wang_CARAFE_Content-Aware_ReAssembly_of_FEatures_ICCV_2019_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/1905.02188" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://openaccess.thecvf.com/content_ICCV_2019/supplemental/Wang_CARAFE_Content-Aware_ReAssembly_ICCV_2019_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Robust Multi-Modality Multi-Object Tracking</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       W. Zhang, H. Zhou, S. Sun, Z. Wang, J. Shi, C. C. Loy  <br /> 
+                                       in Proceedings of International Conference on Computer Vision, 2019 <strong>(ICCV)</strong> <br />
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Zhang_Robust_Multi-Modality_Multi-Object_Tracking_ICCV_2019_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/1909.03850" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://github.com/ZwwWayne/mmMOT" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li> 
+                                    <li>
+                                       <span class="text-primary">Delving Deep into Hybrid Annotations for 3D Human Recovery in the Wild</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       Y. Rong, Z. Liu, C. Li, K. Cao, C. C. Loy  <br /> 
+                                       in Proceedings of International Conference on Computer Vision, 2019 <strong>(ICCV)</strong> <br />
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Rong_Delving_Deep_Into_Hybrid_Annotations_for_3D_Human_Recovery_in_ICCV_2019_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/1908.06442" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="http://personal.ie.cuhk.edu.hk/~ccloy/files/iccv_2019_delving_supp.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="https://penincillin.github.io/dct_iccv2019" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Learning Lightweight Lane Detection CNNs by Self Attention Distillation</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       Y. Hou, Z. Ma, C, Liu, C. C. Loy  <br /> 
+                                       in Proceedings of International Conference on Computer Vision, 2019 <strong>(ICCV)</strong> <br />
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content_ICCV_2019/papers/Hou_Learning_Lightweight_Lane_Detection_CNNs_by_Self_Attention_Distillation_ICCV_2019_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/1908.00821" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://openaccess.thecvf.com/content_ICCV_2019/supplemental/Hou_Learning_Lightweight_Lane_ICCV_2019_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="https://github.com/cardwing/Codes-for-Lane-Detection" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>                                    
+                                    <li>
+                                       <span class="text-primary">Hybrid Task Cascade for Instance Segmentation</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       K. Chen, J. Pang, J. Wang, Y. Xiong, X. Li, S. Sun, W. Feng, Z. Liu, J. Shi, W. Ouyang, C. C. Loy, D. Lin  <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2019 <strong>(CVPR)</strong><br />    
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Chen_Hybrid_Task_Cascade_for_Instance_Segmentation_CVPR_2019_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/1901.07518" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="http://mmlab.ie.cuhk.edu.hk/projects/HybridTaskCascade/" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Region Proposal by Guided Anchoring</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       J. Wang, K. Chen, S. Yang, C. C. Loy, D. Lin  <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2019 <strong>(CVPR)</strong><br />    
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Wang_Region_Proposal_by_Guided_Anchoring_CVPR_2019_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/1901.03278" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://github.com/open-mmlab/mmdetection/blob/master/configs/guided_anchoring/README.md" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>                                    
+                                    <li>
+                                       <span class="text-primary">Deep Network Interpolation for Continuous Imagery Effect Transition</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       X. Wang, K. Yu, C. Dong, X. Tang, C. C. Loy  <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2019 <strong>(CVPR)</strong><br />    
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Wang_Deep_Network_Interpolation_for_Continuous_Imagery_Effect_Transition_CVPR_2019_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/1811.10515" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://xinntao.github.io/projects/DNI" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">TransGaGa: Geometry-Aware Unsupervised Image-to-Image Translation</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       W. Wu, K. Cao, C. Li, C. Qian, C. C. Loy  <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2019 <strong>(CVPR)</strong><br />    
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Wu_TransGaGa_Geometry-Aware_Unsupervised_Image-To-Image_Translation_CVPR_2019_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/1904.09571" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://openaccess.thecvf.com/content_CVPR_2019/supplemental/Wu_TransGaGa_Geometry-Aware_Unsupervised_CVPR_2019_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="https://wywu.github.io/projects/TGaGa/TGaGa.html" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Deep Flow-Guided Video Inpainting</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       R. Xu, X. Li, B. Zhou, C. C. Loy  <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2019 <strong>(CVPR)</strong><br />    
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Xu_Deep_Flow-Guided_Video_Inpainting_CVPR_2019_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/1905.02884" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://nbei.github.io/video-inpainting.html" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Dense Intrinsic Appearance Flow for Human Pose Transfer</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       Y. Li, C. Huang, C. C. Loy  <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2019 <strong>(CVPR)</strong><br />    
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Li_Dense_Intrinsic_Appearance_Flow_for_Human_Pose_Transfer_CVPR_2019_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://openaccess.thecvf.com/content_CVPR_2019/supplemental/Li_Dense_Intrinsic_Appearance_CVPR_2019_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="http://mmlab.ie.cuhk.edu.hk/projects/pose-transfer/" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Self-Supervised Learning via Conditional Motion Propagation</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       X. Zhan, X. Pan, Z. Liu, D. Lin, C. C. Loy  <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2019 <strong>(CVPR)</strong><br />    
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Zhan_Self-Supervised_Learning_via_Conditional_Motion_Propagation_CVPR_2019_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/1903.11412" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="http://mmlab.ie.cuhk.edu.hk/projects/CMP/" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li> 
+                                    <li>
+                                       <span class="text-primary">Learning a Unified Classifier Incrementally via Rebalancing</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       S. Hou, X. Pan, C. C. Loy, Z. Wang, D. Lin  <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2019 <strong>(CVPR)</strong><br />    
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Hou_Learning_a_Unified_Classifier_Incrementally_via_Rebalancing_CVPR_2019_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="http://mmlab.ie.cuhk.edu.hk/projects/rebalanced-learning/" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Learning to Cluster Faces on an Affinity Graph</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       L. Yang, X. Zhan, D. Chen, J. Yan, C. C. Loy, D. Lin  <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2019 <strong>(CVPR, Oral)</strong><br />    
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Yang_Learning_to_Cluster_Faces_on_an_Affinity_Graph_CVPR_2019_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/1904.02749" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="http://yanglei.me/project/ltc/" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>                                    
+                                    <li>
+                                       <span class="text-primary">EDVR: Video Restoration with Enhanced Deformable Convolutional Networks</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       X. Wang, C. K. Chan, K. Yu, C. Dong, X. Tang, C. C. Loy  <br /> 
+                                       in Workshop Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, NTIRE, 2019 <strong>(CVPRW)</strong><br />    
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content_CVPRW_2019/papers/NTIRE/Wang_EDVR_Video_Restoration_With_Enhanced_Deformable_Convolutional_Networks_CVPRW_2019_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/1905.02716" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://xinntao.github.io/projects/EDVR" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>                                    
+                                    <li>
+                                       <span class="text-primary">Disentangling Content and Style via Unsupervised Geometry Distillation</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       W. Wu, K. Cao, C. Li, C. Qian, C. C. Loy  <br /> 
+                                       International Conference on Learning Representations Workshop, 2019 <strong>(ICLRW)</strong> <br />    
+                                       </span>
+                                       [<a href="https://openreview.net/pdf?id=SkgsQ8LK_E" target="_blank"><span class="text-muted">PDF</span></a>]
+                                    </li>                                      
+                                    <li>
+                                       <span class="text-primary">One-shot Face Reenactment</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       Y.  Zhang, S. Zhang, Y. He, C. Li, C. C. Loy, Z. Liu  <br /> 
+                                       in Proceedings of British Machine Vision Conference, 2019 <strong>(BMVC, Spotlight)</strong><br />  
+                                       </span>
+                                       [<a href="http://personal.ie.cuhk.edu.hk/~ccloy/files/bmvc_2019_one.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/1908.03251" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://wywu.github.io/projects/ReenactGAN/OneShotReenact.html" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Instance-level Facial Attributes Transfer with Geometry-aware Flow</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       W. Yin, Z. Liu, C. C. Loy  <br /> 
+                                       in Proceedings of AAAI Conference on Artificial Intelligence, 2019 <strong>(AAAI, Spotlight)</strong><br />  
+                                       </span>
+                                       [<a href="http://personal.ie.cuhk.edu.hk/~ccloy/files/aaai_2019_instance.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/1811.12670" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="http://mmlab.ie.cuhk.edu.hk/projects/attribute-transfer/" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Learning to Steer by Mimicking Features from Heterogeneous Auxiliary Networks</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       Y. Hou, Z. Ma, C. Liu, C. C. Loy  <br /> 
+                                       in Proceedings of AAAI Conference on Artificial Intelligence, 2019 <strong>(AAAI, Oral)</strong><br />  
+                                       </span>
+                                       [<a href="http://personal.ie.cuhk.edu.hk/~ccloy/files/aaai_2019_learning.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/1811.02759" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://cardwing.github.io/projects/FM-Net" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>                                                  
+                                </ol>
+                                <span id="2018"></span>
+                            </div>
+
+                            <div class="mb-8">
+                                <h2 class="mb-4 text-uppercase">2018</h2>
+
+                                <h4 class="mb-4 text-uppercase">Conference</h4>
+                                <ol>
+                                    <li>
+                                       <span class="text-primary">Non-Local Recurrent Network for Image Restoration</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       D. Liu, B. Wen, Y. Fan, C. C. Loy, T. S. Huang  <br /> 
+                                       in Proceedings of Neural Information Processing Systems, 2018 <strong>(NeurIPS)</strong> <br />    
+                                       </span>
+                                       [<a href="https://papers.nips.cc/paper/2018/file/fc49306d97602c8ed1be1dfbf0835ead-Paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/1806.02919" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://github.com/Ding-Liu/NLRN" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">ReenactGAN: Learning to Reenact Faces via Boundary Transfer</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       W. Wu, Y. Zhang, C. Li, C. Qian, C. C. Loy <br /> 
+                                       in Proceedings of European Conference on Computer Vision, 2018 <strong>(ECCV)</strong></strong><br />  
+                                       </span>
+                                       [<a href="https://www.ecva.net/papers/eccv_2018/papers_ECCV/papers/Wayne_Wu_Learning_to_Reenact_ECCV_2018_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/1807.11079" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://wywu.github.io/projects/ReenactGAN/ReenactGAN.html" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                       [<a href="https://www.youtube.com/watch?v=LBAfeKrHMys" target="_blank"><span class="text-muted">YouTube</span></a>]
+                                    </li> 
+                                    <li>
+                                       <span class="text-primary">Video Object Segmentation with Joint Re-identification and Attention-Aware Mask Propagation</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       X. Li, C. C. Loy <br /> 
+                                       in Proceedings of European Conference on Computer Vision, 2018 <strong>(ECCV)</strong></strong><br />  
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content_ECCV_2018/papers/Xiaoxiao_Li_Video_Object_Segmentation_ECCV_2018_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/1803.04242" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                    </li>                                                   
+                                    <li>
+                                       <span class="text-primary">PSANet: Point-wise Spatial Attention Network for Scene Parsing</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       H. Zhao, Y. Zhang, S. Liu, J. Shi, C. C. Loy, D. Lin, J. Jia <br /> 
+                                       in Proceedings of European Conference on Computer Vision, 2018 <strong>(ECCV)</strong></strong><br />  
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content_ECCV_2018/papers/Hengshuang_Zhao_PSANet_Point-wise_Spatial_ECCV_2018_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://hszhao.github.io/projects/psanet/" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Lifelong Learning via Progressive Distillation and Retrospection</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       S. Hou, X. Pan, C. C. Loy, Z. Wang, D. Lin <br /> 
+                                       in Proceedings of European Conference on Computer Vision, 2018 <strong>(ECCV)</strong></strong><br />  
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content_ECCV_2018/papers/Saihui_Hou_Progressive_Lifelong_Learning_ECCV_2018_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="http://mmlab.ie.cuhk.edu.hk/projects/lifelong/" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>   
+                                    <li>
+                                       <span class="text-primary">Consensus-Driven Propagation in Massive Unlabeled Data for Face Recognition</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       X. Zhan, Z. Liu, J. Yan, D. Lin, C. C. Loy <br /> 
+                                       in Proceedings of European Conference on Computer Vision, 2018 <strong>(ECCV)</strong></strong><br />  
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content_ECCV_2018/papers/Xiaohang_Zhan_Consensus-Driven_Propagation_in_ECCV_2018_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/1809.01407" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="http://mmlab.ie.cuhk.edu.hk/projects/CDP/" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">The Devil of Face Recognition is in the Noise</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       F. Wang, L. Chen, C. Li, S. Huang, Y. Chen, C. Qian, C. C. Loy <br /> 
+                                       in Proceedings of European Conference on Computer Vision, 2018 <strong>(ECCV)</strong></strong><br />  
+                                       </span>
+                                       [<a href="https://www.ecva.net/papers/eccv_2018/papers_ECCV/papers/Liren_Chen_The_Devil_of_ECCV_2018_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/1807.11649" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://github.com/fwang91/IMDb-Face" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>  
+                                    <li>
+                                       <span class="text-primary">Zoom-Net: Mining Deep Feature Interactions for Visual Relationship Recognition</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       G. Yin, L. Sheng, B. Liu, N. Yu, X. Wang, J. Shao, C. C. Loy <br /> 
+                                       in Proceedings of European Conference on Computer Vision, 2018 <strong>(ECCV)</strong></strong><br />  
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content_ECCV_2018/papers/Guojun_Yin_Zoom-Net_Mining_Deep_ECCV_2018_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/1807.04979" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                    </li>                                                                      
+                                    <li>
+                                       <span class="text-primary">ESRGAN: Enhanced Super-Resolution Generative Adversarial Networks</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       X. Wang, K. Yu, S. Wu, J. Gu, Y. Liu, C. Dong, C. C. Loy, Y. Qiao, X. Tang <br /> 
+                                       in Workshop Proceedings of European Conference on Computer Vision, 2018 <strong>(ECCVW)</strong></strong><br />  
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content_ECCVW_2018/papers/11133/Wang_ESRGAN_Enhanced_Super-Resolution_Generative_Adversarial_Networks_ECCVW_2018_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/1809.00219" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://github.com/xinntao/ESRGAN" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>                 
+                                </ol>
+
+                                <h4 class="mb-4 text-uppercase">Technical Report</h4>
+                                <ol>
+                                    <li>
+                                       <span class="text-primary">An Embarrassingly Simple Approach for Knowledge Distillation</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       M. Gao, Y. Shen, Q. Li, C. C. Loy, X. Tang  <br /> 
+                                       Technical report, arXiv:1812.01819, 2018<br />  
+                                       </span>
+                                       [<a href="https://arxiv.org/abs/1812.01819" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                    </li>
+                                </ol>
+                            </div>                                                     
+                        </div>                        
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+        </main>
+        <!-- End of Main Content -->
+
+
+        <!-- Footer -->
+        <footer class="footer text-white" style="background-image: url(./assets/img/footer-bg.jpg)">
+            <div class="container d-flex h-100">
+                <div class="row flex-grow-1">
+                    <div class="col-lg-3 pt-3 ext-l bg-secondary text-center text-lg-left">
+                        <div class="d-flex flex-column h-100">
+                            <div class="pt-5 pt-lg-8 pb-4">
+                                <img src="./assets/img/logo-small.png" alt="" width="108" class="mb-4" />
+                                <p class="mb-4 mt-3 fs--1"><br />
+                                Academic Block North <br />
+                                Nanyang Technological University<br />
+                                61 Nanyang Dr, Singapore 637335</p>
+        
+                                <p class="fs--1">
+                                <span class="text-white"><i class="zmdi zmdi-email zmdi-hc-fw mr-1"></i>mmlab-contact at e.ntu.edu.sg</span><br />
+                                <span class="text-white"><i class="zmdi zmdi-twitter zmdi-hc-fw mr-1"></i><a href="https://twitter.com/MMLabNTU" target="_blank" class="text-white">@MMLabNTU</a></span></p>
+                            </div>
+    
+                            <!-- <ul class="mt-4 mt-lg-auto mb-5 mb-lg-0 list-unstyled list-inline">
+                                <li class="mr-3 list-inline-item">
+                                    <a href="https://twitter.com/MMLabNTU" target="_blank">
+                                        <i class="zmdi zmdi-twitter text-white"></i>
+                                    </a>
+                                </li>
+                            </ul> -->
+                        </div>
+                    </div>
+
+                    <div class="col d-flex flex-column mb-2 mt-3 pl-lg-7">
+                        <div class="row pt-5 pt-lg-8 pb-4 pb-lg-6">
+                            <div class="col-6 col-lg-3">
+                                <h6 class="mb-1 mb-lg-4 text-uppercase">Publications</h6>
+                                <ul class="pt-2 mb-5 fw-light list-unstyled">
+                                    <li class="my-1"><a href="./publication_topic.html" class="text-white">By Topic</a></li>
+                                    <li class="my-1"><a href="./publication_year.html" class="text-white">By Year</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-lg-3">
+                                <h6 class="mb-1 mb-lg-4 text-uppercase">About</h6>
+                                <ul class="pt-2 mb-5 fw-light list-unstyled">
+                                    <li class="my-1"><a href="./research.html" class="text-white">Our Research</a></li>
+                                    <li class="my-1"><a href="./team.html" class="text-white">Team</a></li>
+                                    <li class="my-1"><a href="./careers.html" class="text-white">Join Us</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-lg-3">
+                                <h6 class="mb-1 mb-lg-4 text-uppercase">Open Source</h6>
+                                <ul class="pt-2 mb-5 fw-light list-unstyled">
+                                    <li class="my-1"><a href="https://openmmlab.com/" target="_blank" class="text-white">OpenMMLab</a></li>
+                                    <li class="my-1"><a href="./downloads.html" class="text-white">Code and Datasets</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mt-auto d-flex justify-content-between">
+                            <span class="fs--3 fs-lg--2">&copy; MMLab@NTU, 2021</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer -->
+
+        <!-- Top Button -->
+        <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+        <!-- End of Top Button -->
+
+
+        <!-- Core Javascripts -->
+        <script src="./assets/vendor/jquery/dist/jquery.min.js"></script>
+        <script src="./assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+        <script src="./assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="./assets/vendor/typed.js/lib/typed.min.js"></script>
+
+        <!-- Vendor Javascripts -->
+        <script src="./assets/vendor/rellax/rellax.min.js"></script>
+        <script src="./assets/vendor/sticky-kit/dist/sticky-kit.min.js"></script>
+        <script src="./assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+        <script src="./assets/vendor/isotope-layout/dist/isotope.pkgd.min.js"></script>
+        <script src="./assets/vendor/isotope-packery/packery-mode.pkgd.min.js"></script>
+        <script src="./assets/vendor/aos/dist/aos.js"></script>
+
+        <!-- Theme Javascripts -->
+        <script src="./assets/js/theme.js"></script>
+        <script src="./assets/js/top.js"></script>
+    </body>
+</html>

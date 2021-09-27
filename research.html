@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <meta name="keywords" content="Chen Change Loy, Ziwei Liu, Bo Dai, Yixin Cao, Super-resolution, Deep Learning, Computer Vision, Convolutional Neural Network, Enhancement, Inpainting, Knowledge Distillation, Restoration, GAN, Generative Adversarial Networks, Generation, Manipulation, Editing, Object Detection, Segmentation, Recognition, Continual Learning, Domain Generalization, Self-Supervised Learning, Singapore, NTU, Nanyang Technological University, SCSE" />
+        
+        <!-- Page Title -->
+        <title>Research | MMLab@NTU</title>
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicons/favicon-16x16.png">
+        <link rel="manifest" href="./assets/img/favicons/site.webmanifest">
+        <link rel="mask-icon" href="./assets/img/favicons/safari-pinned-tab.svg" color="#f23838">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- Vendor Stylesheets -->
+        <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700%7CRoboto:300,400,700" rel="stylesheet">
+        <link href="./assets/vendor/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <!-- <link href="./assets/vendor/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet"> -->
+        <link href="./assets/vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.css" rel="stylesheet">
+        <link href="./assets/vendor/aos/dist/aos.css" rel="stylesheet">
+
+        <!-- Theme Stylesheets -->
+        <link href="./assets/css/theme.css" rel="stylesheet">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22940424-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-22940424-1');
+        </script>
+    </head>
+
+    <body>
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="spinner">
+                <div class="circles"></div>
+            </div>
+        </div>
+        <!-- End of Preloader -->
+
+
+        <!-- Header -->
+        <header class="spyre-navbar navbar navbar-expand-lg bg-secondary navbar-dark fixed-top align-items-center" data-transparent data-text-color="#ffffff">
+            <div class="container">
+                <a class="navbar-brand mr-lg-5 mr-xl-7" href="./index.html">
+                    <img src="./assets/img/logo.png" class="d-none d-lg-block" alt="MMLab" width="183" />
+                    <img src="./assets/img/logo.png" class="d-block d-lg-none" alt="MMLab" width="150" />
+                </a>
+
+                <!-— Desktop Menu -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="pl-2 nav-item navbar-text"><a href="./index.html" class="nav-link text-400">Home</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="./team.html" class="nav-link text-400">Team</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="./research.html" class="nav-link">Research</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="./publication_topic.html" class="nav-link text-400">Publications</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="./downloads.html" class="nav-link text-400">Code | Datasets</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="./careers.html" class="nav-link text-400">Join Us</a></li>
+                    </ul>
+                </div>
+                <!-— End of Desktop Menu -->
+
+                <div class="menu-toggle d-block d-lg-none">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="cross">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spyrenav Overlay -->
+            <div class="spyre-navbar-overlay overlay-slide">
+                <div class="container">
+                    <div class="row">
+                        <div class="spyre-navbar-nav-container col-md-6 col-lg-5 col-xl-4 bg-white ext-l">
+                            <nav class="spyre-navbar-nav">
+                                <ul class="spyre-nav">
+                                    <li class="spyre-nav-item"><a href="./index.html" class="spyre-nav-link">Home</a></li>
+                                    <li class="spyre-nav-item"><a href="./research.html" class="spyre-nav-link">Our Research</a></li>
+                                    <li class="spyre-nav-item"><a href="./team.html" class="spyre-nav-link">Team</a></li>
+                                    <li class="spyre-nav-item dropdown">
+                                        <a href="#" class="spyre-nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Publications</a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li class="dropdown-menu-item"><a href="./publication_topic.html" class="dropdown-menu-link">By Topic</a></li>
+                                            <li class="dropdown-menu-item"><a href="./publication_year.html" class="dropdown-menu-link">By Year</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="spyre-nav-item"><a href="./downloads.html" class="spyre-nav-link">Code and Datasets</a></li>
+                                    <li class="spyre-nav-item"><a href="./careers.html" class="spyre-nav-link">Join Us</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+        
+                        <div class="col-lg-7 col-xl-8 d-none d-md-block">
+                            <div class="d-flex flex-column h-100">
+                                <div class="d-flex h-100">
+                                    <div class="align-self-center">
+                                        <div class="text-uppercase"
+                                            data-background-text="computer vision"
+                                            data-color="#7079a2"
+                                            data-opacity="0.02"
+                                            data-font-size="85px"
+                                            data-font-weight="500"
+                                            data-offset-x="-5%"
+                                            data-letter-spacing="5px"
+                                        ></div>
+                                        <div class="text-uppercase"
+                                            data-background-text="mmlab"
+                                            data-color="#7079a2"
+                                            data-opacity="0.04"
+                                            data-font-size="175px"
+                                            data-font-weight="500"
+                                            data-offset-x="29%"
+                                            data-padding="7vh 0 2vh 0"
+                                            data-letter-spacing="5px"
+                                        ></div>
+                                        <div class="text-uppercase"
+                                            data-background-text="deep learning"
+                                            data-color="#7079a2"
+                                            data-opacity="0.03"
+                                            data-font-size="140px"
+                                            data-font-weight="500"
+                                            data-offset-x="15%"
+                                            data-letter-spacing="5px"
+                                        ></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-auto">
+                                    <ul class="nav flex-nowrap float-right">
+                                        <li class="nav-item">
+                                            <a class="nav-link px-2" href="https://twitter.com/MMLabNTU" target="_blank">
+                                                <i class="zmdi zmdi-twitter text-white"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Spyrenav Overlay -->
+        </header>
+        <!-- End of Header -->
+
+
+        <!-- Main Content -->
+        <main class="main minh-100vh">
+
+            <!-- Section -->
+            <section class="py-0 overflow-hidden text-center">
+                <div class="bg-container overlay parallax" data-rellax-percentage="0.5" style="background-image: url(./assets/img/backgrounds/bg-11.jpg)"></div>
+                <div class="container">
+                    <div class="row h-100vh align-items-center">
+                        <div class="col">
+                            <h1 class="text-white text-uppercase fs-4 fs-lg-6">Our Research</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+            <!-- Section -->
+            <section class="pb-0">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-6 mb-7 mb-lg-0">
+                            <h3 class="my-0 fs-1 fw-medium text-secondary text-uppercase text-center text-lg-left">Research</h3>
+                            <h2 class="mb-5 fw-medium text-primary text-center text-lg-left">MMLab@NTU</h2>
+                            <p class="mb-4 text-justify">Members in MMLab@NTU conduct research primarily in low-level vision, image and video understanding, creative content creation, 3D scene understanding and reconstruction. 
+                            </p>
+                            <div class="text-center text-lg-left">
+                                <a href="./publication_topic.html" class="btn btn-primary btn-lg mt-4 px-6">Publication<i class="zmdi zmdi-link ml-3"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <img src="./assets/img/images/img-01.jpg" class="img-fluid w-100 mb-4 mb-lg-0" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+            <!-- Section -->
+            <section>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-6 mb-5">
+                                    <div class="d-flex flex-row" data-aos="fade-right">
+                                        <div>
+                                            <i class="zmdi zmdi-compare zmdi-hc-fw zmdi-hc-3x mr-1"></i>
+                                        </div>
+                                        <div class="flex-shrink-1">
+                                            <h2 class="mb-4 fs-1 fw-medium text-uppercase">Super-Resolution</h2>
+                                            <p class="fs--1 text-justify">Our team is the first to introduce the use of deep neural networks to directly predict super-resolved images. Our journal paper on image super-resolution was selected as the `<a href="http://ieeexplore.ieee.org/xpl/topAccessedArticles.jsp?punumber=34" target="_blank">Most Popular Article</a>' by IEEE Transactions on Pattern Analysis and Machine Intelligence in 2016. It remains as one of the top 10 articles to date. Popular image and video super-resolution methods developed by our team include <a href="https://arxiv.org/abs/1501.00092" target="_blank">SRCNN</a>, <a href="https://arxiv.org/abs/1809.00219" target="_blank">ESRGAN</a>, <a href="https://arxiv.org/abs/1905.02716" target="_blank">EDVR</a>, <a href="https://arxiv.org/abs/2012.00739" target="_blank">GLEAN</a> and <a href="https://arxiv.org/abs/2012.02181" target="_blank">BasicVSR</a>.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-5">
+                                    <div class="d-flex flex-row" data-aos="fade-left">
+                                        <div>
+                                            <i class="zmdi zmdi-brush zmdi-hc-fw zmdi-hc-3x mr-1"></i>
+                                        </div>
+                                        <div class="flex-shrink-1">
+                                            <h2 class="mb-4 fs-1 fw-medium text-uppercase">Content Editing and Generation</h2>
+                                            <p class="fs--1 text-justify">We research new methods for generating high-resolution, realistic and novel contents in images and videos. We are also interested in investigating fundamental concepts in generative models. Some of our works include <a href="https://xiaohangzhan.github.io/projects/deocclusion/" target="_blank">scene deocclusion</a>, <a href="https://nbei.github.io/video-inpainting.html" target="_blank">video inpainting</a>, <a href="https://nbei.github.io/gan-pos-encoding.html" target="_blank">image generation</a>, and <a href="https://github.com/XingangPan/deep-generative-prior" target="_blank">image manipulation</a>.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-5">
+                                    <div class="d-flex flex-row" data-aos="fade-right">
+                                        <div>
+                                            <i class="zmdi zmdi-collection-image zmdi-hc-fw zmdi-hc-3x mr-1"></i>
+                                        </div>
+                                        <div class="flex-shrink-1">
+                                            <h2 class="mb-4 fs-1 fw-medium text-uppercase">Image and Video Understanding</h2>
+                                            <p class="fs--1 text-justify">We explore effective and efficient methods to detect, segment and recognize objects in complex scenes. We were the champion in COCO 2019 Object Detection Challenge 2019, and Open Images Challenge 2019.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-5">
+                                    <div class="d-flex flex-row" data-aos="fade-left">
+                                        <div>
+                                            <i class="zmdi zmdi-3d-rotation zmdi-hc-fw zmdi-hc-3x mr-1"></i>
+                                        </div>
+                                        <div class="flex-shrink-1">
+                                            <h2 class="mb-4 fs-1 fw-medium text-uppercase">3D Scene Understanding</h2>
+                                            <p class="fs--1 text-justify">Our team has been working on various tasks related to 3D reconstruction and perception, e.g, 3D shape generation and 3D human recovery. Check out our recent work on <a href="https://paul007pl.github.io/projects/VRCNet" target="_blank">Variational Relational Point Completion Network</a>, <a href="https://junzhezhang.github.io/projects/ShapeInversion/" target="_blank">Unsupervised 3D Shape Completion through GAN Inversion</a> and <a href="https://github.com/hongfz16/DS-Net" target="_blank">LiDAR-based Panoptic Segmentation</a>. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-5 mb-lg-0">
+                                    <div class="d-flex flex-row" data-aos="fade-right">
+                                        <div>
+                                            <i class="zmdi zmdi-layers zmdi-hc-fw zmdi-hc-3x mr-1"></i>
+                                        </div>
+                                        <div class="flex-shrink-1">
+                                            <h2 class="mb-4 fs-1 fw-medium text-uppercase">Deep Learning</h2>
+                                            <p class="fs--1 text-justify">We investigate new deep learning methods that are more efficient, robust, accurate, scalable, transferable, and explainable. We have been working on various problems like domain generalization, knowledge distillation, long-tailed recognition, and self-supervised learning. We participated in Facebook AI Self-Supervision Challenge 2019, and we won champions of all four tracks. Check out <a href="https://github.com/open-mmlab/OpenSelfSup" target="_blank">OpenSelfSup</a>, our open-source project for self-supervised learning. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="d-flex flex-row" data-aos="fade-left">
+                                        <div>
+                                            <i class="zmdi zmdi-search zmdi-hc-fw zmdi-hc-3x mr-1"></i>
+                                        </div>
+                                        <div class="flex-shrink-1">
+                                            <h2 class="mb-4 fs-1 fw-medium text-uppercase">Media Forensics</h2>
+                                            <p class="fs--1 text-justify">The popularization of Deepfakes on the internet has set off alarm bells among the general public and authorities, in view of the conceivable perilous implications. We have proposed two large-scale datasets for face forgery detection. See <a href="https://liming-jiang.com/projects/DrF1/DrF1.html" target="_blank">DeeperForensics</a> and <a href="https://yinanhe.github.io/projects/forgerynet.html" target="_blank">ForgeryNet</a>.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+            <!-- Section -->
+            <section class="py-8 py-md-11 overflow-hidden">
+                <div class="bg-container parallax" data-rellax-percentage="0.5" style="background-image: url(./assets/img/images/basicvsr.jpg);"></div>
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=iIDml09CUc4" class="icon mx-auto align-items-center text"><i class="zmdi zmdi-play zmdi-hc-4x"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+            <!-- Section -->
+            <section class="pt-6 py-0">
+                <div class="container">
+                    <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">Research</h3>
+                    <h2 class="mb-5 mb-lg-0 fw-medium text-secondary text-uppercase text-center text-lg-left">Video Demos</h2>
+
+                    <div class="row">
+                        <div class="col-lg-3 order-lg-1">
+                            <div class="pb-3 py-lg-9" data-toggle="sticky">
+                                <h5 class="mb-4 text-uppercase text-600">Videos</h5>
+                                <ul class="mb-6 list-unstyled text-600">
+                                    <li class="mb-1"><a href="javascript:;" data-filter="*" class="text-600">All</a></li>
+                                    <li class="mb-1"><a href="javascript:;" data-filter=".enhance" class="text-600">Enhancement and Restoration</a></li>
+                                    <li class="mb-1"><a href="javascript:;" data-filter=".editing" class="text-600">Content Editing and Generation</a></li>
+                                    <!-- <li class="mb-1"><a href="javascript:;" data-filter=".2d" class="text-600">Image and Video Understanding</a></li>-->
+                                    <li class="mb-1"><a href="javascript:;" data-filter=".3d" class="text-600">3D Scene Understanding</a></li>
+                                    <li class="mb-1"><a href="javascript:;" data-filter=".forensics" class="text-600">Media Forensics</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 order-lg-2 py-6 py-lg-9 px-0">
+                            <div class="grid">
+                                <div class="row no-gutters mt-neg-3">
+                                    <div class="col-md-6 col-lg-4 p-3 grid-item editing">
+                                        <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=xIHCyyaB5gU" class="position-relative">
+                                            <img class="img-fluid w-100" src="./assets/img/portfolio/deocclusion.jpg" alt="deocclusion" />
+                                            <span class="icon icon-sm position-absolute mt-neg-6 ml-3">
+                                                <i class="zmdi zmdi-play zmdi-hc-2x"></i>
+                                            </span>
+                                        </a>
+                                        <h6>Scene De-occlusion</h6>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4 p-3 grid-item editing forensics">
+                                        <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=ZLWKZ6ej-AQ" class="position-relative">
+                                            <img class="img-fluid w-100" src="./assets/img/portfolio/deeperforensics.jpg" alt="faceoff" />
+                                            <span class="icon icon-sm position-absolute mt-neg-6 ml-3">
+                                                <i class="zmdi zmdi-play zmdi-hc-2x"></i>
+                                            </span>
+                                        </a>
+                                        <h6>Face Swapping</h6>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4 p-3 grid-item editing forensics">
+                                        <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=lVYZ3IAVM_U" class="position-relative">
+                                            <img class="img-fluid w-100" src="./assets/img/portfolio/pareidolia.jpg" alt="faceoff" />
+                                            <span class="icon icon-sm position-absolute mt-neg-6 ml-3">
+                                                <i class="zmdi zmdi-play zmdi-hc-2x"></i>
+                                            </span>
+                                        </a>
+                                        <h6>Pareidolia Face Reenactment</h6>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4 p-3 grid-item enhance editing">
+                                        <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=8HkXZPcxK9c" class="position-relative">
+                                            <img class="img-fluid w-100" src="./assets/img/portfolio/dni.jpg" alt="faceoff" />
+                                            <span class="icon icon-sm position-absolute mt-neg-6 ml-3">
+                                                <i class="zmdi zmdi-play zmdi-hc-2x"></i>
+                                            </span>
+                                        </a>
+                                        <h6>Effect Interpolation</h6>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4 p-3 grid-item editing">
+                                        <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=LIJPUsrwx5E" class="position-relative">
+                                            <img class="img-fluid w-100" src="./assets/img/portfolio/inpainting.jpg" alt="faceoff" />
+                                            <span class="icon icon-sm position-absolute mt-neg-6 ml-3">
+                                                <i class="zmdi zmdi-play zmdi-hc-2x"></i>
+                                            </span>
+                                        </a>
+                                        <h6>Video Inpainting</h6>
+                                    </div>
+                                    <div class="col-12 col-lg-8 p-3 grid-item editing">
+                                        <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=HUdlvjrvOpw">
+                                            <img class="img-fluid w-100" src="./assets/img/portfolio/singan_bohemian.jpg" alt="singan_bohemian" />
+                                            <span class="icon icon-sm position-absolute mt-neg-6 ml-3">
+                                                <i class="zmdi zmdi-play zmdi-hc-2x"></i>
+                                            </span>
+                                        </a>
+                                        <h6>Image Generation and Extrapolation</h6>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4 p-3 grid-item enhance">
+                                        <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=Mrjs_aNeEyQ">
+                                            <img class="img-fluid w-100" src="./assets/img/portfolio/zerodce.jpg" alt="singan_bohemian" />
+                                            <span class="icon icon-sm position-absolute mt-neg-6 ml-3">
+                                                <i class="zmdi zmdi-play zmdi-hc-2x"></i>
+                                            </span>
+                                        </a>
+                                        <h6>Low-Light Image Enhancement</h6>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4 p-3 grid-item 3d">
+                                        <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=0SNHlxvCP0g" class="position-relative">
+                                            <img class="img-fluid w-100" src="./assets/img/portfolio/point_completion.jpg" alt="faceoff" />
+                                            <span class="icon icon-sm position-absolute mt-neg-6 ml-3">
+                                                <i class="zmdi zmdi-play zmdi-hc-2x"></i>
+                                            </span>
+                                        </a>
+                                        <h6>Point Cloud Completion</h6>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4 p-3 grid-item enhance editing">
+                                        <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=p7ToqtwfVko" class="position-relative">
+                                            <img class="img-fluid w-100" src="./assets/img/portfolio/gan_prior.jpg" alt="faceoff" />
+                                            <span class="icon icon-sm position-absolute mt-neg-6 ml-3">
+                                                <i class="zmdi zmdi-play zmdi-hc-2x"></i>
+                                            </span>
+                                        </a>
+                                        <h6>Image Restoration and Manipulation</h6>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4 p-3 grid-item editing">
+                                        <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=Bz7ifJLYR8c" class="position-relative">
+                                            <img class="img-fluid w-100" src="./assets/img/portfolio/liteflownet.jpg" alt="faceoff" />
+                                            <span class="icon icon-sm position-absolute mt-neg-6 ml-3">
+                                                <i class="zmdi zmdi-play zmdi-hc-2x"></i>
+                                            </span>
+                                        </a>
+                                        <h6>Optical Flow Estimation</h6>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4 p-3 grid-item editing">
+                                        <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=tNPuAnvijQk" class="position-relative">
+                                            <img class="img-fluid w-100" src="./assets/img/portfolio/talking_head.jpg" alt="faceoff" />
+                                            <span class="icon icon-sm position-absolute mt-neg-6 ml-3">
+                                                <i class="zmdi zmdi-play zmdi-hc-2x"></i>
+                                            </span>
+                                        </a>
+                                        <h6>Audio-Driven Face Reenactment</h6>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4 p-3 grid-item editing">
+                                        <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=RSCoXXwtXoo" class="position-relative">
+                                            <img class="img-fluid w-100" src="./assets/img/portfolio/retargeting.jpg" alt="faceoff" />
+                                            <span class="icon icon-sm position-absolute mt-neg-6 ml-3">
+                                                <i class="zmdi zmdi-play zmdi-hc-2x"></i>
+                                            </span>
+                                        </a>
+                                        <h6>Motion Retargeting</h6>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4 p-3 grid-item enhance">
+                                        <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=QfkJLDD2jCI" class="position-relative">
+                                            <img class="img-fluid w-100" src="./assets/img/portfolio/esrgan.jpg" alt="faceoff" />
+                                            <span class="icon icon-sm position-absolute mt-neg-6 ml-3">
+                                                <i class="zmdi zmdi-play zmdi-hc-2x"></i>
+                                            </span>
+                                        </a>
+                                        <h6>Anime Super-Resolution (Credit: <a href="https://www.youtube.com/channel/UCU4iOw6d0tdmBp3xOZGNUhA">Jan Bing</a>)</h6>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4 p-3 grid-item enhance">
+                                        <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=9uMcim5KEi8" class="position-relative">
+                                            <img class="img-fluid w-100" src="./assets/img/portfolio/final_fantasy.jpg" alt="faceoff" />
+                                            <span class="icon icon-sm position-absolute mt-neg-6 ml-3">
+                                                <i class="zmdi zmdi-play zmdi-hc-2x"></i>
+                                            </span>
+                                        </a>
+                                        <h6>Game Super-Resolution (Credit: <a href="https://www.youtube.com/channel/UCLhDFpAPh_Nf-bpZ8wTLvSQ">Snouz</a>)</h6>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4 p-3 grid-item enhance">
+                                        <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=2bbujT-ZXr8" class="position-relative">
+                                            <img class="img-fluid w-100" src="./assets/img/portfolio/animeinterp.jpg" alt="faceoff" />
+                                            <span class="icon icon-sm position-absolute mt-neg-6 ml-3">
+                                                <i class="zmdi zmdi-play zmdi-hc-2x"></i>
+                                            </span>
+                                        </a>
+                                        <h6>Anime Video Interpolation</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+            <!-- Section -->
+            <section id="section-1" class="py-0">
+                <div class="container-fluid px-0">
+                    <div class="row no-gutters">
+                        <div class="col-md-6 py-6 py-lg-8 bg-blue-light overflow-hidden">
+                            <div class="row h-100 align-items-center">
+                                <div class="col px-5 px-lg-8 px-xl-10">
+                                    <h3 class="my-0 fs-1 fw-medium text-primary text-center text-lg-left">Selected</h3>
+                                    <h2 class="mb-4 fw-medium text-secondary text-center text-lg-left">Media Coverage | Blog</h2>
+                                    <ul class="mb-0 text-justify">
+                                        <li><a href="https://www.gamedeveloper.com/art/how-ai-upscaling-can-help-remaster-game-art" target="_blank">How AI Upscaling Can Help Remaster Game Art</a><br/>By Tommy Thompson in Game Developer</li>
+                                        <li><a href="https://www.theverge.com/2019/4/18/18311287/ai-upscaling-algorithms-video-games-mods-modding-esrgan-gigapixel" target="_blank">Artificial Intelligence Is Helping Old Video Games Look Like New</a><br/>By James Vincent in The Verge</li>
+                                        <li><a href="https://www.engadget.com/meet-the-upscalers-star-wars-140000459.html" target="_blank">Meet the Upscalers</a><br/>By Daniel Cooper in Engadget</li>
+                                        <li><a href="https://www.pcgamer.com/ai-neural-networks-are-giving-final-fantasy-7-a-makeover/" target="_blank">AI Neural Networks Are Giving Final Fantasy 7 a Makeover</a><br/>By Fraser Brown in PC Gamer</li>
+                                        <li><a href="https://www.inputmag.com/gaming/ai-is-about-to-transform-the-future-past-of-video-games" target="_blank">AI Is About to Transform The Future (And Past) of Video Games</a><br/>By Aidan Moher in Input Mag</li>
+                                        <li><a href="https://sites.google.com/view/moguri-mod/home" target="_blank">Final Fantasy IX Recreated</a><br/>By Moguri Mod</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 py-8">
+                            <div class="bg-container" style="background-image: url(./assets/img/images/esrgan.jpg);"></div>
+                            <span class="position-absolute mt-neg-7 ml-3">
+                                <p class="text-white fs--1"><i>Source:</i> <a href="https://twitter.com/Luke_Aaron/status/1224293674105954309" target="_blank" class="text-white"><i>@Luke_Aaron</i></a></p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section --> 
+
+
+            <!-- Section -->
+            <section id="section-4">
+                <div class="container">
+                    <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">Organized</h3>
+                    <h2 class="mb-5 fw-medium text-secondary text-center text-lg-left">Workshops</h2>
+                    
+                    <div class="row justify-content-left">
+                        <div class="col-lg-4 mb-4 mb-lg-6" data-aos="fade-up" data-aos-duration="1000">
+                            <a href="./openmmlab/workshop_2021/index.html" class="mb-3 d-block position-relative">
+                                <div class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-secondary rounded text-white">
+                                    <i class="fas fa-link fa-2x"></i>
+                                </div>
+                                <img src="./assets/img/printscreens/openmmlab_workshop.jpg" alt="" class="position-relative img-fluid w-100 shadow-lg rounded opacity-1-hover" />
+                            </a>
+                            <h4 class="text-center"><a href="./openmmlab/workshop_2021/index.html" class="text-body">OpenMMLab Workshop 2021</a></h4>
+                        </div>
+                        <div class="col-lg-4 mb-4 mb-lg-6" data-aos="fade-up" data-aos-duration="1000">
+                            <a href="https://wider-challenge.org/2019.html" target="_blank" class="mb-3 d-block position-relative">
+                                <div class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-secondary rounded text-white">
+                                    <i class="fas fa-link fa-2x"></i>
+                                </div>
+                                <img src="./assets/img/printscreens/widerface.jpg" alt="" class="position-relative img-fluid w-100 shadow-lg rounded opacity-1-hover" />
+                            </a>
+                            <h4 class="text-center"><a href="https://wider-challenge.org/2019.html" target="_blank" class="text-body">WIDER Challenge 2018, 2019</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+          
+        </main>
+        <!-- End of Main Content -->
+
+
+        <!-- Footer -->
+        <footer class="footer text-white" style="background-image: url(./assets/img/footer-bg.jpg)">
+            <div class="container d-flex h-100">
+                <div class="row flex-grow-1">
+                    <div class="col-lg-3 pt-3 ext-l bg-secondary text-center text-lg-left">
+                        <div class="d-flex flex-column h-100">
+                            <div class="pt-5 pt-lg-8 pb-4">
+                                <img src="./assets/img/logo-small.png" alt="" width="108" class="mb-4" />
+                                <p class="mb-4 mt-3 fs--1"><br />
+                                Academic Block North <br />
+                                Nanyang Technological University<br />
+                                61 Nanyang Dr, Singapore 637335</p>
+        
+                                <p class="fs--1">
+                                <span class="text-white"><i class="zmdi zmdi-email zmdi-hc-fw mr-1"></i>mmlab-contact at e.ntu.edu.sg</span><br />
+                                <span class="text-white"><i class="zmdi zmdi-twitter zmdi-hc-fw mr-1"></i><a href="https://twitter.com/MMLabNTU" target="_blank" class="text-white">@MMLabNTU</a></span></p>
+                            </div>
+    
+                            <!-- <ul class="mt-4 mt-lg-auto mb-5 mb-lg-0 list-unstyled list-inline">
+                                <li class="mr-3 list-inline-item">
+                                    <a href="https://twitter.com/MMLabNTU" target="_blank">
+                                        <i class="zmdi zmdi-twitter text-white"></i>
+                                    </a>
+                                </li>
+                            </ul> -->
+                        </div>
+                    </div>
+
+                    <div class="col d-flex flex-column mb-2 mt-3 pl-lg-7">
+                        <div class="row pt-5 pt-lg-8 pb-4 pb-lg-6">
+                            <div class="col-6 col-lg-3">
+                                <h6 class="mb-1 mb-lg-4 text-uppercase">Publications</h6>
+                                <ul class="pt-2 mb-5 fw-light list-unstyled">
+                                    <li class="my-1"><a href="./publication_topic.html" class="text-white">By Topic</a></li>
+                                    <li class="my-1"><a href="./publication_year.html" class="text-white">By Year</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-lg-3">
+                                <h6 class="mb-1 mb-lg-4 text-uppercase">About</h6>
+                                <ul class="pt-2 mb-5 fw-light list-unstyled">
+                                    <li class="my-1"><a href="./research.html" class="text-white">Our Research</a></li>
+                                    <li class="my-1"><a href="./team.html" class="text-white">Team</a></li>
+                                    <li class="my-1"><a href="./careers.html" class="text-white">Join Us</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-lg-3">
+                                <h6 class="mb-1 mb-lg-4 text-uppercase">Open Source</h6>
+                                <ul class="pt-2 mb-5 fw-light list-unstyled">
+                                    <li class="my-1"><a href="https://openmmlab.com/" target="_blank" class="text-white">OpenMMLab</a></li>
+                                    <li class="my-1"><a href="./downloads.html" class="text-white">Code and Datasets</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mt-auto d-flex justify-content-between">
+                            <span class="fs--3 fs-lg--2">&copy; MMLab@NTU, 2021</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer -->
+
+
+        <!-- Core Javascripts -->
+        <script src="./assets/vendor/jquery/dist/jquery.min.js"></script>
+        <script src="./assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+        <script src="./assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <!-- Vendor Javascripts -->
+        <script src="./assets/vendor/rellax/rellax.min.js"></script>
+        <script src="./assets/vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+        <script src="./assets/vendor/sticky-kit/dist/sticky-kit.min.js"></script>
+        <script src="./assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+        <script src="./assets/vendor/isotope-layout/dist/isotope.pkgd.min.js"></script>
+        <script src="./assets/vendor/isotope-packery/packery-mode.pkgd.min.js"></script>
+        <script src="./assets/vendor/aos/dist/aos.js"></script>
+
+        <!-- Theme Javascripts -->
+        <script src="./assets/js/theme.js"></script>
+    </body>
+</html>
