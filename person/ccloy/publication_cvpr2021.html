@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <meta name="keywords" content="OpenMMLab, Chen Change Loy, Ziwei Liu, Bo Dai, Yixin Cao, Super-resolution, Deep Learning, Computer Vision, Convolutional Neural Network, Enhancement, Inpainting, Knowledge Distillation, Restoration, GAN, Generative Adversarial Networks, Generation, Manipulation, Editing, Object Detection, Segmentation, Recognition, Continual Learning, Domain Generalization, Self-Supervised Learning, Singapore, NTU, Nanyang Technological University, SCSE" />
+        
+        <!-- Page Title -->
+        <title>Publication | Chen Change Loy</title>
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicons/favicon-16x16.png">
+        <link rel="manifest" href="../../assets/img/favicons/site.webmanifest">
+        <link rel="mask-icon" href="../../assets/img/favicons/safari-pinned-tab.svg" color="#f23838">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- Vendor Stylesheets -->
+        <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700%7CRoboto:300,400,700" rel="stylesheet">
+        <link href="../../assets/vendor/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="../../assets/vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.css" rel="stylesheet">
+        <link href="../../assets/vendor/aos/dist/aos.css" rel="stylesheet">
+
+        <!-- Theme Stylesheets -->
+        <link href="../../assets/css/theme.css" rel="stylesheet">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22940424-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-22940424-1');
+        </script>
+    </head>
+
+    <body>
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="spinner">
+                <div class="circles"></div>
+            </div>
+        </div>
+        <!-- End of Preloader -->
+
+
+        <!-- Header -->
+        <header class="spyre-navbar navbar navbar-expand-lg bg-dark navbar-dark fixed-top align-items-center" data-transparent data-text-color="#ffffff">
+            <div class="container">
+                <a class="navbar-brand mr-lg-5 mr-xl-7" href="../../index.html" target="_blank">
+                    <img src="../../assets/img/logo.png" class="d-none d-lg-block" alt="MMLab" width="183" />
+                    <img src="../../assets/img/logo.png" class="d-block d-lg-none" alt="MMLab" width="150" />
+                </a>
+                <h6 class="mb-neg-1 ml-neg-4 fw-medium text-primary text-uppercase text-center text-lg-left"><a href="./index.html">Chen Change Loy</a></h6>
+
+                <!-— Desktop Menu -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-6 mr-auto">
+                        <li class="pl-2 nav-item navbar-text"><a href="./index.html" class="nav-link text-400">Home</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="./profile.html" class="nav-link text-400">Profile</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="./team.html" class="nav-link text-400">Team</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="./publication_topic.html" class="nav-link">Publications</a></li>
+                    </ul>
+                </div>
+                <!-— End of Desktop Menu -->
+
+                <div class="menu-toggle d-block d-lg-none">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="cross">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spyrenav Overlay -->
+            <div class="spyre-navbar-overlay overlay-slide">
+                <div class="container">
+                    <div class="row">
+                        <div class="spyre-navbar-nav-container col-md-6 col-lg-5 col-xl-4 bg-white ext-l">
+                            <nav class="spyre-navbar-nav">
+                                <ul class="spyre-nav">
+                                    <li class="spyre-nav-item"><a href="./index.html" class="spyre-nav-link">Home</a></li>
+                                    <li class="spyre-nav-item"><a href="./profile.html" class="spyre-nav-link">Profile</a></li>
+                                    <li class="spyre-nav-item"><a href="./team.html" class="spyre-nav-link">Team</a></li>
+                                    <li class="spyre-nav-item dropdown">
+                                        <a href="#" class="spyre-nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Publications</a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li class="dropdown-menu-item"><a href="./publication_topic.html" class="dropdown-menu-link">By Topic</a></li>
+                                            <li class="dropdown-menu-item"><a href="./publication_year.html" class="dropdown-menu-link">By Year</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="spyre-nav-item"><a href="../../index.html" target="_blank" class="spyre-nav-link">MMLab@NTU</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+        
+                        <div class="col-lg-7 col-xl-8 d-none d-md-block">
+                            <div class="d-flex flex-column h-100">
+                                <div class="d-flex h-100">
+                                    <div class="align-self-center">
+                                        <div class="text-uppercase"
+                                            data-background-text="computer vision"
+                                            data-color="#7079a2"
+                                            data-opacity="0.02"
+                                            data-font-size="85px"
+                                            data-font-weight="500"
+                                            data-offset-x="-5%"
+                                            data-letter-spacing="5px"
+                                        ></div>
+                                        <div class="text-uppercase"
+                                            data-background-text="mmlab"
+                                            data-color="#7079a2"
+                                            data-opacity="0.04"
+                                            data-font-size="175px"
+                                            data-font-weight="500"
+                                            data-offset-x="29%"
+                                            data-padding="7vh 0 2vh 0"
+                                            data-letter-spacing="5px"
+                                        ></div>
+                                        <div class="text-uppercase"
+                                            data-background-text="deep learning"
+                                            data-color="#7079a2"
+                                            data-opacity="0.03"
+                                            data-font-size="140px"
+                                            data-font-weight="500"
+                                            data-offset-x="15%"
+                                            data-letter-spacing="5px"
+                                        ></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-auto">
+                                    <ul class="nav flex-nowrap float-right">
+                                        <li class="nav-item">
+                                            <a class="nav-link px-2" href="https://twitter.com/MMLabNTU" target="_blank">
+                                                <i class="zmdi zmdi-twitter text-white"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Spyrenav Overlay -->
+        </header>
+        <!-- End of Header -->
+
+
+        <!-- Main Content -->
+        <main class="main minh-100vh">
+            <!-- Section -->
+            <section class="py-0 overflow-hidden text-center">
+                <div class="bg-container overlay parallax" data-rellax-percentage="0.5" style="background-image: url(./assets/img/backgrounds/bg-02.jpg)">
+                </div>
+            </section>
+            <!-- End of Section -->
+
+            <!-- Section -->
+            <section id="section-1" class="pb-0">
+                <div class="container">
+                    <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">Papers</h3>
+                    <h2 class="mb-5 fw-medium text-secondary text-center text-lg-left">CVPR 2021</h2>
+                    
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 mb-4 mb-lg-0">
+                            <a href="../../project/glean/index.html" target="_blank" class="mb-3 d-block position-relative">
+                                <div class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-secondary rounded text-white">
+                                    <i class="fas fa-link fa-2x"></i>
+                                </div>
+                                <img src="./assets/img/teasers/glean.jpg" alt="" class="position-relative img-fluid w-100 shadow-lg rounded opacity-1-hover" />
+                            </a>
+                        </div>
+                        <div class="col-lg-8 mb-4 mb-lg-6">
+                            <p>
+                                <span class="text-primary">GLEAN: Generative Latent Bank for Large-Factor Image Super-Resolution </span> <strong>(Oral)</strong>
+                                <br />
+                                <span class="text-500">
+                                K. C. K. Chan, X. Wang, X. Xu, J. Gu, C. C. Loy <br />   
+                                </span>
+                                [<a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Chan_GLEAN_Generative_Latent_Bank_for_Large-Factor_Image_Super-Resolution_CVPR_2021_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                [<a href="https://arxiv.org/abs/2012.00739" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                [<a href="https://openaccess.thecvf.com/content/CVPR2021/supplemental/Chan_GLEAN_Generative_Latent_CVPR_2021_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                [<a href="../../project/glean/index.html" target="_blank"><span class="text-muted">Project Page</span></a>]
+                            </p>
+                        </div> 
+
+                        <div class="col-lg-4 mb-4 mb-lg-0">
+                            <a href="https://github.com/yumingj/C2-Matching" target="_blank" class="mb-3 d-block position-relative">
+                                <div class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-secondary rounded text-white">
+                                    <i class="fas fa-link fa-2x"></i>
+                                </div>
+                                <img src="./assets/img/teasers/c2matching.jpg" alt="" class="position-relative img-fluid w-100 shadow-lg rounded opacity-1-hover" />
+                            </a>
+                        </div>
+                        <div class="col-lg-8 mb-4 mb-lg-0">
+                            <p>
+                                <span class="text-primary">Robust Reference-based Super-Resolution via C<sup>2</sup>-Matching </span> 
+                                <br />
+                                <span class="text-500">
+                                Y. Jiang, K. C. K. Chan, X. Wang, C. C. Loy, Z. Liu <br />    
+                                </span>
+                                [<a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Jiang_Robust_Reference-Based_Super-Resolution_via_C2-Matching_CVPR_2021_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                [<a href="https://arxiv.org/abs/2106.01863" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                [<a href="https://openaccess.thecvf.com/content/CVPR2021/supplemental/Jiang_Robust_Reference-Based_Super-Resolution_CVPR_2021_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                [<a href="https://github.com/yumingj/C2-Matching" target="_blank"><span class="text-muted">Project Page</span></a>]
+                            </p>
+                        </div> 
+
+                        <div class="col-lg-4 mb-4 mb-lg-0">
+                            <a href="https://ckkelvinchan.github.io/projects/BasicVSR" target="_blank" class="mb-3 d-block position-relative">
+                                <div class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-secondary rounded text-white">
+                                    <i class="fas fa-link fa-2x"></i>
+                                </div>
+                                <img src="./assets/img/teasers/basicvsr.jpg" alt="" class="position-relative img-fluid w-100 shadow-lg rounded opacity-1-hover" />
+                            </a>
+                        </div>
+                        <div class="col-lg-8 mb-4 mb-lg-0">
+                            <p>
+                                <span class="text-primary">BasicVSR: The Search for Essential Components in Video Super-Resolution and Beyond </span> 
+                                <br />
+                                <span class="text-500">
+                                K. C. K. Chan, X. Wang, K. Yu, C. Dong, C. C. Loy <br />    
+                                </span>
+                                [<a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Chan_BasicVSR_The_Search_for_Essential_Components_in_Video_Super-Resolution_and_CVPR_2021_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                [<a href="https://arxiv.org/abs/2012.02181" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                [<a href="https://openaccess.thecvf.com/content/CVPR2021/supplemental/Chan_BasicVSR_The_Search_CVPR_2021_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                [<a href="https://ckkelvinchan.github.io/projects/BasicVSR" target="_blank"><span class="text-muted">Project Page</span></a>]
+                            </p>
+                        </div>
+
+                        <div class="col-lg-4 mb-4 mb-lg-0">
+                            <a href="https://github.com/lisiyao21/AnimeInterp/" target="_blank" class="mb-3 d-block position-relative">
+                                <div class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-secondary rounded text-white">
+                                    <i class="fas fa-link fa-2x"></i>
+                                </div>
+                                <img src="./assets/img/teasers/animeinterp.jpg" alt="" class="position-relative img-fluid w-100 shadow-lg rounded opacity-1-hover" />
+                            </a>
+                        </div>
+                        <div class="col-lg-8 mb-4 mb-lg-0">
+                            <p>
+                                <span class="text-primary">Deep Animation Video Interpolation in the Wild </span> 
+                                <br />
+                                <span class="text-500">
+                                S-Y. Li, S. Zhao, W. Yu, W. Sun, D. Metaxas, C. C. Loy, Z. Liu <br />   
+                                </span>
+                                [<a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Siyao_Deep_Animation_Video_Interpolation_in_the_Wild_CVPR_2021_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                [<a href="https://arxiv.org/abs/2104.02495" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                [<a href="https://openaccess.thecvf.com/content/CVPR2021/supplemental/Siyao_Deep_Animation_Video_CVPR_2021_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                [<a href="https://github.com/lisiyao21/AnimeInterp/" target="_blank"><span class="text-muted">Project Page</span></a>]
+                            </p>
+                        </div> 
+
+                        <div class="col-lg-4 mb-4 mb-lg-0">
+                            <a href="https://jnjaby.github.io/projects/UDC/" target="_blank" class="mb-3 d-block position-relative">
+                                <div class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-secondary rounded text-white">
+                                    <i class="fas fa-link fa-2x"></i>
+                                </div>
+                                <img src="./assets/img/teasers/udc.jpg" alt="" class="position-relative img-fluid w-100 shadow-lg rounded opacity-1-hover" />
+                            </a>
+                        </div>
+                        <div class="col-lg-8 mb-4 mb-lg-0">
+                            <p>
+                                <span class="text-primary">Removing Diffraction Image Artifacts in Under-Display Camera via Dynamic Skip Connection Network </span> 
+                                <br />
+                                <span class="text-500">
+                                R. Feng, C. Li, H. Chen, S. Li, C. C. Loy, J. Gu  <br />    
+                                </span>
+                                [<a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Feng_Removing_Diffraction_Image_Artifacts_in_Under-Display_Camera_via_Dynamic_Skip_CVPR_2021_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                [<a href="https://arxiv.org/abs/2104.09556" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                [<a href="https://openaccess.thecvf.com/content/CVPR2021/supplemental/Feng_Removing_Diffraction_Image_CVPR_2021_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                [<a href="https://jnjaby.github.io/projects/UDC/" target="_blank"><span class="text-muted">Project Page</span></a>]
+                            </p>
+                        </div>
+
+                        <div class="col-lg-4 mb-4 mb-lg-0">
+                            <a href="https://nbei.github.io/gan-pos-encoding.html" target="_blank" class="mb-3 d-block position-relative">
+                                <div class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-secondary rounded text-white">
+                                    <i class="fas fa-link fa-2x"></i>
+                                </div>
+                                <img src="./assets/img/teasers/mspie.jpg" alt="" class="position-relative img-fluid w-100 shadow-lg rounded opacity-1-hover" />
+                            </a>
+                        </div>
+                        <div class="col-lg-8 mb-4 mb-lg-0">
+                            <p>
+                                <span class="text-primary">Positional Encoding as Spatial Inductive Bias in GANs </span> 
+                                <br />
+                                <span class="text-500">
+                                R. Xu, X. Wang, K. Chen, B. Zhou, C. C. Loy <br />  
+                                </span>
+                                [<a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Xu_Positional_Encoding_As_Spatial_Inductive_Bias_in_GANs_CVPR_2021_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                [<a href="https://arxiv.org/abs/2012.05217" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                [<a href="https://openaccess.thecvf.com/content/CVPR2021/supplemental/Xu_Positional_Encoding_As_CVPR_2021_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                [<a href="https://nbei.github.io/gan-pos-encoding.html" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                [<a href="https://www.youtube.com/watch?v=n6B01YqC1ng&feature=emb_title" target="_blank"><span class="text-muted">YouTube</span></a>]
+                            </p>
+                        </div> 
+
+                        <div class="col-lg-4 mb-4 mb-lg-0">
+                            <a href="https://junzhezhang.github.io/projects/ShapeInversion/" target="_blank" class="mb-3 d-block position-relative">
+                                <div class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-secondary rounded text-white">
+                                    <i class="fas fa-link fa-2x"></i>
+                                </div>
+                                <img src="./assets/img/teasers/shapeinversion.jpg" alt="" class="position-relative img-fluid w-100 shadow-lg rounded opacity-1-hover" />
+                            </a>
+                        </div>
+                        <div class="col-lg-8 mb-4 mb-lg-0">
+                            <p>
+                                <span class="text-primary">Unsupervised 3D Shape Completion through GAN Inversion </span> 
+                                <br />
+                                <span class="text-500">
+                                J. Zhang, X. Chen, Z. Cai, L. Pan, H. Zhao, S. Yi, C. K. Yeo, B. Dai, C. C. Loy <br />   
+                                </span>
+                                [<a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Zhang_Unsupervised_3D_Shape_Completion_Through_GAN_Inversion_CVPR_2021_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                [<a href="https://arxiv.org/abs/2104.13366" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                [<a href="https://openaccess.thecvf.com/content/CVPR2021/supplemental/Zhang_Unsupervised_3D_Shape_CVPR_2021_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                [<a href="https://junzhezhang.github.io/projects/ShapeInversion/" target="_blank"><span class="text-muted">Project Page</span></a>]
+                            </p>
+                        </div>
+
+                        <div class="col-lg-4 mb-4 mb-lg-0">
+                            <a href="https://wywu.github.io/projects/ETT/ETT.html" target="_blank" class="mb-3 d-block position-relative">
+                                <div class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-secondary rounded text-white">
+                                    <i class="fas fa-link fa-2x"></i>
+                                </div>
+                                <img src="./assets/img/teasers/pareidolia.jpg" alt="" class="position-relative img-fluid w-100 shadow-lg rounded opacity-1-hover" />
+                            </a>
+                        </div>
+                        <div class="col-lg-8 mb-4 mb-lg-0">
+                            <p>
+                                <span class="text-primary">Pareidolia Face Reenactment </span> 
+                                <br />
+                                <span class="text-500">
+                                L. Song, W. Wu, C. Fu, C. Qian, C. C. Loy, R. He  <br />    
+                                </span>
+                                [<a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Song_Pareidolia_Face_Reenactment_CVPR_2021_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                [<a href="https://arxiv.org/abs/2104.03061" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                [<a href="https://openaccess.thecvf.com/content/CVPR2021/supplemental/Song_Pareidolia_Face_Reenactment_CVPR_2021_supplemental.zip" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                [<a href="https://wywu.github.io/projects/ETT/ETT.html" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                [<a href="https://www.youtube.com/watch?v=lVYZ3IAVM_U" target="_blank"><span class="text-muted">YouTube</span></a>]
+                            </p>
+                        </div>
+
+                        <div class="col-lg-4 mb-4 mb-lg-0">
+                            <a href="https://github.com/Hangz-nju-cuhk/Talking-Face_PC-AVS" target="_blank" class="mb-3 d-block position-relative">
+                                <div class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-secondary rounded text-white">
+                                    <i class="fas fa-link fa-2x"></i>
+                                </div>
+                                <img src="./assets/img/teasers/pcavs.jpg" alt="" class="position-relative img-fluid w-100 shadow-lg rounded opacity-1-hover" />
+                            </a>
+                        </div>
+                        <div class="col-lg-8 mb-4 mb-lg-0">
+                            <p>
+                                <span class="text-primary">Pose-Controllable Talking Face Generation by Implicitly Modularized Audio-Visual Representation </span> 
+                                <br />
+                                <span class="text-500">
+                                H. Zhou, Y. Sun, W. Wu, C. C. Loy, X. Wang, Z. Liu <br />    
+                                </span>
+                                [<a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Zhou_Pose-Controllable_Talking_Face_Generation_by_Implicitly_Modularized_Audio-Visual_Representation_CVPR_2021_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                [<a href="https://arxiv.org/abs/2104.11116" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                [<a href="https://openaccess.thecvf.com/content/CVPR2021/supplemental/Zhou_Pose-Controllable_Talking_Face_CVPR_2021_supplemental.zip" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                [<a href="https://github.com/Hangz-nju-cuhk/Talking-Face_PC-AVS" target="_blank"><span class="text-muted">Project Page</span></a>]
+                            </p>
+                        </div>
+
+                        <div class="col-lg-4 mb-4 mb-lg-0">
+                            <a href="https://jixinya.github.io/projects/evp/" target="_blank" class="mb-3 d-block position-relative">
+                                <div class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-secondary rounded text-white">
+                                    <i class="fas fa-link fa-2x"></i>
+                                </div>
+                                <img src="./assets/img/teasers/audio_portrait.jpg" alt="" class="position-relative img-fluid w-100 shadow-lg rounded opacity-1-hover" />
+                            </a>
+                        </div>
+                        <div class="col-lg-8 mb-4 mb-lg-0">
+                            <p>
+                                <span class="text-primary">Audio-Driven Emotional Video Portraits </span> 
+                                <br />
+                                <span class="text-500">
+                                X. Ji, H. Zhou, K. Wang, W. Wu, X. Cao, C. C. Loy, F. Xu  <br /> 
+                                </span>
+                                [<a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Ji_Audio-Driven_Emotional_Video_Portraits_CVPR_2021_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                [<a href="https://arxiv.org/abs/2104.07452" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                [<a href="https://openaccess.thecvf.com/content/CVPR2021/supplemental/Ji_Audio-Driven_Emotional_Video_CVPR_2021_supplemental.zip" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                [<a href="https://jixinya.github.io/projects/evp/" target="_blank"><span class="text-muted">Project Page</span></a>]
+                            </p>
+                        </div> 
+
+                        <div class="col-lg-4 mb-4 mb-lg-0">
+                            <a href="#" class="mb-3 d-block position-relative">
+                                <div class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-secondary rounded text-white">
+                                    <i class="fas fa-link fa-2x"></i>
+                                </div>
+                                <img src="./assets/img/teasers/seesaw.jpg" alt="" class="position-relative img-fluid w-100 shadow-lg rounded opacity-1-hover" />
+                            </a>
+                        </div>
+                        <div class="col-lg-8 mb-4 mb-lg-0">
+                            <p>
+                                <span class="text-primary">Seesaw Loss for Long-Tailed Instance Segmentation </span> 
+                                <br />
+                                <span class="text-500">
+                                J. Wang, W. Zhang, Y. Zang, Y. Cao, J. Pang, T. Gong, K. Chen, Z. Liu, C. C. Loy, D. Lin  <br />    
+                                </span>
+                                [<a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Wang_Seesaw_Loss_for_Long-Tailed_Instance_Segmentation_CVPR_2021_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                [<a href="https://openaccess.thecvf.com/content/CVPR2021/supplemental/Wang_Seesaw_Loss_for_CVPR_2021_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                [<a href="https://arxiv.org/abs/2008.10032" target="_blank"><span class="text-muted">arXiv</span></a>]
+                            </p>
+                        </div>  
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+            <!-- Section -->
+            <section id="section-4">
+                <div class="container">
+                    <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">Quick</h3>
+                    <h2 class="mb-5 fw-medium text-secondary text-center text-lg-left">Paper Links</h2>
+                    
+                    <div class="row justify-content-left">
+                        <div class="col-lg-4 mb-4 mb-lg-6" data-aos="fade-up" data-aos-duration="1000">
+                            <a href="./publication_topic.html" class="mb-3 d-block position-relative">
+                                <div class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-secondary rounded text-white">
+                                    <i class="fas fa-link fa-2x"></i>
+                                </div>
+                                <img src="./assets/img/printscreens/publication.jpg" alt="" class="position-relative img-fluid w-100 shadow-lg rounded opacity-1-hover" />
+                            </a>
+                            <h4 class="text-center"><a href="./publication_topic.html" class="text-body">Full Publications</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section --> 
+        </main>
+        <!-- End of Main Content -->
+
+
+        <!-- Footer -->
+        <footer class="footer_p text-white" style="background-image: url(../../assets/img/footer-bg.jpg)">
+            <div class="container d-flex h-100">
+                <div class="row flex-grow-1">
+                    <div class="col-lg-3 pt-3 ext-l bg-dark text-center text-lg-left">
+                        <div class="d-flex flex-column h-100">
+                            <div class="pt-5 pt-lg-8 pb-4">
+                                <img src="../../assets/img/logo-small.png" alt="" width="108" class="mb-4" />
+                                <p class="mb-4 mt-3 fs--1"><br />
+                                Academic Block North <br />
+                                Nanyang Technological University<br />
+                                61 Nanyang Dr, Singapore 637335</p>
+        
+                                <p class="fs--1">
+                                <span class="text-white"><i class="zmdi zmdi-email zmdi-hc-fw mr-1"></i>mmlab-contact at e.ntu.edu.sg</span><br />
+                                <span class="text-white"><i class="zmdi zmdi-twitter zmdi-hc-fw mr-1"></i><a href="https://twitter.com/MMLabNTU" target="_blank" class="text-white">@MMLabNTU</a></span></p>
+                            </div>
+    
+                            <!-- <ul class="mt-4 mt-lg-auto mb-5 mb-lg-0 list-unstyled list-inline">
+                                <li class="mr-3 list-inline-item">
+                                    <a href="https://twitter.com/MMLabNTU" target="_blank">
+                                        <i class="zmdi zmdi-twitter text-white"></i>
+                                    </a>
+                                </li>
+                            </ul> -->
+                        </div>
+                    </div>
+
+                    <div class="col d-flex flex-column mb-2 mt-3 pl-lg-7">
+                        <div class="row pt-5 pt-lg-8 pb-4 pb-lg-6">
+                            <div class="col-6 col-lg-3">
+                                <h6 class="mb-1 mb-lg-4 text-uppercase">Publications</h6>
+                                <ul class="pt-2 mb-5 fw-light list-unstyled">
+                                    <li class="my-1"><a href="../../publication_topic.html" class="text-white">By Topic</a></li>
+                                    <li class="my-1"><a href="../../publication_year.html" class="text-white">By Year</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-lg-3">
+                                <h6 class="mb-1 mb-lg-4 text-uppercase">About</h6>
+                                <ul class="pt-2 mb-5 fw-light list-unstyled">
+                                    <li class="my-1"><a href="../../research.html" class="text-white">Our Research</a></li>
+                                    <li class="my-1"><a href="../../team.html" class="text-white">Team</a></li>
+                                    <li class="my-1"><a href="../../careers.html" class="text-white">Join Us</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-lg-3">
+                                <h6 class="mb-1 mb-lg-4 text-uppercase">Open Source</h6>
+                                <ul class="pt-2 mb-5 fw-light list-unstyled">
+                                    <li class="my-1"><a href="https://openmmlab.com/" target="_blank" class="text-white">OpenMMLab</a></li>
+                                    <li class="my-1"><a href="../../downloads.html" class="text-white">Codes and Datasets</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mt-auto d-flex justify-content-between">
+                            <span class="fs--3 fs-lg--2">&copy; MMLab@NTU, 2021</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer -->
+
+
+        <!-- Core Javascripts -->
+        <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
+        <script src="../../assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+        <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <!-- Vendor Javascripts -->
+        <script src="../../assets/vendor/rellax/rellax.min.js"></script>
+        <script src="../../assets/vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+        <script src="../../assets/vendor/sticky-kit/dist/sticky-kit.min.js"></script>
+        <script src="../../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+        <script src="../../assets/vendor/isotope-layout/dist/isotope.pkgd.min.js"></script>
+        <script src="../../assets/vendor/isotope-packery/packery-mode.pkgd.min.js"></script>
+        <script src="../../assets/vendor/aos/dist/aos.js"></script>
+
+        <!-- Theme Javascripts -->
+        <script src="../../assets/js/theme.js"></script>
+
+
+    </body>
+</html>

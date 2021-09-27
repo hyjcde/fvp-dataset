@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <meta name="keywords" content="OpenMMLab, Chen Change Loy, Ziwei Liu, Bo Dai, Yixin Cao, Super-resolution, Deep Learning, Computer Vision, Convolutional Neural Network, Enhancement, Inpainting, Knowledge Distillation, Restoration, GAN, Generative Adversarial Networks, Generation, Manipulation, Editing, Object Detection, Segmentation, Recognition, Continual Learning, Domain Generalization, Self-Supervised Learning, Singapore, NTU, Nanyang Technological University, SCSE" />
+        
+        <!-- Page Title -->
+        <title>Home | Chen Change Loy</title>
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicons/favicon-16x16.png">
+        <link rel="manifest" href="../../assets/img/favicons/site.webmanifest">
+        <link rel="mask-icon" href="../../assets/img/favicons/safari-pinned-tab.svg" color="#f23838">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- Vendor Stylesheets -->
+        <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700%7CRoboto:300,400,700" rel="stylesheet">
+        <link href="../../assets/vendor/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="../../assets/vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.css" rel="stylesheet">
+        <!-- <link href="../../assets/vendor/aos/dist/aos.css" rel="stylesheet"> -->
+
+        <!-- Theme Stylesheets -->
+        <link href="../../assets/css/theme.css" rel="stylesheet">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22940424-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-22940424-1');
+        </script>
+    </head>
+
+    <body>
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="spinner">
+                <div class="circles"></div>
+            </div>
+        </div>
+        <!-- End of Preloader -->
+
+
+        <!-- Header -->
+        <header class="spyre-navbar navbar navbar-expand-lg bg-dark navbar-dark fixed-top align-items-center" data-transparent data-text-color="#ffffff">
+            <div class="container">
+                <a class="navbar-brand mr-lg-5 mr-xl-7" href="../../index.html" target="_blank">
+                    <img src="../../assets/img/logo.png" class="d-none d-lg-block" alt="MMLab" width="183" />
+                    <img src="../../assets/img/logo.png" class="d-block d-lg-none" alt="MMLab" width="150" />
+                </a>
+                <h6 class="mb-neg-1 ml-neg-4 fw-medium text-primary text-uppercase text-center text-lg-left"><a href="./index.html">Chen Change Loy</a></h6>
+                
+                <!-— Desktop Menu -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav ml-6 mr-auto">
+                        <li class="pl-2 nav-item navbar-text"><a href="./index.html" class="nav-link">Home</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="./profile.html" class="nav-link text-400">Profile</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="./team.html" class="nav-link text-400">Team</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="./publication_topic.html" class="nav-link text-400">Publications</a></li>
+                    </ul>
+                </div>
+                <!-— End of Desktop Menu -->
+
+                <div class="menu-toggle d-block d-lg-none">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="cross">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spyrenav Overlay -->
+            <div class="spyre-navbar-overlay overlay-slide">
+                <div class="container">
+                    <div class="row">
+                        <div class="spyre-navbar-nav-container col-md-6 col-lg-5 col-xl-4 bg-white ext-l">
+                            <nav class="spyre-navbar-nav">
+                                <ul class="spyre-nav">
+                                    <li class="spyre-nav-item"><a href="./index.html" class="spyre-nav-link">Home</a></li>
+                                    <li class="spyre-nav-item"><a href="./profile.html" class="spyre-nav-link">Profile</a></li>
+                                    <li class="spyre-nav-item"><a href="./team.html" class="spyre-nav-link">Team</a></li>
+                                    <li class="spyre-nav-item dropdown">
+                                        <a href="#" class="spyre-nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Publications</a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li class="dropdown-menu-item"><a href="./publication_topic.html" class="dropdown-menu-link">By Topic</a></li>
+                                            <li class="dropdown-menu-item"><a href="./publication_year.html" class="dropdown-menu-link">By Year</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="spyre-nav-item"><a href="../../index.html" target="_blank" class="spyre-nav-link">MMLab@NTU</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+        
+                        <div class="col-lg-7 col-xl-8 d-none d-md-block">
+                            <div class="d-flex flex-column h-100">
+                                <div class="d-flex h-100">
+                                    <div class="align-self-center">
+                                        <div class="text-uppercase"
+                                            data-background-text="computer vision"
+                                            data-color="#7079a2"
+                                            data-opacity="0.02"
+                                            data-font-size="85px"
+                                            data-font-weight="500"
+                                            data-offset-x="-5%"
+                                            data-letter-spacing="5px"
+                                        ></div>
+                                        <div class="text-uppercase"
+                                            data-background-text="mmlab"
+                                            data-color="#7079a2"
+                                            data-opacity="0.04"
+                                            data-font-size="175px"
+                                            data-font-weight="500"
+                                            data-offset-x="29%"
+                                            data-padding="7vh 0 2vh 0"
+                                            data-letter-spacing="5px"
+                                        ></div>
+                                        <div class="text-uppercase"
+                                            data-background-text="deep learning"
+                                            data-color="#7079a2"
+                                            data-opacity="0.03"
+                                            data-font-size="140px"
+                                            data-font-weight="500"
+                                            data-offset-x="15%"
+                                            data-letter-spacing="5px"
+                                        ></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-auto">
+                                    <ul class="nav flex-nowrap float-right">
+                                        <li class="nav-item">
+                                            <a class="nav-link px-2" href="https://twitter.com/MMLabNTU" target="_blank">
+                                                <i class="zmdi zmdi-twitter text-white"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Spyrenav Overlay -->
+        </header>
+        <!-- End of Header -->
+
+
+        <!-- Main Content -->
+        <main class="main minh-100vh">
+            <!-- Section -->
+            <section class="py-0 overflow-hidden text-center">
+                <div class="bg-container overlay parallax" data-rellax-percentage="0.5">
+                </div>
+            </section>
+            <!-- End of Section -->         
+
+            <!-- Section Details -->
+            <section class="pb-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 order-lg-1">
+                            <div class="pb-6 pt-6 pr-lg-3 py-lg-3">
+                                <h2 class="mb-2 fw-medium text-secondary text-uppercase text-center text-lg-left">Chen Change Loy</h2>
+                                <p class="mb-3 text-muted text-center text-lg-left fs--1">
+                                    Nanyang Associate Professor, SCSE, NTU <br />
+                                    Director, <a href="https://www.mmlab-ntu.com/index.html" class="text-muted">MMLab@NTU</a><br />
+                                    Co-Associate Director, S-Lab <br />
+                                </p>
+
+                                <p class="mb-3 text-muted text-center text-lg-left fs--1">
+                                    Blk N4-02c-108, Nanyang Avenue <br />
+                                    School of Computer Science and Engineering <br />
+                                    Nanyang Technological University <br />
+                                    Singapore 639798 <br />
+                                </p>
+
+                                <div class="mb-5 text-center text-lg-left">
+                                    <a href="http://scholar.google.co.uk/citations?user=559LF80AAAAJ" target="_blank" class="btn btn-light btn-sm mr-2 mb-2 text-700"><span class="iconify" data-icon="cib:googles-cholar" data-inline="false"></span></a>
+                                    <a href="https://dblp.org/pid/01/5855.html" target="_blank" class="btn btn-light btn-sm mr-2 mb-2 text-700"><span class="iconify" data-icon="simple-icons:dblp" data-inline="false"></span></a>
+                                    <a href="https://twitter.com/ccloy" target="_blank" class="btn btn-light btn-sm mr-2 mb-2 text-700"><i class="zmdi zmdi-twitter zmdi-hc-fw"></i></a>
+                                    <a href="mailto:ccloy at ntu.edu.sg" target="_blank" class="btn btn-light btn-sm mr-2 mb-2 text-700"><i class="zmdi zmdi-email zmdi-hc-fw"></i></a>
+                                </div>
+
+                                <div class="mb-4 mb-lg-8">
+                                    <img src="./assets/img/cavan.jpg" alt="" class="position-relative img-fluid w-100 shadow-lg rounded" />
+                                </div> 
+
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-8 order-lg-1">
+                            <div class="pb-6 pt-lg-3 pt-0 py-lg-3">
+                                <p class="text-justify">
+                                    Chen Change Loy is a Nanyang Associate Professor with the <a href="http://scse.ntu.edu.sg/Pages/Home.aspx">School of Computer Science and Engineering</a>, Nanyang Technological University, Singapore. He is also an Adjunct Associate Professor at The Chinese University of Hong Kong. He is the Lab Director of MMLab@NTU and Co-associate Director of S-Lab. He received his Ph.D. (2010) in Computer Science from the <a  href="http://www.qmul.ac.uk/">Queen Mary University of London</a>. Prior to joining NTU, he served as a Research Assistant Professor at the <a href="http://mmlab.ie.cuhk.edu.hk/">MMLab</a> of <a href="http://www.cuhk.edu.hk/english/index.html">The Chinese University of Hong Kong</a>, from 2013 to 2018.
+                                </p>
+
+                                <p class="text-justify">
+                                    His research interests include computer vision and deep learning with a focus on image/video restoration and enhancement, generative tasks, and representation learning. He serves as an Associate Editor of the International Journal of Computer Vision (IJCV) and IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI). He also serves/served as an Area Chair of top conferences such as ICCV 2021, CVPR 2021, CVPR 2019, and ECCV 2018. He is a senior member of IEEE.
+                                </p>
+
+                                <p class="mb-0 fs--1">
+                                    <a href="./profile.html" class="h6 fs--1 fw-bold text-uppercase text-primary float-right">Full Biography<i class="zmdi zmdi-chevron-right pl-4"></i></a>
+                                </p>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+            <!-- Section MMLab@NTU -->
+            <section class="py-8 overflow-hidden text-center">
+                <div class="bg-container overlay parallax" data-rellax-percentage="0.5" style="background-image: url(../../assets/img/backgrounds/bg-04.jpg);"></div>
+                <div class="container-fluid">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-10 col-lg-5">
+                            <h2 class="mb-4 text-white">MMLab@NTU</h2>
+                            <h6 class="mb-5 lh-14 text-white">MMLab@NTU was formed by Chen Change Loy on the 1 August 2018, with a research focus on computer vision and deep learning. Its sister lab is <a href="http://mmlab.ie.cuhk.edu.hk/" target="_blank">MMLab@CUHK</a>. It is now a group with four faculty members and more than 35 members including research fellows, research assistants, and PhD students. Members in MMLab@NTU conduct research primarily in low-level vision, image and video understanding, creative content creation, 3D scene understanding and reconstruction.</h6>
+                            <a href="https://www.mmlab-ntu.com/index.html" target="_blank" class="btn btn-lg btn-primary px-6" target="_blank">Visit MMLab@NTU Homepage<i class="zmdi zmdi-chevron-right zmdi-hc-lg ml-3"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->            
+
+            <!-- Section Recent Papers -->
+            <section id="section-3" class="pt-7 pb-6">
+                <div class="container">
+                    <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">Recent</h3>
+                    <h2 class="mb-5 fw-medium text-secondary text-center text-lg-left">Papers</h2>
+                    
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 mb-4 mb-lg-6">
+                            <a href="../../project/pathrestore/index.html" target="_blank" class="mb-3 d-block position-relative">
+                                <div class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-secondary rounded text-white">
+                                    <i class="fas fa-link fa-2x"></i>
+                                </div>
+                                <img src="../../assets/img/teasers/pathrestore.jpg" alt="" class="position-relative img-fluid w-100 shadow-lg rounded opacity-1-hover" />
+                            </a>
+                        </div>
+                        <div class="col-lg-8 mb-4 mb-lg-6">
+                            <p>
+                                <span class="text-primary">Path-Restore: Learning Network Path Selection for Image Restoration </span> 
+                                <br />
+                                <span class="text-500">
+                                K. Yu, X. Wang, C. Dong, X. Tang, C. C. Loy<br /> 
+                                IEEE Transactions on Pattern Analysis and Machine Intelligence, 2021 <strong>(TPAMI)</strong><br />    
+                                </span>
+                                [<a href="https://doi.org/10.1109/TPAMI.2021.3096255" target="_blank"><span class="text-muted">DOI</span></a>]
+                                [<a href="https://arxiv.org/abs/1904.10343" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                [<a href="../../project/pathrestore/index.html" target="_blank"><span class="text-muted">Project Page</span></a>]
+                            </p>
+                            <p class="text-justify">
+                                We observe that some corrupted image regions are inherently easier to restore than others since the distortion and content vary within an image. To this end, we propose Path-Restore, a multi-path CNN with a pathfinder that can dynamically select an appropriate route for each image region. We train the pathfinder using reinforcement learning with a difficulty-regulated reward. This reward is related to the performance, complexity and "the difficulty of restoring a region". 
+                            </p>
+                        </div>
+
+                        <div class="col-lg-4 mb-4 mb-lg-6">
+                            <a href="../../project/fasa/index.html" target="_blank" class="mb-3 d-block position-relative">
+                                <div class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-secondary rounded text-white">
+                                    <i class="fas fa-link fa-2x"></i>
+                                </div>
+                                <img src="./assets/img/teasers/fasa.jpg" alt="" class="position-relative img-fluid w-100 shadow-lg rounded opacity-1-hover" />
+                            </a>
+                        </div>
+                        <div class="col-lg-8 mb-4 mb-lg-6">
+                            <p>
+                                <span class="text-primary">FASA: Feature Augmentation and Sampling Adaptation for Long-Tailed Instance Segmentation </span> 
+                                <br />
+                                <span class="text-500">
+                                Y. Zang, C. Huang, C. C. Loy <br /> 
+                                in Proceedings of IEEE/CVF International Conference on Computer Vision, 2021 <strong>(ICCV)</strong><br />    
+                                </span>
+                                [<a href="http://personal.ie.cuhk.edu.hk/~ccloy/files/iccv_2021_fasa.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                [<a href="https://arxiv.org/abs/2102.12867" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                [<a href="http://personal.ie.cuhk.edu.hk/~ccloy/files/iccv_2021_fasa_supp.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                [<a href="../../project/fasa/index.html" target="_blank"><span class="text-muted">Project Page</span></a>]
+                            </p>
+                            <p class="text-justify">
+                                We propose a simple yet effective method, <strong>F</strong>eature <strong>A</strong>ugmentation and <strong>S</strong>ampling <strong>A</strong>daptation (FASA), that addresses the data scarcity issue by augmenting the feature space especially for rare classes. FASA is a fast, generic method that can be easily plugged into standard or long-tailed segmentation frameworks, with consistent performance gains and little added cost.
+                            </p>
+                        </div>
+
+                        <div class="col-lg-4 mb-4 mb-lg-6">
+                            <a href="../../project/reconfigisp/index.html" target="_blank" class="mb-3 d-block position-relative">
+                                <div class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-secondary rounded text-white">
+                                    <i class="fas fa-link fa-2x"></i>
+                                </div>
+                                <img src="./assets/img/teasers/reconfigisp.jpg" alt="" class="position-relative img-fluid w-100 shadow-lg rounded opacity-1-hover" />
+                            </a>
+                        </div>
+                        <div class="col-lg-8 mb-4 mb-lg-6">
+                            <p>
+                                <span class="text-primary">ReconfigISP: Reconfigurable Camera Image Processing Pipeline </span> 
+                                <br />
+                                <span class="text-500">
+                                K. Yu, Z. Li, Y. Peng, C. C. Loy, J. Gu <br /> 
+                                in Proceedings of IEEE/CVF International Conference on Computer Vision, 2021 <strong>(ICCV)</strong><br />    
+                                </span>
+                                [<a href="http://personal.ie.cuhk.edu.hk/~ccloy/files/iccv_2021_reconfigisp.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                [<a href="https://arxiv.org/abs/2109.04760" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                [<a href="http://personal.ie.cuhk.edu.hk/~ccloy/files/iccv_2021_reconfigisp_supp.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                [<a href="../../project/reconfigisp/index.html" target="_blank"><span class="text-muted">Project Page</span></a>] 
+                            </p>
+                            <p class="text-justify">
+                                We propose a novel Reconfigurable ISP (ReconfigISP) whose architecture and parameters can be automatically tailored to specific data and tasks. In particular, we implement several ISP modules, and enable back-propagation for each module by training a differentiable proxy, hence allowing us to leverage the popular differentiable neural architecture search and effectively search for the optimal ISP architecture. A proxy tuning mechanism is adopted to maintain the accuracy of proxy networks in all cases.
+                            </p>
+                        </div>
+
+                        <div class="col-lg-4 mb-4 mb-lg-6">
+                            <a href="../../project/ffl/index.html" target="_blank" class="mb-3 d-block position-relative">
+                                <div class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-secondary rounded text-white">
+                                    <i class="fas fa-link fa-2x"></i>
+                                </div>
+                                <img src="./assets/img/teasers/ffl.jpg" alt="" class="position-relative img-fluid w-100 shadow-lg rounded opacity-1-hover" />
+                            </a>
+                        </div>
+                        <div class="col-lg-8 mb-4 mb-lg-6">
+                            <p>
+                                <span class="text-primary">Focal Frequency Loss for Image Reconstruction and Synthesis </span> 
+                                <br />
+                                <span class="text-500">
+                                L. Jiang, B. Dai, W. Wu, C. C. Loy <br /> 
+                                in Proceedings of IEEE/CVF International Conference on Computer Vision, 2021 <strong>(ICCV)</strong><br />    
+                                </span>
+                                [<a href="http://personal.ie.cuhk.edu.hk/~ccloy/files/iccv_2021_ffl.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                [<a href="https://arxiv.org/abs/2012.12821" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                [<a href="../../project/ffl/index.html" target="_blank"><span class="text-muted">Project Page</span></a>]
+                            </p>
+                            <p class="text-justify">
+                                We show that narrowing gaps in the frequency domain can ameliorate image reconstruction and synthesis quality further. We propose a novel focal frequency loss, which allows a model to adaptively focus on frequency components that are hard to synthesize by down-weighting the easy ones. This objective function is complementary to existing spatial losses, offering great impedance against the loss of important frequency information due to the inherent bias of neural networks.
+                            </p>
+                        </div>
+
+                        <div class="col-lg-4 mb-4 mb-lg-6">
+                            <a href="../../project/texformer/index.html" target="_blank" class="mb-3 d-block position-relative">
+                                <div class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-secondary rounded text-white">
+                                <i class="fas fa-link fa-2x"></i>
+                                </div>
+                                <img src="./assets/img/teasers/3trans.jpg" alt="" class="position-relative img-fluid w-100 shadow-lg rounded opacity-1-hover" />
+                            </a>
+                        </div>
+                        <div class="col-lg-8 mb-4 mb-lg-6">
+                            <p>
+                                <span class="text-primary">3D Human Texture Estimation from a Single Image with Transformers </span> 
+                                <br />
+                                <span class="text-500">
+                                X. Xu, C. C. Loy <br /> 
+                                in Proceedings of IEEE/CVF International Conference on Computer Vision, 2021 <strong>(ICCV, Oral)</strong><br />    
+                                </span>
+                                [<a href="http://personal.ie.cuhk.edu.hk/~ccloy/files/iccv_2021_texformer.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                [<a href="https://arxiv.org/abs/2109.02563" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                [<a href="../../project/texformer/index.html" target="_blank"><span class="text-muted">Project Page</span></a>]   
+                            </p>
+                            <p class="text-justify">
+                                Texformer estimates high-quality 3D human texture from a single image. The Transformer-based method allows efficient information interchange between the image space and UV texture space.
+                            </p>
+                        </div>
+
+                        <div class="col-lg-4 mb-4 mb-lg-6">
+                            <a href="../../project/talkedit/index.html" target="_blank" class="mb-3 d-block position-relative">
+                                <div class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-secondary rounded text-white">
+                                    <i class="fas fa-link fa-2x"></i>
+                                </div>
+                                <img src="./assets/img/teasers/talkedit.jpg" alt="" class="position-relative img-fluid w-100 shadow-lg rounded opacity-1-hover" />
+                            </a>
+                        </div>
+                        <div class="col-lg-8 mb-4 mb-lg-6">
+                            <p>
+                                <span class="text-primary">Talk-to-Edit: Fine-Grained Facial Editing via Dialog </span> 
+                                <br />
+                                <span class="text-500">
+                                Y. Jiang,  Z. Huang, X. Pan, C. C. Loy, Z. Liu <br /> 
+                                in Proceedings of IEEE/CVF International Conference on Computer Vision, 2021 <strong>(ICCV)</strong><br />    
+                                </span>
+                                [<a href="http://personal.ie.cuhk.edu.hk/~ccloy/files/iccv_2021_talkedit.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                [<a href="https://arxiv.org/abs/2109.04425" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                [<a href="../../project/talkedit/index.html" target="_blank"><span class="text-muted">Project Page</span></a>] 
+                            </p>
+                            <p class="text-justify">
+                                We propose Talk-to-Edit, an interactive facial editing framework that performs fine-grained attribute manipulation through dialog between the user and the system. Unlike previous works that regard the editing as traversing straight lines in the latent space, here the fine-grained editing is formulated as finding a curving trajectory that respects fine-grained attribute landscape on the semantic field. 2) The curvature at each step is location-specific and determined by the input image as well as the users’ language requests.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+            <!-- Section -->
+            <section id="section-4">
+                <div class="container">
+                    <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">Quick</h3>
+                    <h2 class="mb-5 fw-medium text-secondary text-center text-lg-left">Paper Links</h2>
+                    
+                    <div class="row justify-content-left">
+                        <div class="col-lg-4 mb-4 mb-lg-6">
+                            <a href="./publication_topic.html" class="mb-3 d-block position-relative">
+                                <div class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-secondary rounded text-white">
+                                    <i class="fas fa-link fa-2x"></i>
+                                </div>
+                                <img src="./assets/img/printscreens/publication.jpg" alt="" class="position-relative img-fluid w-100 shadow-lg rounded opacity-1-hover" />
+                            </a>
+                            <h4 class="text-center"><a href="./publication_topic.html" class="text-body">Full Publications</a></h4>
+                        </div>
+                        <div class="col-lg-4 mb-4 mb-lg-6">
+                            <a href="./publication_cvpr2021.html" class="mb-3 d-block position-relative">
+                                <div class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-secondary rounded text-white">
+                                    <i class="fas fa-link fa-2x"></i>
+                                </div>
+                                <img src="./assets/img/printscreens/cvpr_2021.jpg" alt="" class="position-relative img-fluid w-100 shadow-lg rounded opacity-1-hover" />
+                            </a>
+                            <h4 class="text-center"><a href="./publication_cvpr2021.html" class="text-body">CVPR 2021</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->            
+
+            <!-- Section -->
+            <section id="section-1" class="py-0">
+                <div class="container-fluid px-0">
+                    <div class="row no-gutters">
+                        <div class="col-md-6 py-6 py-lg-8 bg-blue-light overflow-hidden">
+                            <div class="row h-100 align-items-center">
+                                <div class="col px-5 px-lg-8 px-xl-10">
+                                    <h3 class="my-0 fs-1 fw-medium text-primary text-center text-lg-left">ICCV 2021 - The 3rd Workshop on</h3>
+                                    <h2 class="mb-4 fw-medium text-secondary text-center text-lg-left"> Sensing, Understanding and Synthesizing Humans</h2>
+                                    <p class="mb-0 text-justify">In our <a href="https://sense-human.github.io/" target="_blank">workshop</a> this year, we are organizing two exciting challenges. <br /><br />
+                                    </p>
+                                    <p class="mb-0 text-justify"> In <a href="https://competitions.codalab.org/competitions/33430" target="_blank">MVP Point Cloud Challenge</a>, you can compete with others using your point cloud completion and registration methods based on the newly proposed <a href="https://mvp-dataset.github.io/" target="_blank">MVP dataset</a>, a high-quality multi-view partial point cloud dataset. It contains over 100,000 high-quality scans of partial 3D shapes rendered from 26 uniformly distributed camera poses for each 3D CAD model.<br /><br />
+                                    </p>
+                                    <p class="mb-0 text-justify"> In <a href="https://competitions.codalab.org/competitions/33386" target="_blank">ForgeryNet: Face Forgery Analysis Challenge</a>, you will benchmark your anti-deepfake methods on the largest face forgery data <a href="https://yinanhe.github.io/projects/forgerynet.html" target="_blank">ForgeryNet</a>.<br /><br />
+                                    </p>
+                                    <p class="mb-0 text-justify"> Both challenges have the deadline on September 19, 2021. Great prizes up for grabs!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 py-8">
+                            <div class="bg-container" style="background-image: url(../../assets/img/images/forgerynet_logo.jpg);"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+            <!-- Section Join Us -->
+            <section class="py-6 bg-primary text-white">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 text-center">
+                            <a href="../../careers.html" target="_blank" class="btn btn-outline-light btn-lg px-6 mb-5 mb-lg-0">Join Us<i class="zmdi zmdi-accounts-alt zmdi-hc-lg ml-3"></i></a>
+                        </div>
+                        <div class="col-lg-8 text-center text-lg-left">
+                            <p class="mb-0">I am looking for motivated PhD students, postdocs, research associates and project officers who have interests in image processing, computer vision and deep learning.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->             
+        </main>
+        <!-- End of Main Content -->
+
+
+        <!-- Footer -->
+        <footer class="footer_p text-white" style="background-image: url(../../assets/img/footer-bg.jpg)">
+            <div class="container d-flex h-100">
+                <div class="row flex-grow-1">
+                    <div class="col-lg-3 pt-3 ext-l bg-dark text-center text-lg-left">
+                        <div class="d-flex flex-column h-100">
+                            <div class="pt-5 pt-lg-8 pb-4">
+                                <img src="../../assets/img/logo-small.png" alt="" width="108" class="mb-4" />
+                                <p class="mb-4 mt-3 fs--1"><br />
+                                Academic Block North <br />
+                                Nanyang Technological University<br />
+                                61 Nanyang Dr, Singapore 637335</p>
+        
+                                <p class="fs--1">
+                                <span class="text-white"><i class="zmdi zmdi-email zmdi-hc-fw mr-1"></i>mmlab-contact at e.ntu.edu.sg</span><br />
+                                <span class="text-white"><i class="zmdi zmdi-twitter zmdi-hc-fw mr-1"></i><a href="https://twitter.com/MMLabNTU" target="_blank" class="text-white">@MMLabNTU</a></span></p>
+                            </div>
+    
+                            <!-- <ul class="mt-4 mt-lg-auto mb-5 mb-lg-0 list-unstyled list-inline">
+                                <li class="mr-3 list-inline-item">
+                                    <a href="https://twitter.com/MMLabNTU" target="_blank">
+                                        <i class="zmdi zmdi-twitter text-white"></i>
+                                    </a>
+                                </li>
+                            </ul> -->
+                        </div>
+                    </div>
+
+                    <div class="col d-flex flex-column mb-2 mt-3 pl-lg-7">
+                        <div class="row pt-5 pt-lg-8 pb-4 pb-lg-6">
+                            <div class="col-6 col-lg-3">
+                                <h6 class="mb-1 mb-lg-4 text-uppercase">Publications</h6>
+                                <ul class="pt-2 mb-5 fw-light list-unstyled">
+                                    <li class="my-1"><a href="../../publication_topic.html" class="text-white">By Topic</a></li>
+                                    <li class="my-1"><a href="../../publication_year.html" class="text-white">By Year</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-lg-3">
+                                <h6 class="mb-1 mb-lg-4 text-uppercase">About</h6>
+                                <ul class="pt-2 mb-5 fw-light list-unstyled">
+                                    <li class="my-1"><a href="../../research.html" class="text-white">Our Research</a></li>
+                                    <li class="my-1"><a href="../../team.html" class="text-white">Team</a></li>
+                                    <li class="my-1"><a href="../../careers.html" class="text-white">Join Us</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-lg-3">
+                                <h6 class="mb-1 mb-lg-4 text-uppercase">Open Source</h6>
+                                <ul class="pt-2 mb-5 fw-light list-unstyled">
+                                    <li class="my-1"><a href="https://openmmlab.com/" target="_blank" class="text-white">OpenMMLab</a></li>
+                                    <li class="my-1"><a href="../../downloads.html" class="text-white">Codes and Datasets</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mt-auto d-flex justify-content-between">
+                            <span class="fs--3 fs-lg--2">&copy; MMLab@NTU, 2021</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer -->
+
+
+        <!-- Core Javascripts -->
+        <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
+        <script src="../../assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+        <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <!-- Vendor Javascripts -->
+        <script src="../../assets/vendor/rellax/rellax.min.js"></script>
+        <script src="../../assets/vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+        <script src="../../assets/vendor/sticky-kit/dist/sticky-kit.min.js"></script>
+        <script src="../../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+        <script src="../../assets/vendor/isotope-layout/dist/isotope.pkgd.min.js"></script>
+        <script src="../../assets/vendor/isotope-packery/packery-mode.pkgd.min.js"></script>
+        <!-- <script src="../../assets/vendor/aos/dist/aos.js"></script> -->
+        <script src="../../assets/vendor/iconify/dist/iconify.min.js"></script>
+
+        <!-- Theme Javascripts -->
+        <script src="../../assets/js/theme.js"></script>
+
+
+    </body>
+</html>
