@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <meta name="keywords" content="Chen Change Loy, Ziwei Liu, Bo Dai, Yixin Cao, Super-resolution, Deep Learning, Computer Vision, Convolutional Neural Network, Enhancement, Inpainting, Knowledge Distillation, Restoration, GAN, Generative Adversarial Networks, Generation, Manipulation, Editing, Object Detection, Segmentation, Recognition, Continual Learning, Domain Generalization, Self-Supervised Learning, Singapore, NTU, Nanyang Technological University, SCSE" />
+
+        <!-- Page Title -->
+        <title>Focal Frequency Loss | MMLab@NTU</title>
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicons/favicon-16x16.png">
+        <link rel="manifest" href="../../assets/img/favicons/site.webmanifest">
+        <link rel="mask-icon" href="../../assets/img/favicons/safari-pinned-tab.svg" color="#f23838">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- Vendor Stylesheets -->
+        <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700%7CRoboto:300,400,700" rel="stylesheet">
+        <link href="../../assets/vendor/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="../../assets/vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.css" rel="stylesheet">
+        <link href="../../assets/vendor/aos/dist/aos.css" rel="stylesheet">
+
+        <!-- Theme Stylesheets -->
+        <link href="../../assets/css/theme.css" rel="stylesheet">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22940424-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-22940424-1');
+        </script>
+    </head>
+
+    <body>
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="spinner">
+                <div class="circles"></div>
+            </div>
+        </div>
+        <!-- End of Preloader -->
+
+
+        <!-- Header -->
+        <header class="spyre-navbar navbar navbar-expand-lg bg-secondary navbar-dark fixed-top align-items-center" data-transparent data-text-color="#ffffff">
+            <div class="container">
+                <a class="navbar-brand mr-lg-5 mr-xl-7" href="../../index.html">
+                    <img src="../../assets/img/logo.png" class="d-none d-lg-block" alt="MMLab" width="183" />
+                    <img src="../../assets/img/logo.png" class="d-block d-lg-none" alt="MMLab" width="150" />
+                </a>
+
+                <!-— Desktop Menu -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="pl-2 nav-item navbar-text"><a href="../../index.html" class="nav-link text-400">Home</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="../../team.html" class="nav-link text-400">Team</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="../../research.html" class="nav-link text-400">Research</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="../../publication_topic.html" class="nav-link text-400">Publications</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="../../downloads.html" class="nav-link text-400">Code | Datasets</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="../../careers.html" class="nav-link text-400">Join Us</a></li>
+                    </ul>
+                </div>
+                <!-— End of Desktop Menu -->
+
+                <div class="menu-toggle d-block d-lg-none">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="cross">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spyrenav Overlay -->
+            <div class="spyre-navbar-overlay overlay-slide">
+                <div class="container">
+                    <div class="row">
+                        <div class="spyre-navbar-nav-container col-md-6 col-lg-5 col-xl-4 bg-white ext-l">
+                            <nav class="spyre-navbar-nav">
+                                <ul class="spyre-nav">
+                                    <li class="spyre-nav-item"><a href="../../index.html" class="spyre-nav-link">Home</a></li>
+                                    <li class="spyre-nav-item"><a href="../../research.html" class="spyre-nav-link">Our Research</a></li>
+                                    <li class="spyre-nav-item"><a href="../../team.html" class="spyre-nav-link">Team</a></li>
+                                    <li class="spyre-nav-item dropdown">
+                                        <a href="#" class="spyre-nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Publications</a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li class="dropdown-menu-item"><a href="../../publication_topic.html" class="dropdown-menu-link">By Topic</a></li>
+                                            <li class="dropdown-menu-item"><a href="../../publication_year.html" class="dropdown-menu-link">By Year</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="spyre-nav-item"><a href="../../downloads.html" class="spyre-nav-link">Code and Datasets</a></li>
+                                    <li class="spyre-nav-item"><a href="../../careers.html" class="spyre-nav-link">Join Us</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <div class="col-lg-7 col-xl-8 d-none d-md-block">
+                            <div class="d-flex flex-column h-100">
+                                <div class="d-flex h-100">
+                                    <div class="align-self-center">
+                                        <div class="text-uppercase"
+                                            data-background-text="computer vision"
+                                            data-color="#7079a2"
+                                            data-opacity="0.02"
+                                            data-font-size="85px"
+                                            data-font-weight="500"
+                                            data-offset-x="-5%"
+                                            data-letter-spacing="5px"
+                                        ></div>
+                                        <div class="text-uppercase"
+                                            data-background-text="mmlab"
+                                            data-color="#7079a2"
+                                            data-opacity="0.04"
+                                            data-font-size="175px"
+                                            data-font-weight="500"
+                                            data-offset-x="29%"
+                                            data-padding="7vh 0 2vh 0"
+                                            data-letter-spacing="5px"
+                                        ></div>
+                                        <div class="text-uppercase"
+                                            data-background-text="deep learning"
+                                            data-color="#7079a2"
+                                            data-opacity="0.03"
+                                            data-font-size="140px"
+                                            data-font-weight="500"
+                                            data-offset-x="15%"
+                                            data-letter-spacing="5px"
+                                        ></div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-auto">
+                                    <ul class="nav flex-nowrap float-right">
+                                        <li class="nav-item">
+                                            <a class="nav-link px-2" href="https://twitter.com/MMLabNTU" target="_blank">
+                                                <i class="zmdi zmdi-twitter text-white"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Spyrenav Overlay -->
+        </header>
+        <!-- End of Header -->
+
+
+        <!-- Main Content -->
+        <main class="main minh-100vh">
+            <!-- Section -->
+            <section class="py-0 overflow-hidden text-center">
+                <div class="bg-container overlay parallax" data-rellax-percentage="0.5" style="background-image: url(../../assets/img/backgrounds/bg-27.jpg)"></div>
+                <div class="container">
+                    <div class="row h-100vh align-items-center">
+                        <div class="col">
+                            <h1 class="text-white text-uppercase fs-4 fs-lg-5">Focal Frequency Loss for Image Reconstruction and Synthesis</h1>
+                            <p class="mb-5 fs-lg-1 text-white">ICCV 2021<br />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+            <!-- Section Abstract -->
+            <section>
+                <div class="container">
+                    <div class="row no-gutters justify-content-between">
+                        <div class="col-lg-5">
+                            <h3 class="mt-6 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">Paper</h3>
+                            <h2 class="mb-5 fw-medium text-secondary text-uppercase text-center text-lg-left">Abstract</h2>
+                            <p class="text-justify">
+                                Image reconstruction and synthesis have witnessed remarkable progress thanks to the development of generative models. Nonetheless, gaps could still exist between the real and generated images, especially in the frequency domain. In this study, we show that narrowing gaps in the frequency domain can ameliorate image reconstruction and synthesis quality further. We propose a novel focal frequency loss, which allows a model to adaptively focus on frequency components that are hard to synthesize by down-weighting the easy ones. This objective function is complementary to existing spatial losses, offering great impedance against the loss of important frequency information due to the inherent bias of neural networks. We demonstrate the versatility and effectiveness of focal frequency loss to improve popular models, such as VAE, pix2pix, and SPADE, in both perceptual quality and quantitative performance. We further show its potential on StyleGAN2.
+                            </p>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="order-lg-2 pb-0 pb-lg-0 pt-lg-3">
+                                <img src="./img/teaser.jpg" class="img-fluid" alt="" />
+                            </div>
+
+                            <div class="card d-block border-0">
+                                <div class="card-body">
+                                    <p class="card-text fs--1 text-justify">
+                                        Frequency domain gaps between the real and the generated images by typical generative models in image reconstruction and synthesis. Vanilla AE loses important frequencies, leading to blurry images (Row 1 and 2). VAE biases to a limited spectrum region (Row 3), losing high-frequency information (outer regions and corners). Unnatural periodic patterns can be spotted on the spectra of images generated by GAN (pix2pix) (Row 4), consistent with the observable checkerboard artifacts (zoom in for view). In some cases, a frequency spectrum region shift occurs to GAN-generated images (Row 5).
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+            <!-- Section Downloads -->
+            <section class="pt-0">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 pr-lg-5 text-center">
+                                    <h2 class="mb-4 fs-1 fw-medium text-uppercase"><span class="fs-2 pr-2 text-primary position-relative top-2"><i class="zmdi zmdi-collection-pdf"></i></span><a href="http://personal.ie.cuhk.edu.hk/~ccloy/files/iccv_2021_ffl.pdf" class="text-muted" target="_blank">Paper</a></h2>
+                                    <!-- <p class="fs--1">If you have description you can put it here.</p> -->
+                                </div>
+                                <div class="col-md-6 col-lg-6 px-lg-5 border-left-centered-40 border-left-centered-faded text-center">
+                                    <h2 class="mb-4 fs-1 fw-medium text-uppercase"><span class="fs-2 pr-2 text-primary position-relative top-2"><i class="zmdi zmdi-github-box"></i></span><a href="https://github.com/EndlessSora/focal-frequency-loss" class="text-muted" target="_blank">Code</a></h2>
+                                    <!-- <p class="fs--1">If you have description you can put it here.</p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+            <!-- Section Methodology -->
+            <section class="pb-0 bg-blue-light">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5 order-lg-1">
+                            <div class="pt-6 py-lg-3">
+                                <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">The Formulation</h3>
+                                <h2 class="mb-5 fw-medium text-secondary text-uppercase text-center text-lg-left">Focal Frequency Loss</h2>
+                                <p class="text-justify">
+                                The proposed focal frequency loss (FFL) can be formulated in three steps:
+                                </p>
+                                <ol>
+                                    <li>Explicitly exploit the frequency representation of images via 2D DFT, facilitating the network to locate hard frequencies.</li>
+                                    <li>Define a frequency distance to quantify the differences between images in the frequency domain.</li>
+                                    <li>Adopt a dynamic spectrum weighting scheme that allows the model to focus on the on-the-fly hard frequencies.</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-7 order-lg-2 pb-lg-0 pt-lg-3">
+                            <div class="mb-8">
+                                <img src="./img/method.png" class="mt-6 img-fluid" alt="" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+            <!-- Section Image Reconstruction -->
+            <section class="pb-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 order-lg-1">
+                            <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">VAE</h3>
+                            <h2 class="mb-5 fw-medium text-secondary text-uppercase text-center text-lg-left">Image Reconstruction</h2>
+                            <p class="text-justify">We show some examples of applying the proposed FFL.
+                                In the spatial domain, without applying FFL, the reconstructed faces are blurry.
+                                Trained with FFL, the VAE model can reconstruct much clearer results, being closer to the ground truth real images.
+                                Besides, gaps in the frequency domain are clearly narrowed by FFL for VAE image reconstruction on CelebA (64 × 64).
+                            </p>
+
+                            <div class="row">                                
+                                <div class="col-lg-6 order-lg-2 mb-lg-0 mb-5">
+                                        <img class="img-fluid" src="./img/reconvae_01.jpg" />
+                                </div>
+                                <div class="col-lg-6 order-lg-2 mb-lg-0 mb-5">
+                                        <img class="img-fluid" src="./img/reconvae_02.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+           <!-- Section Image-to-Image Translation -->
+            <section class="pb-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 order-lg-1">
+                            <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">pix2pix | SPADE</h3>
+                            <h2 class="mb-5 fw-medium text-secondary text-uppercase text-center text-lg-left">Image-to-Image Translation</h2>
+                            <p class="text-justify">For conditional image synthesis, we examine two typical GAN-based image-to-image translation methods, <i>i.e.,</i>
+                                pix2pix on CMP Facades (256 × 256) and edges → shoes (256 × 256), as well as SPADE on Cityscapes (512 × 256) and ADE20K (256 × 256).
+                                FFL improves the image synthesis quality by reducing unnatural artifacts and boosting the models' capability to generate essential details.
+                            </p>
+
+                            <div class="row">                                
+                                <div class="col-lg-6 order-lg-2 mb-lg-0 mb-5">
+                                        <img class="img-fluid" src="./img/consynI2I_01.jpg" />
+                                </div>
+                                <div class="col-lg-6 order-lg-2 mb-lg-0 mb-5">
+                                        <img class="img-fluid" src="./img/consynI2I_02.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+            <!-- Section Unconditional Image Synthesis -->
+            <section class="pb-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 order-lg-1">
+                            <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">StyleGAN2</h3>
+                            <h2 class="mb-5 fw-medium text-secondary text-uppercase text-center text-lg-left">Unconditional Image Synthesis</h2>
+
+                            <p class="text-justify">We further study the potential of FFL on the state-of-the-art unconditional image synthesis method, <i>i.e.,</i> StyleGAN2.
+                                The synthesis results without truncation and the mini-batch average spectra (adjusted to better contrast) on CelebA-HQ (256 × 256) are shown below.
+                                Although StyleGAN2 (w/o FFL) generates photorealistic images in most cases, some tiny artifacts can still be spotted on the background (Column 2 and 4) and face (Column 5).
+                                Applying FFL (w/ FFL), such artifacts are reduced, and the frequency domain gaps between mini-batch average spectra are evidently mitigated (Column 8).
+                            </p>
+
+                            <div class="col-lg-12 order-lg-2 pb-lg-0 pt-lg-3">
+                                <div class="mb-6">
+                                    <img src="./img/unsynsg2res256.jpg" class="mt-4 img-fluid w-100" alt="" />
+                                </div>
+                            </div>
+
+                            <p class="text-justify">Below we show some higher-resolution synthesized images (without truncation) by StyleGAN2 trained with/without FFL on CelebA-HQ (1024 × 1024).
+                                Although StyleGAN2 (w/o FFL) generates plausible results in most cases, it sometimes yields tiny artifacts on the face (Row 2) and eyes (Row 3).
+                                The details on the teeth are missing in certain cases (Row 1). The synthesized images by StyleGAN2 with FFL (w/ FFL) are very photorealistic.
+                                Quantitatively, the model with FFL achieves the FID score of <b>3.374</b>, outperforming StyleGAN2 without FFL of 3.733.
+                            </p>
+
+                            <div class="col-lg-12 order-lg-2 pb-lg-0 pt-lg-3">
+                                <div class="mb-8">
+                                    <img src="./img/unsynsg2res1024.jpg" class="mt-4 img-fluid w-100" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+            <!-- Section Citation -->
+            <section class="pb-7 bg-blue-light">
+                <div class="container">
+                    <div class="col-lg-12 order-lg-2 pb-lg-0 pt-lg-3">
+                        <div class="mb-3">
+                                <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">Paper</h3>
+                                <h2 class="mb-5 fw-medium text-secondary text-uppercase text-center text-lg-left">Citation</h2>
+                                <p class="text-700 fw-medium">
+                                    @inproceedings{jiang2021focal,<br />
+                                        &emsp;title={Focal Frequency Loss for Image Reconstruction and Synthesis},<br />
+                                        &emsp;author={Jiang, Liming and Dai, Bo and Wu, Wayne and Loy, Chen Change},<br />
+                                        &emsp;booktitle={ICCV},<br />
+                                        &emsp;year={2021} <br />
+                                    }
+                                </p>
+                                </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+            <!-- Section Related Projects -->
+            <section class="pb-6">
+                <div class="container">
+                    <div class="row">
+                        <div class="col text-center text-lg-left">
+                            <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase">Related</h3>
+                            <h2 class="mb-5 fw-medium text-secondary text-uppercase">Projects</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-10">
+                            <div class="row">
+                                <ul>
+                                    <li>
+                                       <span class="text-primary">TSIT: A Simple and Versatile Framework for Image-to-Image Translation</span> 
+                                       <br />
+                                       <span class="text-500">
+                                       L. Jiang, C. Zhang, M. Huang, C. Liu, J. Shi, C. C. Loy  <br /> 
+                                       European Conference on Computer Vision, 2020 <strong>(ECCV, Spotlight)</strong><br />  
+                                       </span>
+                                       [<a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123480205.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2007.12072" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123480205-supp.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="https://github.com/EndlessSora/TSIT" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">DeeperForensics-1.0: A Large-Scale Dataset for Real-World Face Forgery Detection </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       L. Jiang, R. Li, W. Wu, C. Qian, C. C. Loy  <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2020 <strong>(CVPR)</strong> <br />    
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Jiang_DeeperForensics-1.0_A_Large-Scale_Dataset_for_Real-World_Face_Forgery_Detection_CVPR_2020_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2001.03024" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://openaccess.thecvf.com/content_CVPR_2020/supplemental/Jiang_DeeperForensics-1.0_A_Large-Scale_CVPR_2020_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="https://liming-jiang.com/projects/DrF1/DrF1.html" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                       [<a href="https://youtu.be/ZLWKZ6ej-AQ" target="_blank"><span class="text-muted">YouTube</span></a>]
+                                    </li>
+                                    <li>
+                                       <span class="text-primary">Positional Encoding as Spatial Inductive Bias in GANs </span> 
+                                       <br />
+                                       <span class="text-500">
+                                       R. Xu, X. Wang, K. Chen, B. Zhou, C. C. Loy <br /> 
+                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2021 <strong>(CVPR)</strong><br />   
+                                       </span>
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Xu_Positional_Encoding_As_Spatial_Inductive_Bias_in_GANs_CVPR_2021_paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                       [<a href="https://arxiv.org/abs/2012.05217" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                       [<a href="https://openaccess.thecvf.com/content/CVPR2021/supplemental/Xu_Positional_Encoding_As_CVPR_2021_supplemental.pdf" target="_blank"><span class="text-muted">Supplementary Material</span></a>]
+                                       [<a href="https://nbei.github.io/gan-pos-encoding.html" target="_blank"><span class="text-muted">Project Page</span></a>]
+                                       [<a href="https://www.youtube.com/watch?v=n6B01YqC1ng&feature=emb_title" target="_blank"><span class="text-muted">YouTube</span></a>]
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+
+            <!-- Section Contact -->
+            <section class="pt-7 pb-0 bg-blue-light">
+                <div class="container">
+                    <div class="pb-6 px-lg-8 px-xl-12">
+                        <div class="row justify-content-center">
+                            <div class="col-6 col-lg-3">
+                                <img src="../../assets/img/profiles/liming_jiang.jpg" alt="" class="img-fluid w-100 rounded-circle" />
+                            </div>
+                            <div class="col-lg-9 text-center text-lg-left">
+                                    <p class="h5 text-secondary fw-medium mt-3">Contact</p>
+                                    <br /><a href="https://liming-jiang.com/" target="_blank">Liming Jiang</a>
+                                    <br />Email: liming002 at ntu.edu.sg
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+        </main>
+        <!-- End of Main Content -->
+
+
+        <!-- Footer -->
+        <footer class="footer text-white" style="background-image: url(../../assets/img/footer-bg.jpg)">
+            <div class="container d-flex h-100">
+                <div class="row flex-grow-1">
+                    <div class="col-lg-3 pt-3 ext-l bg-secondary text-center text-lg-left">
+                        <div class="d-flex flex-column h-100">
+                            <div class="pt-5 pt-lg-8 pb-4">
+                                <img src="../../assets/img/logo-small.png" alt="" width="108" class="mb-4" />
+                                <p class="mb-4 mt-3 fs--1"><br />
+                                Academic Block North <br />
+                                Nanyang Technological University<br />
+                                61 Nanyang Dr, Singapore 637335</p>
+
+                                <p class="fs--1">
+                                <span class="text-white"><i class="zmdi zmdi-email zmdi-hc-fw mr-1"></i>mmlab-contact at e.ntu.edu.sg</span><br />
+                                <span class="text-white"><i class="zmdi zmdi-twitter zmdi-hc-fw mr-1"></i><a href="https://twitter.com/MMLabNTU" target="_blank" class="text-white">@MMLabNTU</a></span></p>
+                            </div>
+
+                            <!-- <ul class="mt-4 mt-lg-auto mb-5 mb-lg-0 list-unstyled list-inline">
+                                <li class="mr-3 list-inline-item">
+                                    <a href="https://twitter.com/MMLabNTU" target="_blank">
+                                        <i class="zmdi zmdi-twitter text-white"></i>
+                                    </a>
+                                </li>
+                            </ul> -->
+                        </div>
+                    </div>
+
+                    <div class="col d-flex flex-column mb-2 mt-3 pl-lg-7">
+                        <div class="row pt-5 pt-lg-8 pb-4 pb-lg-6">
+                            <div class="col-6 col-lg-3">
+                                <h6 class="mb-1 mb-lg-4 text-uppercase">Publications</h6>
+                                <ul class="pt-2 mb-5 fw-light list-unstyled">
+                                    <li class="my-1"><a href="../../publication_topic.html" class="text-white">By Topic</a></li>
+                                    <li class="my-1"><a href="../../publication_year.html" class="text-white">By Year</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-lg-3">
+                                <h6 class="mb-1 mb-lg-4 text-uppercase">About</h6>
+                                <ul class="pt-2 mb-5 fw-light list-unstyled">
+                                    <li class="my-1"><a href="../../research.html" class="text-white">Our Research</a></li>
+                                    <li class="my-1"><a href="../../team.html" class="text-white">Team</a></li>
+                                    <li class="my-1"><a href="../../careers.html" class="text-white">Join Us</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-lg-3">
+                                <h6 class="mb-1 mb-lg-4 text-uppercase">Open Source</h6>
+                                <ul class="pt-2 mb-5 fw-light list-unstyled">
+                                    <li class="my-1"><a href="https://openmmlab.com/" target="_blank" class="text-white">OpenMMLab</a></li>
+                                    <li class="my-1"><a href="../../downloads.html" class="text-white">Code and Datasets</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mt-auto d-flex justify-content-between">
+                            <span class="fs--3 fs-lg--2">&copy; MMLab@NTU, 2021</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer -->
+
+
+        <!-- Core Javascripts -->
+        <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
+        <script src="../../assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+        <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <!-- Vendor Javascripts -->
+        <script src="../../assets/vendor/rellax/rellax.min.js"></script>
+        <script src="../../assets/vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+        <script src="../../assets/vendor/sticky-kit/dist/sticky-kit.min.js"></script>
+        <script src="../../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+        <script src="../../assets/vendor/isotope-layout/dist/isotope.pkgd.min.js"></script>
+        <script src="../../assets/vendor/isotope-packery/packery-mode.pkgd.min.js"></script>
+        <script src="../../assets/vendor/aos/dist/aos.js"></script>
+
+        <!-- Theme Javascripts -->
+        <script src="../../assets/js/theme.js"></script>
+
+    </body>
+</html>

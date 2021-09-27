@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <meta name="keywords" content="Chen Change Loy, Ziwei Liu, Bo Dai, Yixin Cao, Super-resolution, Deep Learning, Computer Vision, Convolutional Neural Network, Enhancement, Inpainting, Knowledge Distillation, Restoration, GAN, Generative Adversarial Networks, Generation, Manipulation, Editing, Object Detection, Segmentation, Recognition, Continual Learning, Domain Generalization, Self-Supervised Learning, Singapore, NTU, Nanyang Technological University, SCSE" />
+        
+        <!-- Page Title -->
+        <title>Talk-to-Edit | MMLab@NTU</title>
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicons/favicon-16x16.png">
+        <link rel="manifest" href="../../assets/img/favicons/site.webmanifest">
+        <link rel="mask-icon" href="../../assets/img/favicons/safari-pinned-tab.svg" color="#f23838">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- Vendor Stylesheets -->
+        <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700%7CRoboto:300,400,700" rel="stylesheet">
+        <link href="../../assets/vendor/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="../../assets/vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.css" rel="stylesheet">
+        <link href="../../assets/vendor/aos/dist/aos.css" rel="stylesheet">
+        <link href="../../assets/vendor/twentytwenty/css/twentytwenty.css" rel="stylesheet">
+        <link href="../../assets/vendor/twentytwenty/css/foundation.css" rel="stylesheet">
+
+        <!-- Theme Stylesheets -->
+        <link href="../../assets/css/theme.css" rel="stylesheet">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22940424-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-22940424-1');
+        </script>
+    </head>
+
+    <body>
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="spinner">
+                <div class="circles"></div>
+            </div>
+        </div>
+        <!-- End of Preloader -->
+
+
+        <!-- Header -->
+        <header class="spyre-navbar navbar navbar-expand-lg bg-secondary navbar-dark fixed-top align-items-center" data-transparent data-text-color="#ffffff">
+            <div class="container">
+                <a class="navbar-brand mr-lg-5 mr-xl-7" href="../../index.html">
+                    <img src="../../assets/img/logo.png" class="d-none d-lg-block" alt="MMLab" width="183" />
+                    <img src="../../assets/img/logo.png" class="d-block d-lg-none" alt="MMLab" width="150" />
+                </a>
+
+                <!-— Desktop Menu -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="pl-2 nav-item navbar-text"><a href="../../index.html" class="nav-link text-400">Home</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="../../team.html" class="nav-link text-400">Team</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="../../research.html" class="nav-link text-400">Research</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="../../publication_topic.html" class="nav-link text-400">Publications</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="../../downloads.html" class="nav-link text-400">Code | Datasets</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="../../careers.html" class="nav-link text-400">Join Us</a></li>
+                    </ul>
+                </div>
+                <!-— End of Desktop Menu -->
+
+                <div class="menu-toggle d-block d-lg-none">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="cross">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spyrenav Overlay -->
+            <div class="spyre-navbar-overlay overlay-slide">
+                <div class="container">
+                    <div class="row">
+                        <div class="spyre-navbar-nav-container col-md-6 col-lg-5 col-xl-4 bg-white ext-l">
+                            <nav class="spyre-navbar-nav">
+                                <ul class="spyre-nav">
+                                    <li class="spyre-nav-item"><a href="../../index.html" class="spyre-nav-link">Home</a></li>
+                                    <li class="spyre-nav-item"><a href="../../research.html" class="spyre-nav-link">Our Research</a></li>
+                                    <li class="spyre-nav-item"><a href="../../team.html" class="spyre-nav-link">Team</a></li>
+                                    <li class="spyre-nav-item dropdown">
+                                        <a href="#" class="spyre-nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Publications</a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li class="dropdown-menu-item"><a href="../../publication_topic.html" class="dropdown-menu-link">By Topic</a></li>
+                                            <li class="dropdown-menu-item"><a href="../../publication_year.html" class="dropdown-menu-link">By Year</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="spyre-nav-item"><a href="../../downloads.html" class="spyre-nav-link">Code and Datasets</a></li>
+                                    <li class="spyre-nav-item"><a href="../../careers.html" class="spyre-nav-link">Join Us</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+        
+                        <div class="col-lg-7 col-xl-8 d-none d-md-block">
+                            <div class="d-flex flex-column h-100">
+                                <div class="d-flex h-100">
+                                    <div class="align-self-center">
+                                        <div class="text-uppercase"
+                                            data-background-text="computer vision"
+                                            data-color="#7079a2"
+                                            data-opacity="0.02"
+                                            data-font-size="85px"
+                                            data-font-weight="500"
+                                            data-offset-x="-5%"
+                                            data-letter-spacing="5px"
+                                        ></div>
+                                        <div class="text-uppercase"
+                                            data-background-text="mmlab"
+                                            data-color="#7079a2"
+                                            data-opacity="0.04"
+                                            data-font-size="175px"
+                                            data-font-weight="500"
+                                            data-offset-x="29%"
+                                            data-padding="7vh 0 2vh 0"
+                                            data-letter-spacing="5px"
+                                        ></div>
+                                        <div class="text-uppercase"
+                                            data-background-text="deep learning"
+                                            data-color="#7079a2"
+                                            data-opacity="0.03"
+                                            data-font-size="140px"
+                                            data-font-weight="500"
+                                            data-offset-x="15%"
+                                            data-letter-spacing="5px"
+                                        ></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-auto">
+                                    <ul class="nav flex-nowrap float-right">
+                                        <li class="nav-item">
+                                            <a class="nav-link px-2" href="https://twitter.com/MMLabNTU" target="_blank">
+                                                <i class="zmdi zmdi-twitter text-white"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Spyrenav Overlay -->
+        </header>
+        <!-- End of Header -->
+
+
+        <!-- Main Content -->
+        <main class="main minh-100vh">
+            <!-- Section -->
+            <section class="py-0 overflow-hidden text-center">
+                <div class="bg-container overlay parallax" data-rellax-percentage="0.5" style="background-image: url(../../assets/img/images/celeba_dialog.jpg)"></div>
+                <div class="container">
+                    <div class="row h-100vh align-items-center">
+                        <div class="col">
+                            <h1 class="text-white text-uppercase fs-4 fs-lg-6">Talk-to-Edit: </h1>
+                            <h1 class="text-white text-uppercase fs-4 fs-lg-6">Fine-Grained Facial Editing via Dialog</h1>
+                            <p class="mb-5 fs-lg-1 text-white">ICCV 2021<br />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+            <!-- Section Abstract -->
+            <section>
+                <div class="container">
+                    <div class="row no-gutters justify-content-between">
+                        <div class="col-lg-12">
+                            <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">Paper</h3>
+                            <h2 class="mb-5 fw-medium text-secondary text-uppercase text-center text-lg-left">Abstract</h2>
+                            <p class="text-justify">
+                                Facial editing is an important task in vision and graphics with numerous applications. However, existing works are incapable to deliver a continuous and fine-grained editing mode (e.g., editing a slightly smiling face to a big laughing one) with natural interactions with users. In this work, we propose <strong>Talk-to-Edit</strong>, an interactive facial editing framework that performs fine-grained attribute manipulation through dialog between the user and the system. Our key insight is to model a continual "semantic field" in the GAN latent space. 1) Unlike previous works that regard the editing as traversing straight lines in the latent space, here the fine-grained editing is formulated as finding a curving trajectory that respects fine-grained attribute landscape on the semantic field. 2) The curvature at each step is location-specific and determined by the input image as well as the users' language requests. 3) To engage the users in a meaningful dialog, our system generates language feedback by considering both the user request and the current state of the semantic field.
+                            </p>
+                            <p class="text-justify">
+                                We also contribute <strong>CelebA-Dialog</strong>, a visual-language facial editing dataset to facilitate large-scale study. Specifically, each image has manually annotated fine-grained attribute annotations as well as template-based textual descriptions in natural language. Extensive quantitative and qualitative experiments demonstrate the superiority of our framework in terms of 1) the smoothness of fine-grained editing, 2) the identity/attribute preservation, and 3) the visual photorealism and dialog fluency. Notably, user study validates that our overall system is consistently favored by around 80% of the participants.                            </p>
+                        </div> 
+                    </div>     
+                    <div class="row no-gutters justify-content-between">
+                        <div class="col-lg-12 pb-lg-0 pt-lg-3">
+                            <div class="mb-0">
+                                <img src="./img/teaser.jpg" class="mt-4 img-fluid w-100" alt="" />
+                            </div>     
+                            <div class="card d-block border-0">
+                                <div class="card-body">
+                                    <p class="card-text fs--1 justify-content-center">
+                                        We propose Talk-to-Edit, an interactive facial editing framework that performs fine-grained facial editing through dialog between the user and the system.
+                                    </p>
+                                </div>                                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section --> 
+
+            <!-- Section Downloads -->
+            <section class="pt-0">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-4 pr-lg-5 text-center">
+                                    <h2 class="mb-4 fs-1 fw-medium text-uppercase"><span class="fs-2 pr-2 text-primary position-relative top-2"><i class="zmdi zmdi-collection-pdf"></i></span><a href="http://personal.ie.cuhk.edu.hk/~ccloy/files/iccv_2021_talkedit.pdf" target="_blank" class="text-muted">Paper</a></h2>
+                                    <!-- <p class="fs--1">If you have description you can put it here.</p> -->
+                                </div>
+                                <div class="col-md-6 col-lg-4 px-lg-5 border-left-centered-40 border-left-centered-faded text-center">
+                                    <h2 class="mb-4 fs-1 fw-medium text-uppercase"><span class="fs-2 pr-2 text-primary position-relative top-2"><i class="zmdi zmdi-github-box"></i></span><a href="https://github.com/yumingj/Talk-to-Edit" target="_blank" class="text-muted">Codes</a></h2>
+                                    <!-- <p class="fs--1">If you have description you can put it here.</p> -->
+                                </div>
+                                <div class="col-md-6 col-lg-4 pl-lg-5 border-left-centered-40 border-left-centered-faded text-center">
+                                    <h2 class="mb-4 fs-1 fw-medium text-uppercase"><span class="fs-2 pr-2 text-primary position-relative top-2"><i class="zmdi zmdi-cloud-download"></i></span><a href="https://mmlab.ie.cuhk.edu.hk/projects/CelebA/CelebA_Dialog.html" target="_blank" class="text-muted">Dataset</a></h2>
+                                    <!-- <p class="fs--1">If you have description you can put it here.</p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+            <!-- Section Methodology -->
+            <section class="pb-6 bg-blue-light">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 order-lg-1">
+                            <div class="pb-6 pt-6 py-lg-3">
+                                <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">The Pipeline</h3>
+                                <h2 class="mb-5 fw-medium text-secondary text-uppercase text-center text-lg-left">Talk-to-Edit</h2>
+                                <p class="text-justify">
+                                    The pipeline consists of three components:
+                                </p>
+                                    <ol>
+                                        <li><strong>Language Encoder</strong>: understands user request.</li>
+                                        <li><strong>Semantic Field</strong>: performs fine-grained editing.</li>
+                                        <li><strong>Talk Module</strong>: provides meaningful natural language feedback.</li>
+                                    </ol>                                
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-8 order-lg-2 pb-lg-0 pt-lg-6"> 
+                            <div class="mb-8">
+                                <img src="./img/pipeline.png" class="mt-4 img-fluid w-100" alt="" />
+                            </div>                                                         
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->  
+
+            <!-- Section Results -->
+            <section class="pb-6">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 order-lg-1">
+                            <div class="pb-6 pt-6 py-lg-3">
+                                <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">The</h3>
+                                <h2 class="mb-5 fw-medium text-secondary text-uppercase text-center text-lg-left">Semantic Field</h2>
+                                <p class="text-justify">
+                                    In the StyleGAN latent space, the attribute score is a scalar field. The gradient of attribute score field with respect to the latent code is a vector field, which we term as “semantic field”. We learn the semantic field, and move the latent code along the learned field lines to achieve facial editing.
+                                </p>      
+                            </div>
+                        </div>
+
+                        <div class="col-lg-8 order-lg-2 pb-lg-0 pt-lg-6"> 
+                            <div class="mb-8">
+                                <img src="./img/field.png" class="mt-4 img-fluid w-100" alt="" />
+                            </div>                                                   
+                        </div>  
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+            <!-- Section Results -->
+            <section class="pb-6 bg-blue-light">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 order-lg-1">
+                            <div class="pb-6 pt-6 py-lg-3">
+                                <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">The Dataset</h3>
+                                <h2 class="mb-5 fw-medium text-secondary text-uppercase text-center text-lg-left">CelebA-Dialog</h2>
+                                <p class="text-justify">
+                                    We contribute a large-scale visual-language face dataset named <strong>CelebA-Dialog</strong>:
+                                    <ol>
+                                        <li>Facial images are annotated with rich <strong>fine-grained labels</strong>, which classify one attribute into multiple degrees according to its semantic meaning.</li> 
+                                        <li>Accompanied with each image, there are <strong>captions</strong> describing the attributes and a <strong>user request</strong> sample.</li>
+                                    </ol>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-8 order-lg-2 pb-lg-0 pt-lg-6">
+                            <div class="mb-8">
+                                <img src="./img/dataset.png" class="mt-4 img-fluid w-100" alt="" />
+                                <p class="card-text fs--1 text-center mt-2">
+                                    Illustration of CelebA-Dialog dataset. We show example images and annotations for the smiling attribute. Below the images are the attribute degrees and the corresponding textual descriptions. We also show the fine-grained label distribution of the smiling attribute.
+                                </p>
+                            </div>
+                        </div>          
+
+                        <!-- <div class="col-lg-12 pb-lg-0 pt-lg-3">
+                            <div class="mb-0">
+                                <img src="./img/celeba_dialog.png" class="mt-4 img-fluid w-100" alt="" />
+                            </div>     
+                        </div> -->                                        
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+            <!-- Section Results -->
+            <section class="pb-6">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 order-lg-1">
+                            <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">Qualitative</h3>
+                            <h2 class="mb-5 fw-medium text-secondary text-uppercase text-center text-lg-left">Results</h2>
+                            <div class="row"> 
+                                <div class="col-lg-12 pb-lg-0 pt-lg-3">
+                                    <div class="mb-0">
+                                        <img src="./img/1024_results_annotated.jpg" class="mt-4 img-fluid w-100" alt="" />
+                                    </div>    
+                                </div>    
+                            </div>
+                            <p class="card-text fs--1 text-center mt-2">
+                                Qualitative results on the manipulation of five attributes respectively: Bangs, Eyeglasses, Beard, Smiling, Young.
+                            </p>
+                        </div>                        
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section --> 
+
+            <!-- Section Citation -->
+            <section class="pb-7 bg-blue-light">
+                <div class="container">                       
+                    <div class="col-lg-12 order-lg-2 pb-lg-0 pt-lg-3"> 
+                        <div class="mb-3">
+                            <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">Paper</h3>
+                            <h2 class="mb-5 fw-medium text-secondary text-uppercase text-center text-lg-left">Citation</h2>
+                            <p class="text-700 fw-medium">
+                                @InProceedings{jiang2021talkedit,<br />
+                                    &emsp;author = {Jiang, Yuming and Huang, Ziqi and Pan, Xingang and Loy, Chen Change and Liu, Ziwei},<br />
+                                    &emsp;title = {Talk-to-Edit: Fine-Grained Facial Editing via Dialog},<br />
+                                    &emsp;booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision},<br />
+                                    &emsp;year = {2021} <br />
+                                }
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+            <!-- Section Contact -->
+            <section class="pt-7 pb-0">
+                <div class="container">
+                    <div class="pb-6 px-lg-8 px-xl-12">
+                        <div class="row justify-content-center">
+                            <div class="col-6 col-lg-3">
+                                <img src="../../assets/img/profiles/yuming_jiang.jpg" alt="" class="img-fluid w-100 rounded-circle" />
+                            </div>
+                            <div class=" pb-8 col-lg-9 text-center text-lg-left">
+                                <p class="h5 text-secondary fw-medium mt-3">Contact</p>
+                                <br /><a href="https://yumingj.github.io" target="_blank">Yuming Jiang</a> 
+                                <br />Email: yuming002 at e.ntu.edu.sg
+                            </div>
+							<br>
+                            <div class="col-6 col-lg-3">
+                                <img src="../../assets/img/profiles/ziqi_huang.jpg" alt="" class="img-fluid w-100 rounded-circle" />
+                            </div>
+                            <div class="col-lg-9 text-center text-lg-left">
+                                <p class="h5 text-secondary fw-medium mt-3">Contact</p>
+                                <br /><a href="https://ziqihuangg.github.io" target="_blank">Ziqi Huang</a> 
+                                <br />Email: hu0007qi at e.ntu.edu.sg
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->  
+
+        </main>
+        <!-- End of Main Content -->
+
+
+        <!-- Footer -->
+        <footer class="footer text-white" style="background-image: url(../../assets/img/footer-bg.jpg)">
+            <div class="container d-flex h-100">
+                <div class="row flex-grow-1">
+                    <div class="col-lg-3 pt-3 ext-l bg-secondary text-center text-lg-left">
+                        <div class="d-flex flex-column h-100">
+                            <div class="pt-5 pt-lg-8 pb-4">
+                                <img src="../../assets/img/logo-small.png" alt="" width="108" class="mb-4" />
+                                <p class="mb-4 mt-3 fs--1"><br />
+                                Academic Block North <br />
+                                Nanyang Technological University<br />
+                                61 Nanyang Dr, Singapore 637335</p>
+        
+                                <p class="fs--1">
+                                <span class="text-white"><i class="zmdi zmdi-email zmdi-hc-fw mr-1"></i>mmlab-contact at e.ntu.edu.sg</span><br />
+                                <span class="text-white"><i class="zmdi zmdi-twitter zmdi-hc-fw mr-1"></i><a href="https://twitter.com/MMLabNTU" target="_blank" class="text-white">@MMLabNTU</a></span></p>
+                            </div>
+    
+                            <!-- <ul class="mt-4 mt-lg-auto mb-5 mb-lg-0 list-unstyled list-inline">
+                                <li class="mr-3 list-inline-item">
+                                    <a href="https://twitter.com/MMLabNTU" target="_blank">
+                                        <i class="zmdi zmdi-twitter text-white"></i>
+                                    </a>
+                                </li>
+                            </ul> -->
+                        </div>
+                    </div>
+
+                    <div class="col d-flex flex-column mb-2 mt-3 pl-lg-7">
+                        <div class="row pt-5 pt-lg-8 pb-4 pb-lg-6">
+                            <div class="col-6 col-lg-3">
+                                <h6 class="mb-1 mb-lg-4 text-uppercase">Publications</h6>
+                                <ul class="pt-2 mb-5 fw-light list-unstyled">
+                                    <li class="my-1"><a href="../../publication_topic.html" class="text-white">By Topic</a></li>
+                                    <li class="my-1"><a href="../../publication_year.html" class="text-white">By Year</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-lg-3">
+                                <h6 class="mb-1 mb-lg-4 text-uppercase">About</h6>
+                                <ul class="pt-2 mb-5 fw-light list-unstyled">
+                                    <li class="my-1"><a href="../../research.html" class="text-white">Our Research</a></li>
+                                    <li class="my-1"><a href="../../team.html" class="text-white">Team</a></li>
+                                    <li class="my-1"><a href="../../careers.html" class="text-white">Join Us</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-lg-3">
+                                <h6 class="mb-1 mb-lg-4 text-uppercase">Open Source</h6>
+                                <ul class="pt-2 mb-5 fw-light list-unstyled">
+                                    <li class="my-1"><a href="https://openmmlab.com/" target="_blank" class="text-white">OpenMMLab</a></li>
+                                    <li class="my-1"><a href="../../downloads.html" class="text-white">Code and Datasets</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mt-auto d-flex justify-content-between">
+                            <span class="fs--3 fs-lg--2">&copy; MMLab@NTU, 2021</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer -->
+
+
+        <!-- Core Javascripts -->
+        <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
+        <script src="../../assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+        <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <!-- Vendor Javascripts -->
+        <script src="../../assets/vendor/rellax/rellax.min.js"></script>
+        <script src="../../assets/vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+        <script src="../../assets/vendor/sticky-kit/dist/sticky-kit.min.js"></script>
+        <script src="../../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+        <script src="../../assets/vendor/isotope-layout/dist/isotope.pkgd.min.js"></script>
+        <script src="../../assets/vendor/isotope-packery/packery-mode.pkgd.min.js"></script>
+        <script src="../../assets/vendor/aos/dist/aos.js"></script>
+
+        <!-- Theme Javascripts -->
+        <script src="../../assets/js/theme.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <meta name="keywords" content="Chen Change Loy, Ziwei Liu, Bo Dai, Yixin Cao, Super-resolution, Deep Learning, Computer Vision, Convolutional Neural Network, Enhancement, Inpainting, Knowledge Distillation, Restoration, GAN, Generative Adversarial Networks, Generation, Manipulation, Editing, Object Detection, Segmentation, Recognition, Continual Learning, Domain Generalization, Self-Supervised Learning, Singapore, NTU, Nanyang Technological University, SCSE" />
+
+        <!-- Page Title -->
+        <title>TexFormer | MMLab@NTU</title>
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicons/favicon-16x16.png">
+        <link rel="manifest" href="../../assets/img/favicons/site.webmanifest">
+        <link rel="mask-icon" href="../../assets/img/favicons/safari-pinned-tab.svg" color="#f23838">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- Vendor Stylesheets -->
+        <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700%7CRoboto:300,400,700" rel="stylesheet">
+        <link href="../../assets/vendor/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="../../assets/vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.css" rel="stylesheet">
+        <link href="../../assets/vendor/aos/dist/aos.css" rel="stylesheet">
+        <link href="../../assets/vendor/twentytwenty/css/twentytwenty.css" rel="stylesheet">
+        <link href="../../assets/vendor/twentytwenty/css/foundation.css" rel="stylesheet">
+
+        <!-- Theme Stylesheets -->
+        <link href="../../assets/css/theme.css" rel="stylesheet">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22940424-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-22940424-1');
+        </script>
+    </head>
+
+    <body>
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="spinner">
+                <div class="circles"></div>
+            </div>
+        </div>
+        <!-- End of Preloader -->
+
+
+        <!-- Header -->
+        <header class="spyre-navbar navbar navbar-expand-lg bg-secondary navbar-dark fixed-top align-items-center" data-transparent data-text-color="#ffffff">
+            <div class="container">
+                <a class="navbar-brand mr-lg-5 mr-xl-7" href="../../index.html">
+                    <img src="../../assets/img/logo.png" class="d-none d-lg-block" alt="MMLab" width="183" />
+                    <img src="../../assets/img/logo.png" class="d-block d-lg-none" alt="MMLab" width="150" />
+                </a>
+
+                <!-— Desktop Menu -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="pl-2 nav-item navbar-text"><a href="../../index.html" class="nav-link text-400">Home</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="../../team.html" class="nav-link text-400">Team</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="../../research.html" class="nav-link text-400">Research</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="../../publication_topic.html" class="nav-link text-400">Publications</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="../../downloads.html" class="nav-link text-400">Code | Datasets</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="../../careers.html" class="nav-link text-400">Join Us</a></li>
+                    </ul>
+                </div>
+                <!-— End of Desktop Menu -->
+
+                <div class="menu-toggle d-block d-lg-none">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="cross">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spyrenav Overlay -->
+            <div class="spyre-navbar-overlay overlay-slide">
+                <div class="container">
+                    <div class="row">
+                        <div class="spyre-navbar-nav-container col-md-6 col-lg-5 col-xl-4 bg-white ext-l">
+                            <nav class="spyre-navbar-nav">
+                                <ul class="spyre-nav">
+                                    <li class="spyre-nav-item"><a href="../../index.html" class="spyre-nav-link">Home</a></li>
+                                    <li class="spyre-nav-item"><a href="../../research.html" class="spyre-nav-link">Our Research</a></li>
+                                    <li class="spyre-nav-item"><a href="../../team.html" class="spyre-nav-link">Team</a></li>
+                                    <li class="spyre-nav-item dropdown">
+                                        <a href="#" class="spyre-nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Publications</a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li class="dropdown-menu-item"><a href="../../publication_topic.html" class="dropdown-menu-link">By Topic</a></li>
+                                            <li class="dropdown-menu-item"><a href="../../publication_year.html" class="dropdown-menu-link">By Year</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="spyre-nav-item"><a href="../../downloads.html" class="spyre-nav-link">Code and Datasets</a></li>
+                                    <li class="spyre-nav-item"><a href="../../careers.html" class="spyre-nav-link">Join Us</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <div class="col-lg-7 col-xl-8 d-none d-md-block">
+                            <div class="d-flex flex-column h-100">
+                                <div class="d-flex h-100">
+                                    <div class="align-self-center">
+                                        <div class="text-uppercase"
+                                            data-background-text="computer vision"
+                                            data-color="#7079a2"
+                                            data-opacity="0.02"
+                                            data-font-size="85px"
+                                            data-font-weight="500"
+                                            data-offset-x="-5%"
+                                            data-letter-spacing="5px"
+                                        ></div>
+                                        <div class="text-uppercase"
+                                            data-background-text="mmlab"
+                                            data-color="#7079a2"
+                                            data-opacity="0.04"
+                                            data-font-size="175px"
+                                            data-font-weight="500"
+                                            data-offset-x="29%"
+                                            data-padding="7vh 0 2vh 0"
+                                            data-letter-spacing="5px"
+                                        ></div>
+                                        <div class="text-uppercase"
+                                            data-background-text="deep learning"
+                                            data-color="#7079a2"
+                                            data-opacity="0.03"
+                                            data-font-size="140px"
+                                            data-font-weight="500"
+                                            data-offset-x="15%"
+                                            data-letter-spacing="5px"
+                                        ></div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-auto">
+                                    <ul class="nav flex-nowrap float-right">
+                                        <li class="nav-item">
+                                            <a class="nav-link px-2" href="https://twitter.com/MMLabNTU" target="_blank">
+                                                <i class="zmdi zmdi-twitter text-white"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Spyrenav Overlay -->
+        </header>
+        <!-- End of Header -->
+
+
+        <!-- Main Content -->
+        <main class="main minh-100vh">
+            <!-- Section -->
+            <section class="py-0 overflow-hidden text-center">
+                <div class="bg-container overlay parallax" data-rellax-percentage="0.5" style="background-image: url(../../assets/img/images/texformer.jpg)"></div>
+                <div class="container">
+                    <div class="row h-100vh align-items-center">
+                        <div class="col">
+                            <h1 class="text-white text-uppercase fs-4 fs-lg-5">3D Human Texture Estimation from a Single Image with Transformers</h1>
+                            <p class="mb-5 fs-lg-1 text-white">ICCV 2021, Oral<br />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+            <!-- Section Abstract -->
+            <section>
+                <div class="container">
+                    <div class="row no-gutters justify-content-between">
+                        <div class="col-lg-5">
+                            <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">Paper</h3>
+                            <h2 class="mb-5 fw-medium text-secondary text-uppercase text-center text-lg-left">Abstract</h2>
+                            <p class="text-justify">
+                                We propose a Transformer-based framework for 3D human texture estimation from a single image. The proposed Transformer is able to effectively exploit the global information of the input image, overcoming the limitations of existing methods that are solely based on convolutional neural networks. In addition, we also propose a mask-fusion strategy to combine the advantages of the RGB-based and texture-flow-based models. We further introduce a part-style loss to help reconstruct high-fidelity colors without introducing unpleasant artifacts. Extensive experiments demonstrate the effectiveness of the proposed method against state-of-the-art 3D human texture estimation approaches both quantitatively and qualitatively.
+                            </p>
+                        </div>                        
+                        <div class="col-lg-6">
+                            <div class="order-lg-2 pb-0 pb-lg-0 pt-lg-3">
+                                <img src="./img/teaser.jpg" class="mt-8 img-fluid w-110" alt="" />
+                            </div>
+
+                            <div class="card d-block border-0">
+                                <div class="card-body">
+                                    <p class="card-text fs--1 text-justify">
+                                      (a) Existing methods are based on CNNs and thus cannot effectively exploit global information. (b) We propose a Transformer-based framework for 3D human texture estimation from a single image, which overcomes this difficulty.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section --> 
+
+            <!-- Section Downloads -->
+            <section class="pt-0">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-4 pr-lg-5 text-center">
+                                    <h2 class="mb-4 fs-1 fw-medium text-uppercase"><span class="fs-2 pr-2 text-primary position-relative top-2"><i class="zmdi zmdi-collection-pdf"></i></span><a href="http://personal.ie.cuhk.edu.hk/~ccloy/files/iccv_2021_texformer.pdf" target="_blank" class="text-muted">Paper</a></h2>
+                                    <!-- <p class="fs--1">If you have description you can put it here.</p> -->
+                                </div>
+                                <div class="col-md-6 col-lg-4 px-lg-5 border-left-centered-40 border-left-centered-faded text-center">
+                                    <h2 class="mb-4 fs-1 fw-medium text-uppercase"><span class="fs-2 pr-2 text-primary position-relative top-2"><i class="zmdi zmdi-github-box"></i></span><a href="https://github.com/xuxy09/Texformer" target="_blank" class="text-muted">Codes</a></h2>
+                                    <!-- <p class="fs--1">If you have description you can put it here.</p> -->
+                                </div>
+                                <div class="col-md-6 col-lg-4 pl-lg-5 border-left-centered-40 border-left-centered-faded text-center">
+                                    <h2 class="mb-4 fs-1 fw-medium text-uppercase"><span class="fs-2 pr-2 text-primary position-relative top-2"><i class="zmdi zmdi-cloud-download"></i></span><a href="https://sites.google.com/view/xiangyuxu/texformer" target="_blank" class="text-muted">Dataset</a></h2>
+                                    <!-- <p class="fs--1">If you have description you can put it here.</p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+            <!-- Section Methodology -->
+            <section class="pb-0 bg-blue-light">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 order-lg-1">
+                            <div class="pb-6 pt-6 py-lg-3">
+                                <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">The Framework</h3>
+                                <h2 class="mb-5 fw-medium text-secondary text-uppercase text-center text-lg-left">Texformer</h2>
+                                <p class="text-justify">
+                                We propose a Transformer-based framework, termed as Texformer, for 3D human texture estimation from a single image. Based on the attention mechanism, the proposed network is able to effectively exploit global information of the input. It naturally overcomes the limitations of existing algorithms that solely rely on CNNs and effectively facilitates higher-quality 3D human texture reconstruction.
+                                </p>
+
+                                <p class="text-justify">
+                                The Query is a pre-computed color encoding of the UV space obtained by mapping the 3D coordinates of a standard human body mesh to the UV space. The Key is a concatenation of the input image and the 2D part-segmentation map. The Value is a concatenation of the input image and its 2D coordinates. We first feed the Query, Key, and Value into three CNNs to transform them into feature space. Then the multi-scale features are sent to the Transformer units to generate the Output features. The multi-scale Output features are processed and fused in another CNN, which produces the RGB UV map T, texture flow F, and fusion mask M. The final UV map is generated by combining T and the textures sampled with F using the fusion mask M.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 order-lg-2 pb-lg-0 pt-lg-3">
+                            <div class="mb-8">
+                                <img src="./img/framework.png" class="mt-4 img-fluid" alt="" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+            <!-- Section Quantitative Results-->
+            <section class="pb-6">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">Quantitative</h3>
+                            <h2 class="mb-5 fw-medium text-secondary text-uppercase text-center text-lg-left">Evaluation</h2>
+                            <p class="text-justify">
+                                We compare against the state-of-the-art 3D texture estimation methods: CMR [4], HPBTT [5], RSTG [3], and TexGlo [1]. The proposed Texformer achieves consistently better results than the baseline approaches on all metrics.
+                            </p>
+                        </div>
+                    </div>
+
+                    <table border="0" class="mb-5 table table-responsive-sm">                        
+                        <thead class="bg-secondary text-white">
+                            <tr>
+                                <th>Method</th>
+                                <th>CosSim</th>
+                                <th>CosSim-R</th>
+                                <th>SSIM</th>
+                                <th>LPIPS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="" align="center" >
+                                <tr>
+                                    <td class="text-left" style="vertical-align:middle" text-align:="" "center"="">CMR</td>
+                                    <td class="text-left" style="vertical-align:middle" text-align:="" "center"="">0.5241</td>
+                                    <td class="text-left" style="vertical-align:middle" text-align:="" "center"="">0.4978</td>
+                                    <td class="text-left" style="vertical-align:middle" text-align:="" "center"="">0.7142</td>
+                                    <td class="text-left" style="vertical-align:middle" text-align:="" "center"="">0.1275</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left" style="vertical-align:middle" text-align:="" "center"="">HPBTT</td>
+                                    <td class="text-left" style="vertical-align:middle" text-align:="" "center"="">0.5246</td>
+                                    <td class="text-left" style="vertical-align:middle" text-align:="" "center"="">0.5027</td>
+                                    <td class="text-left" style="vertical-align:middle" text-align:="" "center"="">0.7420</td>
+                                    <td class="text-left" style="vertical-align:middle" text-align:="" "center"="">0.1168</td>
+                                </tr>
+                                <tr>    
+                                    <td class="text-left" style="vertical-align:middle" text-align:="" "center"="">RSTG</td>
+                                    <td class="text-left" style="vertical-align:middle" text-align:="" "center"="">0.5282</td>
+                                    <td class="text-left" style="vertical-align:middle" text-align:="" "center"="">0.4924</td>
+                                    <td class="text-left" style="vertical-align:middle" text-align:="" "center"="">0.6735</td>
+                                    <td class="text-left" style="vertical-align:middle" text-align:="" "center"="">0.1778</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left" style="vertical-align:middle" text-align:="" "center"="">TexGlo</td>
+                                    <td class="text-left" style="vertical-align:middle" text-align:="" "center"="">0.5408</td>
+                                    <td class="text-left" style="vertical-align:middle" text-align:="" "center"="">0.5048</td>
+                                    <td class="text-left" style="vertical-align:middle" text-align:="" "center"="">0.6658</td>
+                                    <td class="text-left" style="vertical-align:middle" text-align:="" "center"="">0.1776</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left" style="vertical-align:middle" text-align:="" "center"="">Texformer</td>
+                                    <td class="text-left" style="vertical-align:middle" text-align:="" "center"=""><b>0.5747</b></td>
+                                    <td class="text-left" style="vertical-align:middle" text-align:="" "center"=""><b>0.5422</b></td>
+                                    <td class="text-left" style="vertical-align:middle" text-align:="" "center"=""><b>0.7422</b></td>
+                                    <td class="text-left" style="vertical-align:middle" text-align:="" "center"=""><b>0.1154</b></td>
+                                </tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+            <!-- Section Visual Results -->
+            <section class="pb-6 bg-blue-light">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12 order-lg-1">
+                            <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">Visual</h3>
+                            <h2 class="mb-5 fw-medium text-secondary text-uppercase text-center text-lg-left">Results</h2>
+                            <p> For each example, the image on the left is the input, and the image on the right is the rendered 3D human, where the human texture is predicted by the proposed Texformer, and the geometry is predicted by RSC-Net [2]. </p>
+                        </div>
+                        <div class="col-lg-3 order-lg-2 pb-6">
+                            <center>
+                                <img src="./img/ex1_in.png" class="img-fluid" />
+                                <img src="./img/ex1.gif" class="img-fluid" />
+                            </center>    
+                        </div>  
+                        <div class="col-lg-3 order-lg-2 pb-6">
+                            <center>
+                                <img src="./img/ex2_in.png" class="img-fluid" />
+                                <img src="./img/ex2.gif" class="img-fluid" /> 
+                            </center>                  
+                        </div>
+                        <div class="col-lg-3 order-lg-2 pb-6">
+                            <center>
+                                <img src="./img/ex3_in.png" class="img-fluid" />
+                                <img src="./img/ex3.gif" class="img-fluid" />
+                            </center>  
+                        </div>
+                        <div class="col-lg-3 order-lg-2 pb-6">
+                            <center>
+                                <img src="./img/ex4_in.png" class="img-fluid" />
+                                <img src="./img/ex4.gif" class="img-fluid" />
+                            </center>
+                        </div>
+                    </div>
+                    </tr>
+                </div>
+                
+            </section>
+            <!-- End of Section -->
+
+            <!-- Section Datasets -->
+            <section class="pb-7">
+                <div class="container">                       
+                    <div class="col-lg-12 order-lg-2 pb-lg-0 pt-lg-3"> 
+                        <div class="mb-3">
+                            <h2 class="mb-5 fw-medium text-secondary text-uppercase text-center text-lg-left">Datasets</h2>
+                            <p class="text-justify">
+                                We use the following datasets in our paper:
+                            </p>
+                            <ul>
+                                <li>We propose an enhanced Market-1501 dataset, termed as <a href="https://www.dropbox.com/s/9e9riso6lq5w0gj/SMPLMarket.zip?dl=0" target="_blank">SMPLMarket</a>, by equipping the original data of <a href="http://zheng-lab.cecs.anu.edu.au/Project/project_reid.html" target="_blank">Market-1501</a> with SMPL estimation from <a href="https://github.com/xuxy09/RSC-Net" target="_blank">RSC-Net</a> and body part segmentation estimated by <a href="https://github.com/huanghoujing/EANet" target="_blank">EANet</a>. </li>
+                                <li><a href="https://www.dropbox.com/s/niwb6pr50avr92q/PRW.zip?dl=0" target="_blank">PRW</a></li>
+                                <li><a href="https://www.dropbox.com/s/2nyeb3r0ls44gp3/surreal.zip?dl=0" target="_blank">SURREAL</a></li>
+                                <li><a href="https://www.dropbox.com/s/aivc8pjzt3xeoxj/CUHK-SYSU.zip?dl=0" target="_blank">CUHK-SYSU</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+            <!-- Section Citation -->
+            <section class="pb-7 bg-blue-light">
+                <div class="container">                       
+                    <div class="col-lg-12 order-lg-2 pb-lg-0 pt-lg-3"> 
+                        <div class="mb-3">
+                            <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">Paper</h3>
+                            <h2 class="mb-5 fw-medium text-secondary text-uppercase text-center text-lg-left">Citation</h2>
+                            <p class="text-700 fw-medium">
+                                @InProceedings{xu2021texformer,<br />
+                                    &emsp;author = {Xu, Xiangyu and Loy, Chen Change},<br />
+                                    &emsp;title = {{3D} Human Texture Estimation from a Single Image with Transformers},<br />
+                                    &emsp;booktitle = {Proceedings of the IEEE International Conference on Computer Vision},<br />
+                                    &emsp;year = {2021} <br />
+                                }
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+            <!-- Section Related Projects -->
+            <section class="pb-6">
+                <div class="container">
+                    <div class="row">
+                        <div class="col text-center text-lg-left">
+                            <h2 class="mb-5 fw-medium text-secondary text-uppercase">References</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-10">
+                            <div class="row">
+                                <ol>
+                                    <li>
+                                        <span class="text-primary">3D Human Pose, Shape and Texture from Low-Resolution Images and Videos </span>
+                                        <br />
+                                        <span class="text-500">
+                                        X. Xu, H. Chen, F. Moreno-Noguer, L. A. Jeni, and F. De la Torre <br /> 
+                                        in IEEE Transactions on Pattern Analysis and Machine Intelligence, 2021 <strong>(TPAMI)</strong><br />    
+                                        </span>
+                                        [<a href="https://arxiv.org/abs/2103.06498" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                    </li>
+                                    <li>
+                                        <span class="text-primary">3D Human Shape and Pose from a Single Low-Resolution Image with Self-Supervised Learning </span>
+                                        <br />
+                                        <span class="text-500">
+                                        X. Xu, H. Chen, F. Moreno-Noguer, L. A. Jeni, and F. De la Torre <br /> 
+                                        in Proceedings of European Conference on Computer Vision, 2020 <strong>(ECCV)</strong><br />    
+                                        </span>
+                                        [<a href="https://arxiv.org/abs/2007.13666" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                    </li>                                   
+                                    <li>
+                                        <span class="text-primary">Re-Identification Supervised Texture Generation </span>
+                                        <br />
+                                        <span class="text-500">
+                                        J. Wang, Y. Zhong, Y. Li, C. Zhang, and Y. Wei <br /> 
+                                        in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2019 <strong>(CVPR)</strong><br />    
+                                        </span>
+                                        [<a href="https://arxiv.org/abs/1904.03385" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                    </li>
+                                    <li>
+                                        <span class="text-primary">Learning Category-Specific Mesh Reconstruction from Image Collections </span>
+                                        <br />
+                                        <span class="text-500">
+                                        A. Kanazawa, S. Tulsiani, A. A. Efros, and J. Malik <br /> 
+                                        in Proceedings of European Conference on Computer Vision, 2018 <strong>(ECCV)</strong><br />    
+                                        </span>
+                                        [<a href="https://arxiv.org/abs/1803.07549" target="_blank"><span class="text-muted">arXiv</span></a>]
+                                    </li>
+                                    <li>
+                                        <span class="text-primary">Human Parsing Based Texture Transfer from Single Image to 3D Human via Cross-View Consistency </span>
+                                        <br />
+                                        <span class="text-500">
+                                        F. Zhao, S. Liao, K. Zhang, and L. Shao <br /> 
+                                        in Advances in Neural Information Processing Systems, 2020 <strong>(NeurIPS)</strong><br />    
+                                        </span>
+                                        [<a href="https://proceedings.neurips.cc/paper/2020/file/a516a87cfcaef229b342c437fe2b95f7-Paper.pdf" target="_blank"><span class="text-muted">PDF</span></a>]
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+            <!-- Section Contact -->
+            <section class="pt-7 pb-0 bg-blue-light">
+                <div class="container">
+                    <div class="pb-6 px-lg-8 px-xl-12">
+                        <div class="row justify-content-center">
+                            <div class="col-6 col-lg-3">
+                                <img src="../../assets/img/profiles/xiangyu_xu.jpg" alt="" class="img-fluid w-100 rounded-circle" />
+                            </div>
+                            <div class="col-lg-9 text-center text-lg-left">
+                                    <p class="h5 text-secondary fw-medium mt-3">Contact</p>
+                                    <br /><a href="https://sites.google.com/view/xiangyuxu" target="_blank">Xiangyu Xu</a>
+                                    <br />Email: xiangyu.xu at ntu.edu.sg
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Section -->
+
+        </main>
+        <!-- End of Main Content -->
+
+
+        <!-- Footer -->
+        <footer class="footer text-white" style="background-image: url(../../assets/img/footer-bg.jpg)">
+            <div class="container d-flex h-100">
+                <div class="row flex-grow-1">
+                    <div class="col-lg-3 pt-3 ext-l bg-secondary text-center text-lg-left">
+                        <div class="d-flex flex-column h-100">
+                            <div class="pt-5 pt-lg-8 pb-4">
+                                <img src="../../assets/img/logo-small.png" alt="" width="108" class="mb-4" />
+                                <p class="mb-4 mt-3 fs--1"><br />
+                                Academic Block North <br />
+                                Nanyang Technological University<br />
+                                61 Nanyang Dr, Singapore 637335</p>
+
+                                <p class="fs--1">
+                                <span class="text-white"><i class="zmdi zmdi-email zmdi-hc-fw mr-1"></i>mmlab-contact at e.ntu.edu.sg</span><br />
+                                <span class="text-white"><i class="zmdi zmdi-twitter zmdi-hc-fw mr-1"></i><a href="https://twitter.com/MMLabNTU" target="_blank" class="text-white">@MMLabNTU</a></span></p>
+                            </div>
+
+                            <!-- <ul class="mt-4 mt-lg-auto mb-5 mb-lg-0 list-unstyled list-inline">
+                                <li class="mr-3 list-inline-item">
+                                    <a href="https://twitter.com/MMLabNTU" target="_blank">
+                                        <i class="zmdi zmdi-twitter text-white"></i>
+                                    </a>
+                                </li>
+                            </ul> -->
+                        </div>
+                    </div>
+
+                    <div class="col d-flex flex-column mb-2 mt-3 pl-lg-7">
+                        <div class="row pt-5 pt-lg-8 pb-4 pb-lg-6">
+                            <div class="col-6 col-lg-3">
+                                <h6 class="mb-1 mb-lg-4 text-uppercase">Publications</h6>
+                                <ul class="pt-2 mb-5 fw-light list-unstyled">
+                                    <li class="my-1"><a href="../../publication_topic.html" class="text-white">By Topic</a></li>
+                                    <li class="my-1"><a href="../../publication_year.html" class="text-white">By Year</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-lg-3">
+                                <h6 class="mb-1 mb-lg-4 text-uppercase">About</h6>
+                                <ul class="pt-2 mb-5 fw-light list-unstyled">
+                                    <li class="my-1"><a href="../../research.html" class="text-white">Our Research</a></li>
+                                    <li class="my-1"><a href="../../team.html" class="text-white">Team</a></li>
+                                    <li class="my-1"><a href="../../careers.html" class="text-white">Join Us</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-lg-3">
+                                <h6 class="mb-1 mb-lg-4 text-uppercase">Open Source</h6>
+                                <ul class="pt-2 mb-5 fw-light list-unstyled">
+                                    <li class="my-1"><a href="https://openmmlab.com/" target="_blank" class="text-white">OpenMMLab</a></li>
+                                    <li class="my-1"><a href="../../downloads.html" class="text-white">Code and Datasets</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mt-auto d-flex justify-content-between">
+                            <span class="fs--3 fs-lg--2">&copy; MMLab@NTU, 2021</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer -->
+
+
+        <!-- Core Javascripts -->
+        <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
+        <script src="../../assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+        <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <!-- Vendor Javascripts -->
+        <script src="../../assets/vendor/rellax/rellax.min.js"></script>
+        <script src="../../assets/vendor/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+        <script src="../../assets/vendor/sticky-kit/dist/sticky-kit.min.js"></script>
+        <script src="../../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+        <script src="../../assets/vendor/isotope-layout/dist/isotope.pkgd.min.js"></script>
+        <script src="../../assets/vendor/isotope-packery/packery-mode.pkgd.min.js"></script>
+        <script src="../../assets/vendor/aos/dist/aos.js"></script>
+
+        <!-- Theme Javascripts -->
+        <script src="../../assets/js/theme.js"></script>
+
+    </body>
+</html>
