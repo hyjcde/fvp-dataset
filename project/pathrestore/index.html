@@ -54,7 +54,7 @@
         <header class="spyre-navbar navbar navbar-expand-lg bg-secondary navbar-dark fixed-top align-items-center" data-transparent data-text-color="#ffffff">
             <div class="container">
                 <a class="navbar-brand mr-lg-5 mr-xl-7" href="../../index.html">
-<!--                    <img src="../../assets/img/logo.png" class="d-none d-lg-block" alt="MMLab" width="183" />-->
+                    <img src="img/FlyingLion.png" class="d-none d-lg-block" alt="MMLab" width="93" />
 <!--                    <img src="../../assets/img/logo.png" class="d-block d-lg-none" alt="MMLab" width="150" />-->
                 </a>
 
@@ -62,11 +62,12 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
 <!--                        <li class="pl-2 nav-item navbar-text"><a href="../../index.html" class="nav-link text-400">Home</a></li>-->
-<!--                        <li class="pl-5 nav-item navbar-text"><a href="../../team.html" class="nav-link text-400">Team</a></li>-->
-<!--                        <li class="pl-5 nav-item navbar-text"><a href="../../research.html" class="nav-link text-400">Research</a></li>-->
-<!--                        <li class="pl-5 nav-item navbar-text"><a href="../../publication_topic.html" class="nav-link text-400">Publications</a></li>-->
-                        <li class="pl-5 nav-item navbar-text"><a href="../../downloads.html" class="nav-link text-400">Code | Datasets</a></li>
-<!--                        <li class="pl-5 nav-item navbar-text"><a href="../../careers.html" class="nav-link text-400">Join Us</a></li>-->
+                        <li class="pl-2 nav-item navbar-text"><a href="#" class="nav-link text-400">Home</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="#" class="nav-link text-400">Team</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="#" class="nav-link text-400">Research</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="#" class="nav-link text-400">Publications</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="#" class="nav-link text-400">Code | Datasets</a></li>
+                        <li class="pl-5 nav-item navbar-text"><a href="#" class="nav-link text-400">Join Us</a></li>
                     </ul>
                 </div>
                 <!-— End of Desktop Menu -->
@@ -170,7 +171,7 @@
                     <div class="row h-100vh align-items-center">
                         <div class="col">
                             <h1 class="text-white text-uppercase fs-4 fs-lg-6">Flying Vehicle Detection under Complex Conditions: A Large-scale Dataset and Benchmark Approach</h1>
-                            <p class="mb-5 fs-lg-1 text-white">Submitted to expert systems with applications<br />
+                            <p class="mb-5 fs-lg-1 text-white">Submitted to Elsevier<br />
                         </div>
                     </div>
                 </div>
@@ -187,34 +188,23 @@
                             <p class="text-justify">
                                 Detecting flying vehicles in complex scenes presents a significant challenge in the air transportation system. Existing research primarily focuses on flying vehicle detection using RGB imagery, limiting its effectiveness in real-life applications, particularly under challenging conditions such as low-light environments and cluttered backgrounds. A promising approach is the integration of RGB and thermal infrared (RGBT) images, providing complementary information and have shown potential in various computer vision tasks. However, the progress in RGBT flying vehicle detection is impeded by the lack of a large-scale dataset and a comprehensive benchmark for evaluation. To address this research gap, we contribute by introducing a novel RGBT image dataset called FT55k, which encompasses diverse scenarios and consists of over 55k spatially aligned RGBT image pairs with meticulously annotated ground truth, enabling comprehensive evaluation and exploration of algorithmic robustness. We propose a series of baseline approaches that can be deployed on devices with varying computing capabilities, providing a solid foundation for further research. Extensive experiments were conducted on the FT55k dataset and seven challenging public datasets, demonstrating the superiority of our proposed approaches compared to state-of-the-art methods. This work presents the first comprehen- sive benchmark for multiple types of flying vehicle detection methods across multiple scenarios. We also make corrections to the existing datasets and establish a new benchmark. Our method achieves the lowest computational complexity with a consumption of only 0.49 BFLOPs. To the best of our knowledge, this is the first flying vehicle detection method with a computational complexity below 0.5 BFLOPs. Moreover, we validate the proposed approaches through the deployment experiments on edge-computing devices, confirming their reliability and feasibility. Our codes and dataset are made publicly available at <a href="https://github.com/XXX">here</a> .
                             </p>
-                        </div>                        
-                      <!--  <div class="col-lg-6">
-                            <div class="row">                                
-                                <div class="small-12 columns">
-                                    <div class="twentytwenty-container" id="images">
-                                        <img src="./img/0786_input.jpg" />
-                                        <img src="./img/0786_output.jpg" />
-                                    </div>
-                                </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="mb-2 mt-10">
+                                <img src="./img/example_mydate2.png" class="mt-4 img-fluid w-100" alt="" />
                             </div>
                             <p></p>
-                            <div class="row">                                
-                                <div class="small-12 columns">
-                                    <div class="twentytwenty-container" id="images_heatmap">
-                                        <img src="./img/0786_input.jpg" />
-                                        <img src="./img/0786_heatmap.jpg" />
-                                    </div>
-                                </div>
-                            </div>                                                           
+
                         
                             <div class="card d-block border-0">
                                 <div class="card-body">
-                                    <p class="card-text fs&#45;&#45;1">Path-Restore handles different image regions (gradual Gaussian noise are added) using different network paths. [Top] Before and after restoration. [Bottom] Path-Restore automatically selects <span class="text-success">shorter</span> network paths for 'easier' regions and <span class="text-danger">longer</span> paths for 'harder' regions.</p>
+                                    <p class="card-text fs--1">Our methods provide a more accurate prediction of flying vehicles in various challenging situations, i.e., low lighting conditions (second column), tangled jungle (fourth column), and tiny vehicles (all columns). The red numbers in the figure represent confidence scores. Please zoom in for the best view.</p>
                                 </div>
                             </div>
                         </div>
-                 -->
                     </div>
+
                 </div>
             </section>
             <!-- End of Section --> 
@@ -253,16 +243,15 @@
                                 <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">The Dataset of</h3>
                                 <h2 class="mb-5 fw-medium text-secondary text-uppercase text-center text-lg-left">FT55k</h2>
                                 <p class="text-justify">
-                                    FT55k encompasses diverse scenarios and consists of over 55k spatially aligned RGBT image pairs with meticulously annotated ground truth, enabling comprehensive evaluation and exploration of algorithmic robustness   </p>
+                                    FT55k encompasses diverse scenarios and consists of over 55k spatially aligned RGBT image pairs with meticulously annotated ground truth, enabling comprehensive evaluation and exploration of algorithmic robustness.   </p>
                             </div>
                         </div>
 
                         <div class="col-lg-8 order-lg-2 pb-lg-0 pt-lg-3"> 
                             <div class="mb-8">
-                                <img src="./img/example-multi-scens.png" class="mt-4 img-fluid w-100" alt="" />
+                                <img src="./img/example.png" class="mt-4 img-fluid w-100" alt="" />
                             </div>                                                         
                         </div>
-                        
                     </div>
                 </div>
             </section>
@@ -275,17 +264,16 @@
                         <div class="col-lg-4 order-lg-1">
                             <div class="pb-6 pt-6 py-lg-3">
                                 <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">The Architecture of</h3>
-                                <h2 class="mb-5 fw-medium text-secondary text-uppercase text-center text-lg-left">Path-Restore-Mask</h2>
+                                <h2 class="mb-5 fw-medium text-secondary text-uppercase text-center text-lg-left">FTNet-h</h2>
                                 <p class="text-justify">
-                                    We propose Path-Restore-Mask to process a high-resolution input at image level with higher efficiency. The pathfinder predicts a policy mask with multiple channels,
-                                    which are then up-sampled by nearest-neighbor interpolation to select eligible regions for the corresponding paths.
+                                    Our FTNet-h framework for accurate flying vehicle detection experiences five downsampling stages, followed by spatial attention to filter out redundant information. The SPP (Spatial Pyramid Pooling) module is employed to expand the receptive field. Additionally, PANet-like operations are applied to reduce the semantic gap between high-level and low-level semantic information. Multiple scale detection heads are utilized to generate the final output. The dx module is used during the downsampling process, where the d1, d2, d3 and d4 stages each employ one dx module. The d5 and C stages consist of a convolutional layer with two ResNet modules, while the r1 stage contains two ResNet modules. Here, ResNet×m in the dx module indicates the presence of 𝑚 ResNet modules. The d1, d2, d3, and d4 stages contain 2, 8, 8, and 8 ResNet modules, respectively.
                                 </p>
                             </div>
                         </div>
 
                         <div class="col-lg-8 order-lg-2 pb-lg-0 pt-lg-3"> 
-                            <div class="mb-8">
-                                <img src="./img/framework_mask.png" class="mt-4 img-fluid w-100" alt="" />
+                            <div class="mt-13">
+                                <img src="./img/ftnet-h.png" class="mt-4 img-fluid w-100" alt="" />
                             </div>                                                   
                         </div>
                         
@@ -299,13 +287,13 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12 order-lg-1">
-                            <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">Mixed</h3>
-                            <h2 class="mb-5 fw-medium text-secondary text-uppercase text-center text-lg-left">Distortions</h2>
-                            <p class="text-justify">Qualitative results of real-world denoising on the Darmstadt Noise Dataset. Path-Restore recovers clean results with sharp edges. With a deeper architecture and more training data, Path-Restore-Ext further mitigates the artifacts along sharp edges.</p>
+                            <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">Data</h3>
+                            <h2 class="mb-5 fw-medium text-secondary text-uppercase text-center text-lg-left">Distributions</h2>
+                            <p class="text-justify">(a) Target positional distribution on the three sub-dataset. Box positions are mostly concentrated in the central area of the picture (b) Statistical data of the target size in our dataset. The dark blue points correspond to the vehicle images whose width and height are less than 5% of the image size. The blue points represent the data that the sizes are less than 10% of the image size. The remaining red points are samples greater than 10%. Since the attitude of the camera may frequently change during the moving process, there are various height-width ratios of bounding boxes.</p>
 
                             <div class="col-lg-12 order-lg-2 pb-lg-0 pt-lg-3"> 
                                 <div class="mb-8">
-                                    <img src="./img/realistic_denoising.png" class="mt-4 img-fluid w-100" alt="" />
+                                    <img src="./img/data_distribution.png" class="mt-4 img-fluid w-100" alt="" />
                                 </div>                                                   
                             </div>
                         </div>                        
@@ -319,20 +307,17 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12 order-lg-1">
-                            <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">Gaussian</h3>
-                            <h2 class="mb-5 fw-medium text-secondary text-uppercase text-center text-lg-left">Denoising</h2>
-                            <p class="text-justify">Qualitative results of spatially variant Gaussian denoising. Path-Restore recovers textured regions better than the unified <a href="https://arxiv.org/abs/1608.03981" target="_blank">DnCNN</a> since these regions are processed with long paths.</p>
+                            <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">Qualitative</h3>
+                            <h2 class="mb-5 fw-medium text-secondary text-uppercase text-center text-lg-left">visualization</h2>
+                            <p class="text-justify">
+                                Our methods provide a more accurate prediction of flying vehicles in various challenging situations, i.e., low lighting conditions (second column), tangled jungle (fourth column), and tiny vehicles (all columns). The red numbers in the figure represent confidence scores. Please zoom in for the best view.
+                            </p>
 
                             <div class="row">                                
                                 <div class="col-lg-4 order-lg-2 mb-lg-0 mb-5">
-                                        <img class="img-fluid" src="./img/gaussian_denoising_01.jpg" />
+                                        <img class="img-fluid" src="./img/example_mydate2.png" />
                                 </div>
-                                <div class="col-lg-4 order-lg-2 mb-lg-0 mb-5">
-                                        <img class="img-fluid" src="./img/gaussian_denoising_02.jpg" />
-                                </div>
-                                <div class="col-lg-4 order-lg-2 mb-lg-0 mb-5">
-                                        <img class="img-fluid" src="./img/gaussian_denoising_03.jpg" />
-                                </div>
+
                             </div>
                         </div>                        
                     </div>
@@ -340,98 +325,7 @@
             </section>
             <!-- End of Section -->
 
-            <!-- Section Mixed Distortions -->
-            <section class="pb-6">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12 order-lg-1">
-                            <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">Mixed</h3>
-                            <h2 class="mb-5 fw-medium text-secondary text-uppercase text-center text-lg-left">Distortions</h2>
-                            <p class="text-justify">Qualitative results of addressing mixed distortions. Path-Restore is able to handle diverse distortions and produce more spatially consistent results compared to <a href="https://arxiv.org/abs/1804.03312" target="_blank">RL-Restore</a>.</p>
 
-                            <div class="row">                                
-                                <div class="col-lg-4 order-lg-2 mb-lg-0 mb-5">
-                                        <img class="img-fluid" src="./img/mixed_distortions_01.png" />
-                                </div>
-                                <div class="col-lg-4 order-lg-2 mb-lg-0 mb-5">
-                                        <img class="img-fluid" src="./img/mixed_distortions_02.png" />
-                                </div>
-                                <div class="col-lg-4 order-lg-2 mb-lg-0 mb-5">
-                                        <img class="img-fluid" src="./img/mixed_distortions_03.png" />
-                                </div>
-                            </div>
-                        </div>                        
-                    </div>
-                </div>
-            </section>
-            <!-- End of Section -->
-
-            <!-- Section Results -->
-            <section class="pb-6">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12 order-lg-1">
-                            <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">Network Path</h3>
-                            <h2 class="mb-5 fw-medium text-secondary text-uppercase text-center text-lg-left">Selections</h2>
-                            <p class="text-justify">Path-Restore handles different image regions using different network paths. [Left] Before and after restoration. [Right] Path-Restore automatically selects <span class="text-success">shorter</span> network paths for 'easier' regions and <span class="text-danger">longer</span> paths for 'harder' regions.</p>
-                            <div class="row">                                
-                                <div class="col-sm col-6 small-3 columns pb-3">
-                                    <div class="twentytwenty-container" id="images">
-                                        <img src="./img/04_input.jpg" />
-                                        <img src="./img/04_output.jpg" />
-                                    </div>
-                                </div>
-                                <div class="col-sm col-6 small-3 columns pb-3">
-                                    <div class="twentytwenty-container" id="images_heatmap">
-                                        <img src="./img/04_input.jpg" />
-                                        <img src="./img/04_heatmap.jpg" />
-                                    </div>
-                                </div>
-                                <div class="col-sm col-6 small-3 columns pb-3 ml-lg-5">
-                                    <div class="twentytwenty-container" id="images">
-                                        <img src="./img/11_input.jpg" />
-                                        <img src="./img/11_output.jpg" />
-                                    </div>
-                                </div>
-                                <div class="col-sm col-6 small-3 columns pb-3">
-                                    <div class="twentytwenty-container" id="images_heatmap">
-                                        <img src="./img/11_input.jpg" />
-                                        <img src="./img/11_heatmap.jpg" />
-                                    </div>
-                                </div>
-                            </div>
-                            <p></p>
-                            <div class="row">                                
-                                <div class="col-sm col-6 small-3 columns pb-3">
-                                    <div class="twentytwenty-container" id="images">
-                                        <img src="./img/21_input.jpg" />
-                                        <img src="./img/21_output.jpg" />
-                                    </div>
-                                </div>
-                                <div class="col-sm col-6 small-3 columns pb-3">
-                                    <div class="twentytwenty-container" id="images_heatmap">
-                                        <img src="./img/21_input.jpg" />
-                                        <img src="./img/21_heatmap.jpg" />
-                                    </div>
-                                </div>
-                                <div class="col-sm col-6 small-3 columns pb-3 ml-lg-5">
-                                    <div class="twentytwenty-container" id="images">
-                                        <img src="./img/191_input.jpg" />
-                                        <img src="./img/191_output.jpg" />
-                                    </div>
-                                </div>
-                                <div class="col-sm col-6 small-3 columns pb-3">
-                                    <div class="twentytwenty-container" id="images_heatmap">
-                                        <img src="./img/191_input.jpg" />
-                                        <img src="./img/191_heatmap.jpg" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>                        
-                    </div>
-                </div>
-            </section>
-            <!-- End of Section --> 
 
             <!-- Section Citation -->
             <section class="pb-7 bg-blue-light">
@@ -441,12 +335,12 @@
                                 <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">Paper</h3>
                                 <h2 class="mb-5 fw-medium text-secondary text-uppercase text-center text-lg-left">Citation</h2>
                                 <p class="text-700 fw-medium">
-                                    @article{yu2021path,<br/>
-                                        &emsp;title={Path-Restore: Learning Network Path Selection for Image Restoration},<br/>
-                                        &emsp;author={Yu, Ke and Wang, Xintao and Dong, Chao and Tang, Xiaoou and Loy, Chen Change},<br/>
-                                        &emsp;journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},<br/>
-                                        &emsp;year={2021},<br/>
-                                        &emsp;publisher={IEEE}<br/>
+                                    @article{,<br/>
+                                        &emsp;title={Flying Vehicle Detection under Complex Conditions: A Large-scale Dataset and Benchmark Approach},<br/>
+                                        &emsp;author={Xunkuai Zhou, Yijun Huang, Li Li, Jie Huang and Ben M. Chen},<br/>
+                                        &emsp;journal={Expert Systems with Applications},<br/>
+                                        &emsp;year={2024},<br/>
+                                        &emsp;publisher={Elsevier}<br/>
                                     }
                                 </p>
                         </div>
@@ -469,16 +363,15 @@
                             <div class="row">
                                 <ul>
                                     <li>
-                                       <span class="text-primary">Crafting a Toolchain for Image Restoration by Deep Reinforcement Learning </span> 
+                                       <span class="text-primary">VDTNet: A High-Performance Visual Network for Detecting and Tracking of Intruding Drones </span>
                                        <br />
                                        <span class="text-500">
-                                       K. Yu, C. Dong, L. Lin, C. C. Loy<br /> 
-                                       in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition, 2018 <strong>(CVPR)</strong><br />
+
+                                       2023 IEEE/RSJ International Conference on Intelligent Robots and Systems , 2023 <strong>(IROS)</strong><br />
                                        </span>
-                                       [<a href="https://arxiv.org/abs/1804.03312" target="_blank"><span class="text-muted">arXiv</span></a>]
-                                       [<a href="http://mmlab.ie.cuhk.edu.hk/projects/RL-Restore/" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                    </li>                                    
-                                    <li>
+                                       [<a href="https://www.researchgate.net/publication/377606630_VDTNet_A_High-Performance_Visual_Network_for_Detecting_and_Tracking_of_Intruding_Drones?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6InByb2ZpbGUiLCJwYWdlIjoicHJvZmlsZSJ9fQ" target="_blank"><span class="text-muted">ResearchGate</span></a>]
+                                    </li>
+                                    <!--<li>
                                        <span class="text-primary">Recovering Realistic Texture in Image Super-resolution by Deep Spatial Feature Transform </span> 
                                        <br />
                                        <span class="text-500">
@@ -487,7 +380,7 @@
                                        </span>
                                        [<a href="https://arxiv.org/abs/1804.02815" target="_blank"><span class="text-muted">arXiv</span></a>]
                                        [<a href="http://mmlab.ie.cuhk.edu.hk/projects/SFTGAN/" target="_blank"><span class="text-muted">Project Page</span></a>]
-                                    </li>                                    
+                                    </li>   -->
                                 </ul>
                             </div>
                         </div>
@@ -502,12 +395,12 @@
                     <div class="pb-6 px-lg-8 px-xl-12">
                         <div class="row justify-content-center">
                             <div class="col-6 col-lg-3">
-                                <img src="./img/ke_yu.jpg" alt="" class="img-fluid w-100 rounded-circle" />
+                                <img src="./img/xunkuai.jpeg" alt="" class="img-fluid w-100 rounded-circle" />
                             </div>
                             <div class="col-lg-9 text-center text-lg-left">
                                     <p class="h5 text-secondary fw-medium mt-3">Contact</p>
-                                    <br /><a href="http://yuke93.github.io/">Ke Yu</a> 
-                                    <br />Email: ericyu16 at hotmail.com
+                                    <br /><a href="">Xunkuai Zhou</a>
+                                    <br />Email: xunkuaizhou@cuhk.edu.hk
                             </div>
                         </div>
                     </div>
@@ -520,30 +413,31 @@
 
 
         <!-- Footer -->
-        <footer class="footer text-white" style="background-image: url(../../assets/img/footer-bg.jpg)">
+
+       <!-- <footer class="footer text-white" style="background-image: url(../../assets/img/footer-bg.jpg)">
             <div class="container d-flex h-100">
                 <div class="row flex-grow-1">
                     <div class="col-lg-3 pt-3 ext-l bg-secondary text-center text-lg-left">
                         <div class="d-flex flex-column h-100">
                             <div class="pt-5 pt-lg-8 pb-4">
                                 <img src="../../assets/img/logo-small.png" alt="" width="108" class="mb-4" />
-                                <p class="mb-4 mt-3 fs--1"><br />
+                                <p class="mb-4 mt-3 fs&#45;&#45;1"><br />
                                 Academic Block North <br />
                                 Nanyang Technological University<br />
                                 61 Nanyang Dr, Singapore 637335</p>
-        
-                                <p class="fs--1">
+
+                                <p class="fs&#45;&#45;1">
                                 <span class="text-white"><i class="zmdi zmdi-email zmdi-hc-fw mr-1"></i>mmlab-contact at e.ntu.edu.sg</span><br />
                                 <span class="text-white"><i class="zmdi zmdi-twitter zmdi-hc-fw mr-1"></i><a href="https://twitter.com/MMLabNTU" target="_blank" class="text-white">@MMLabNTU</a></span></p>
                             </div>
-    
-                            <!-- <ul class="mt-4 mt-lg-auto mb-5 mb-lg-0 list-unstyled list-inline">
+
+                            &lt;!&ndash; <ul class="mt-4 mt-lg-auto mb-5 mb-lg-0 list-unstyled list-inline">
                                 <li class="mr-3 list-inline-item">
                                     <a href="https://twitter.com/MMLabNTU" target="_blank">
                                         <i class="zmdi zmdi-twitter text-white"></i>
                                     </a>
                                 </li>
-                            </ul> -->
+                            </ul> &ndash;&gt;
                         </div>
                     </div>
 
@@ -574,12 +468,13 @@
                         </div>
 
                         <div class="mt-auto d-flex justify-content-between">
-                            <span class="fs--3 fs-lg--2">&copy; MMLab@NTU, 2021</span>
+                            <span class="fs&#45;&#45;3 fs-lg&#45;&#45;2">&copy; MMLab@NTU, 2021</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </footer>
+        </footer>-->
+
         <!-- End of Footer -->
 
 
