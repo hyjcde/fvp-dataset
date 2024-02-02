@@ -53,8 +53,8 @@
         <!-- Header -->
         <header class="spyre-navbar navbar navbar-expand-lg bg-secondary navbar-dark fixed-top align-items-center" data-transparent data-text-color="#ffffff">
             <div class="container">
-                <a class="navbar-brand mr-lg-5 mr-xl-7" href="../../index.html">
-                    <img src="img/FlyingLion.png" class="d-none d-lg-block" alt="MMLab" width="93" />
+                <a class="navbar-brand mr-lg-5 mr-xl-7" href="#">
+                    <img src="img/FlyingLion.png" class="d-none d-lg-block" alt="USR" width="93" />
 <!--                    <img src="../../assets/img/logo.png" class="d-block d-lg-none" alt="MMLab" width="150" />-->
                 </a>
 
@@ -166,11 +166,11 @@
         <main class="main minh-100vh">
             <!-- Section -->
             <section class="py-0 overflow-hidden text-center">
-                <div class="bg-container overlay parallax" data-rellax-percentage="0.5" style="background-image: url(../../assets/img/backgrounds/bg-21.jpg)"></div>
+                <div class="bg-container overlay parallax" data-rellax-percentage="0.5" style="background-image: url(img/cover.jpg)"></div>
                 <div class="container">
                     <div class="row h-100vh align-items-center">
                         <div class="col">
-                            <h1 class="text-white text-uppercase fs-4 fs-lg-6">Flying Vehicle Detection under Complex Conditions: A Large-scale Dataset and Benchmark Approach</h1>
+                            <h1 class="text-white text-uppercase fs-4 fs-lg-6">Flying Vehicle Perception under Complex Conditions: A Large-scale Dataset and Benchmark Approach</h1>
                             <p class="mb-5 fs-lg-1 text-white">Submitted to Elsevier<br />
                         </div>
                     </div>
@@ -186,14 +186,14 @@
                             <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">Paper</h3>
                             <h2 class="mb-5 fw-medium text-secondary text-uppercase text-center text-lg-left">Abstract</h2>
                             <p class="text-justify">
-                                Detecting flying vehicles in complex scenes presents a significant challenge in the air transportation system. Existing research primarily focuses on flying vehicle detection using RGB imagery, limiting its effectiveness in real-life applications, particularly under challenging conditions such as low-light environments and cluttered backgrounds. A promising approach is the integration of RGB and thermal infrared (RGBT) images, providing complementary information and have shown potential in various computer vision tasks. However, the progress in RGBT flying vehicle detection is impeded by the lack of a large-scale dataset and a comprehensive benchmark for evaluation. To address this research gap, we contribute by introducing a novel RGBT image dataset called FT55k, which encompasses diverse scenarios and consists of over 55k spatially aligned RGBT image pairs with meticulously annotated ground truth, enabling comprehensive evaluation and exploration of algorithmic robustness. We propose a series of baseline approaches that can be deployed on devices with varying computing capabilities, providing a solid foundation for further research. Extensive experiments were conducted on the FT55k dataset and seven challenging public datasets, demonstrating the superiority of our proposed approaches compared to state-of-the-art methods. This work presents the first comprehen- sive benchmark for multiple types of flying vehicle detection methods across multiple scenarios. We also make corrections to the existing datasets and establish a new benchmark. Our method achieves the lowest computational complexity with a consumption of only 0.49 BFLOPs. To the best of our knowledge, this is the first flying vehicle detection method with a computational complexity below 0.5 BFLOPs. Moreover, we validate the proposed approaches through the deployment experiments on edge-computing devices, confirming their reliability and feasibility. Our codes and dataset are made publicly available at <a href="https://github.com/XXX">here</a> .
-                            </p>
+                                Detecting flying vehicles in complex scenes presents a significant challenge. Existing works primarily focus on flying vehicle detection using RGB imagery, limiting its effectiveness in real-life applications, particularly under challenging conditions such as low-light and cluttered backgrounds. A promising approach is the integration of RGB and thermal infrared (RGBT) images, providing complementary information and have shown potential in various computer vision tasks. The progress in RGBT flying vehicle detection is impeded by the lack of a large-scale dataset and a comprehensive benchmark for evaluation. To address this research gap, we introduce a novel RGBT dataset called FT55k, which encompasses diverse scenarios and consists of over 55000 spatially aligned RGBT image pairs with meticulously annotated ground truth, enabling comprehensive evaluation and exploration of algorithmic robustness. We propose a series of baseline approaches that can be deployed on devices with varying computing capabilities, providing a solid foundation for further research. Extensive experiments were conducted on the FT55k and seven challenging public datasets, demonstrating the superiority of our proposed approaches compared to state-of-the-art methods. This work presents the first comprehensive benchmark for multiple types of flying vehicle detection methods across multiple scenarios. We also make corrections to the existing datasets and establish a new benchmark. Our method achieves the computational cost of only 0.49 BFLOPs. To the best of our knowledge, this is the first flying vehicle detection method with a computational cost below 0.5 BFLOPs. Moreover, we perform real-time detection through the deployment experiments on edge-computing devices, confirming their reliability and feasibility. Our codes and dataset are made publicly available at https://github.com/XXX.     </p>
                         </div>
 
                         <div class="col-lg-6">
                             <div class="mb-2 mt-10">
                                 <img src="./img/example_mydate2.png" class="mt-4 img-fluid w-100" alt="" />
-                            </div>
+<!--                                set vedio here-->
+
                             <p></p>
 
                         
@@ -206,8 +206,18 @@
                     </div>
 
                 </div>
+                    <div class="embed-responsive embed-responsive-16by9" style="width: 100%; margin-top: 30px;">
+                        <iframe class="embed-responsive-item" src="img/Detection.mp4"></iframe>
+                    </div>
+                    <div class="embed-responsive embed-responsive-16by9" style="width: 100%; margin: 50px auto">
+                        <iframe width="100%" class="embed-responsive-item" src="img/FTNet-h-ir.mp4" style="width: 100%;"></iframe>
+                    </div>
+
+                </div>
             </section>
-            <!-- End of Section --> 
+            <!-- End of Section -->
+
+
 
             <!-- Section Downloads -->
             <section class="pt-0">
@@ -255,10 +265,27 @@
                     </div>
                 </div>
             </section>
-            <!-- End of Section -->  
+            <!-- End of Section -->
 
+            <section class="pb-0 ">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 order-lg-1">
+                            <h3 class="my-0 fs-1 fw-medium text-primary text-uppercase text-center text-lg-left">Det-Fly </h3>
+                            <h2 class="mb-5 fw-medium text-secondary text-uppercase text-center text-lg-left">Visualization</h2>
+                            <p class="text-justify">
+                               The figure below illustrates the qualitative visualization of actual aerial UAV perception, where each column represents the same scene, and each row represents the visualization of a specific method. In the third column, except for FTNet- h, the remaining methods fail to detect the target. While all methods successfully detect the UAVs under the other three situations, our approach exhibits higher confidence scores. Based on the analysis above on Det-Fly, Our method achieves superior accuracy and inference speed with minimal computational resource consumption, which is compet- itive for devices with weaker computational capabilities.     </p>
+                            <div class="col-lg-12 order-lg-2 pb-lg-0 pt-lg-3">
+                                <div class="mb-8">
+                                    <img src="./img/exampl-detfly.png" class="mt-4 img-fluid w-100" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <!-- Section Path-Restore-Mask -->
-            <section class="pb-0">
+            <section class="pb-0 bg-blue-light">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-4 order-lg-1">
@@ -274,7 +301,7 @@
                         <div class="col-lg-8 order-lg-2 pb-lg-0 pt-lg-3"> 
                             <div class="mt-13">
                                 <img src="./img/ftnet-h.png" class="mt-4 img-fluid w-100" alt="" />
-                            </div>                                                   
+                            </div>
                         </div>
                         
                     </div>
@@ -283,7 +310,7 @@
             <!-- End of Section -->
 
             <!-- Section Realistic Denoising -->
-            <section class="pb-0 bg-blue-light">
+            <section class="pb-0 ">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12 order-lg-1">
@@ -303,7 +330,7 @@
             <!-- End of Section -->
 
             <!-- Section Gaussian Denoising -->
-            <section class="pb-6">
+            <section class="pb-6 bg-blue-light">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12 order-lg-1">
@@ -313,11 +340,10 @@
                                 Our methods provide a more accurate prediction of flying vehicles in various challenging situations, i.e., low lighting conditions (second column), tangled jungle (fourth column), and tiny vehicles (all columns). The red numbers in the figure represent confidence scores. Please zoom in for the best view.
                             </p>
 
-                            <div class="row">                                
-                                <div class="col-lg-4 order-lg-2 mb-lg-0 mb-5">
-                                        <img class="img-fluid" src="./img/example_mydate2.png" />
+                            <div class="col-lg-12 order-lg-2 pb-lg-0 pt-lg-3">
+                                <div class="mb-8">
+                                    <img src="./img/example-nudt-h.pdf" class="mt-4 img-fluid w-100" alt="" />
                                 </div>
-
                             </div>
                         </div>                        
                     </div>
@@ -328,7 +354,7 @@
 
 
             <!-- Section Citation -->
-            <section class="pb-7 bg-blue-light">
+            <section class="pb-7 ">
                 <div class="container">                       
                     <div class="col-lg-12 order-lg-2 pb-lg-0 pt-lg-3"> 
                         <div class="mb-3">
@@ -336,7 +362,7 @@
                                 <h2 class="mb-5 fw-medium text-secondary text-uppercase text-center text-lg-left">Citation</h2>
                                 <p class="text-700 fw-medium">
                                     @article{,<br/>
-                                        &emsp;title={Flying Vehicle Detection under Complex Conditions: A Large-scale Dataset and Benchmark Approach},<br/>
+                                        &emsp;title={Flying Vehicle Perception under Complex Conditions: A Large-scale Dataset and Benchmark Approach},<br/>
                                         &emsp;author={Xunkuai Zhou, Yijun Huang, Li Li, Jie Huang and Ben M. Chen},<br/>
                                         &emsp;journal={Expert Systems with Applications},<br/>
                                         &emsp;year={2024},<br/>
@@ -350,7 +376,7 @@
             <!-- End of Section -->
 
             <!-- Section Related Projects -->
-            <section class="pb-6">
+            <section class="pb-6 bg-blue-light">
                 <div class="container">
                     <div class="row">
                         <div class="col text-center text-lg-left">
@@ -369,7 +395,7 @@
 
                                        2023 IEEE/RSJ International Conference on Intelligent Robots and Systems , 2023 <strong>(IROS)</strong><br />
                                        </span>
-                                       [<a href="https://www.researchgate.net/publication/377606630_VDTNet_A_High-Performance_Visual_Network_for_Detecting_and_Tracking_of_Intruding_Drones?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6InByb2ZpbGUiLCJwYWdlIjoicHJvZmlsZSJ9fQ" target="_blank"><span class="text-muted">ResearchGate</span></a>]
+                                       [<a href="https://ieeexplore.ieee.org/abstract/document/10341901?casa_token=0RDbYysVxzQAAAAA:yOq0whE-BqFKzWpMfAK4ggaFTVJXXoVkSNMk775uBD1U1QzPsQaUDXlYbaM9aYn2mx8euqRM" target="_blank"><span class="text-muted">IEEE</span></a>]
                                     </li>
                                     <!--<li>
                                        <span class="text-primary">Recovering Realistic Texture in Image Super-resolution by Deep Spatial Feature Transform </span> 
@@ -390,7 +416,7 @@
             <!-- End of Section -->
 
             <!-- Section Contact -->
-            <section class="pt-7 pb-0 bg-blue-light">
+            <section class="pt-7 pb-0 ">
                 <div class="container">
                     <div class="pb-6 px-lg-8 px-xl-12">
                         <div class="row justify-content-center">
